@@ -15,9 +15,12 @@
 		499EDC912197ECB40088D7A8 /* Investment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC902197ECB40088D7A8 /* Investment.storyboard */; };
 		499EDC932197ECBC0088D7A8 /* Reward.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC922197ECBC0088D7A8 /* Reward.storyboard */; };
 		499EDC952197ECC20088D7A8 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC942197ECC20088D7A8 /* More.storyboard */; };
+		70C2B28376D9880DECBEA354 /* Pods_Tlend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515C28C28C39821D1A718EFA /* Pods_Tlend.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18787935DDB8D450B2984C6C /* Pods-Tlend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tlend.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tlend/Pods-Tlend.debug.xcconfig"; sourceTree = "<group>"; };
+		197B4B4716FDCB2915466B01 /* Pods-Tlend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tlend.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tlend/Pods-Tlend.release.xcconfig"; sourceTree = "<group>"; };
 		499EDC692197E85C0088D7A8 /* Tlend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tlend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499EDC6C2197E85C0088D7A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499EDC712197E85C0088D7A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		499EDC902197ECB40088D7A8 /* Investment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Investment.storyboard; sourceTree = "<group>"; };
 		499EDC922197ECBC0088D7A8 /* Reward.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reward.storyboard; sourceTree = "<group>"; };
 		499EDC942197ECC20088D7A8 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
+		515C28C28C39821D1A718EFA /* Pods_Tlend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tlend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C2B28376D9880DECBEA354 /* Pods_Tlend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				499EDC6B2197E85C0088D7A8 /* Tlend */,
 				499EDC6A2197E85C0088D7A8 /* Products */,
+				5DE76DEF1DBA07F5E1674413 /* Pods */,
+				D793D4304F4EDC01F698719E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +168,23 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		5DE76DEF1DBA07F5E1674413 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18787935DDB8D450B2984C6C /* Pods-Tlend.debug.xcconfig */,
+				197B4B4716FDCB2915466B01 /* Pods-Tlend.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D793D4304F4EDC01F698719E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				515C28C28C39821D1A718EFA /* Pods_Tlend.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +192,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 499EDC7B2197E85D0088D7A8 /* Build configuration list for PBXNativeTarget "Tlend" */;
 			buildPhases = (
+				FBBE6ADA46E3EC602768B4E0 /* [CP] Check Pods Manifest.lock */,
 				499EDC652197E85C0088D7A8 /* Sources */,
 				499EDC662197E85C0088D7A8 /* Frameworks */,
 				499EDC672197E85C0088D7A8 /* Resources */,
@@ -230,6 +255,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FBBE6ADA46E3EC602768B4E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tlend-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		499EDC652197E85C0088D7A8 /* Sources */ = {
@@ -380,6 +430,7 @@
 		};
 		499EDC7C2197E85D0088D7A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18787935DDB8D450B2984C6C /* Pods-Tlend.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -397,6 +448,7 @@
 		};
 		499EDC7D2197E85D0088D7A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 197B4B4716FDCB2915466B01 /* Pods-Tlend.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
