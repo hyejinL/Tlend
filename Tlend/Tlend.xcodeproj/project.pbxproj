@@ -16,6 +16,14 @@
 		499EDC932197ECBC0088D7A8 /* Reward.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC922197ECBC0088D7A8 /* Reward.storyboard */; };
 		499EDC952197ECC20088D7A8 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC942197ECC20088D7A8 /* More.storyboard */; };
 		70C2B28376D9880DECBEA354 /* Pods_Tlend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515C28C28C39821D1A718EFA /* Pods_Tlend.framework */; };
+		BA3DF96221982A3D00B1D42C /* FormCheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF96021982A3D00B1D42C /* FormCheckTableViewCell.swift */; };
+		BA3DF96321982A3D00B1D42C /* FormCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3DF96121982A3D00B1D42C /* FormCheckTableViewCell.xib */; };
+		BA3DF96821982C3C00B1D42C /* StartFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF96721982C3C00B1D42C /* StartFormViewController.swift */; };
+		BA3DF96A21982CA700B1D42C /* FundingKindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF96921982CA700B1D42C /* FundingKindViewController.swift */; };
+		BA3DF96C2198306600B1D42C /* TableView+Tlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF96B2198306600B1D42C /* TableView+Tlend.swift */; };
+		BA3DF9702198320F00B1D42C /* UIStoryboard+Tlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF96F2198320F00B1D42C /* UIStoryboard+Tlend.swift */; };
+		BA3DF972219842E600B1D42C /* StockCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF971219842E600B1D42C /* StockCategoryViewController.swift */; };
+		BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFEFEAD2198239F00E39F15 /* Form.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +40,14 @@
 		499EDC922197ECBC0088D7A8 /* Reward.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reward.storyboard; sourceTree = "<group>"; };
 		499EDC942197ECC20088D7A8 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		515C28C28C39821D1A718EFA /* Pods_Tlend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tlend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3DF96021982A3D00B1D42C /* FormCheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCheckTableViewCell.swift; sourceTree = "<group>"; };
+		BA3DF96121982A3D00B1D42C /* FormCheckTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormCheckTableViewCell.xib; sourceTree = "<group>"; };
+		BA3DF96721982C3C00B1D42C /* StartFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartFormViewController.swift; sourceTree = "<group>"; };
+		BA3DF96921982CA700B1D42C /* FundingKindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundingKindViewController.swift; sourceTree = "<group>"; };
+		BA3DF96B2198306600B1D42C /* TableView+Tlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+Tlend.swift"; sourceTree = "<group>"; };
+		BA3DF96F2198320F00B1D42C /* UIStoryboard+Tlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Tlend.swift"; sourceTree = "<group>"; };
+		BA3DF971219842E600B1D42C /* StockCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCategoryViewController.swift; sourceTree = "<group>"; };
+		BAFEFEAD2198239F00E39F15 /* Form.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Form.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +88,7 @@
 				499EDC812197E8CF0088D7A8 /* Storyboard */,
 				499EDC7F2197E8CD0088D7A8 /* Model */,
 				499EDC802197E8CE0088D7A8 /* Util */,
+				BA3DF95A2198292200B1D42C /* View */,
 				499EDC7E2197E8CB0088D7A8 /* SupportingFiles */,
 			);
 			path = Tlend;
@@ -111,6 +128,7 @@
 				499EDC922197ECBC0088D7A8 /* Reward.storyboard */,
 				499EDC942197ECC20088D7A8 /* More.storyboard */,
 				499EDC752197E85D0088D7A8 /* LaunchScreen.storyboard */,
+				BAFEFEAD2198239F00E39F15 /* Form.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -122,6 +140,7 @@
 				499EDC892197E8FC0088D7A8 /* Investment */,
 				499EDC882197E8FB0088D7A8 /* Reward */,
 				499EDC872197E8FA0088D7A8 /* More */,
+				BA3DF96421982BF800B1D42C /* Form */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -157,6 +176,8 @@
 		499EDC8C2197EA9C0088D7A8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				BA3DF96B2198306600B1D42C /* TableView+Tlend.swift */,
+				BA3DF96F2198320F00B1D42C /* UIStoryboard+Tlend.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -175,6 +196,33 @@
 				197B4B4716FDCB2915466B01 /* Pods-Tlend.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA3DF95A2198292200B1D42C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA3DF95B219829B600B1D42C /* Form */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA3DF95B219829B600B1D42C /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				BA3DF96021982A3D00B1D42C /* FormCheckTableViewCell.swift */,
+				BA3DF96121982A3D00B1D42C /* FormCheckTableViewCell.xib */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		BA3DF96421982BF800B1D42C /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				BA3DF96721982C3C00B1D42C /* StartFormViewController.swift */,
+				BA3DF96921982CA700B1D42C /* FundingKindViewController.swift */,
+				BA3DF971219842E600B1D42C /* StockCategoryViewController.swift */,
+			);
+			path = Form;
 			sourceTree = "<group>";
 		};
 		D793D4304F4EDC01F698719E /* Frameworks */ = {
@@ -246,11 +294,13 @@
 			files = (
 				499EDC772197E85D0088D7A8 /* LaunchScreen.storyboard in Resources */,
 				499EDC742197E85D0088D7A8 /* Assets.xcassets in Resources */,
+				BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */,
 				499EDC952197ECC20088D7A8 /* More.storyboard in Resources */,
 				499EDC722197E85C0088D7A8 /* Main.storyboard in Resources */,
 				499EDC8F2197ECA90088D7A8 /* Home.storyboard in Resources */,
 				499EDC912197ECB40088D7A8 /* Investment.storyboard in Resources */,
 				499EDC932197ECBC0088D7A8 /* Reward.storyboard in Resources */,
+				BA3DF96321982A3D00B1D42C /* FormCheckTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +336,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA3DF9702198320F00B1D42C /* UIStoryboard+Tlend.swift in Sources */,
+				BA3DF96221982A3D00B1D42C /* FormCheckTableViewCell.swift in Sources */,
+				BA3DF96821982C3C00B1D42C /* StartFormViewController.swift in Sources */,
+				BA3DF96C2198306600B1D42C /* TableView+Tlend.swift in Sources */,
+				BA3DF972219842E600B1D42C /* StockCategoryViewController.swift in Sources */,
+				BA3DF96A21982CA700B1D42C /* FundingKindViewController.swift in Sources */,
 				499EDC6D2197E85C0088D7A8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Tlend/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +510,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/Tlend/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
