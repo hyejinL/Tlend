@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +29,7 @@
         <scene sceneID="3oS-Kl-Zem">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iKx-ov-Ter" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="리워드" id="CqR-C8-Pg5"/>
+                    <tabBarItem key="tabBarItem" title="리워드" image="icReward" id="CqR-C8-Pg5"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vDt-5z-i3d">
@@ -47,4 +46,7 @@
             <point key="canvasLocation" x="250" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icReward" width="24" height="24"/>
+    </resources>
 </document>

@@ -9,6 +9,10 @@
 import UIKit
 
 class StockCategoryViewController: UIViewController {
+    
+    struct Const {
+        static let cellHeight: CGFloat = 60
+    }
 
     @IBOutlet weak var tableView: UITableView!
     
