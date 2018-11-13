@@ -8,19 +8,24 @@
 
 import UIKit
 
+protocol HotKeywordDelegate: class {
+    func hotKeywordCellClickAction()
+}
+
 class HotKeywordTableViewCell: UITableViewCell {
     
     @IBOutlet weak var hotKeywordCollectionView: UICollectionView!
     
+    weak var delegate: HotKeywordDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
         self.collectionViewInit()
     }
 }
 
-extension HotKeywordTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HotKeywordTableViewCell: UICollectionViewDelegate {
     private func collectionViewInit() {
         self.hotKeywordCollectionView.delegate = self; self.hotKeywordCollectionView.dataSource = self
         
@@ -28,6 +33,13 @@ extension HotKeywordTableViewCell: UICollectionViewDelegate, UICollectionViewDat
         self.hotKeywordCollectionView.register(nib, forCellWithReuseIdentifier: "HotKeywordCollectionViewCell")
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let action = delegate?.hotKeywordCellClickAction else { return }
+        action()
+    }
+}
+
+extension HotKeywordTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }

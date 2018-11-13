@@ -31,7 +31,14 @@ class HomeMainViewController: UIViewController {
     
 }
 
-extension HomeMainViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeMainViewController: HotKeywordDelegate {
+    func hotKeywordCellClickAction() {
+        let viewController = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(ofType: HomeHotKeywordViewController.self)
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension HomeMainViewController: UITableViewDelegate {
     private func tableViewInit() {
         self.homeMainTableView.delegate = self; self.homeMainTableView.dataSource = self
         
@@ -39,6 +46,11 @@ extension HomeMainViewController: UITableViewDelegate, UITableViewDataSource {
         self.homeMainTableView.register(HomeItemsTableViewCell.self)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+}
+
+extension HomeMainViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return HomeItems.allCases.count
     }
@@ -60,6 +72,7 @@ extension HomeMainViewController: UITableViewDelegate, UITableViewDataSource {
         switch section {
         case .HotKeyword:
             let cell = tableView.dequeue(HotKeywordTableViewCell.self, for: indexPath)
+            cell.delegate = self
             return cell
             
         case .FundingItems:
