@@ -23,6 +23,9 @@ class HomeHotKeywordViewController: UIViewController {
         self.tableViewInit()
     }
     
+    @IBAction func goSearchViewAction(_ sender: Any) {
+        goSearchView()
+    }
 }
 
 extension HomeHotKeywordViewController: UITableViewDelegate {

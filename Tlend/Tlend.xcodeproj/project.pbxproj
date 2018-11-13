@@ -21,6 +21,8 @@
 		490D9491219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D948F219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift */; };
 		490D9492219A4CCA00DAE837 /* HotKeywordListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490D9490219A4CCA00DAE837 /* HotKeywordListTableViewCell.xib */; };
 		490D9494219A4ED200DAE837 /* CollectionView+Tlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D9493219A4ED200DAE837 /* CollectionView+Tlend.swift */; };
+		490D9496219A583700DAE837 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490D9495219A583700DAE837 /* Search.storyboard */; };
+		490D949B219A696100DAE837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D949A219A696100DAE837 /* SearchViewController.swift */; };
 		499EDC6D2197E85C0088D7A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EDC6C2197E85C0088D7A8 /* AppDelegate.swift */; };
 		499EDC722197E85C0088D7A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC702197E85C0088D7A8 /* Main.storyboard */; };
 		499EDC742197E85D0088D7A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC732197E85D0088D7A8 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		490D948F219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeywordListTableViewCell.swift; sourceTree = "<group>"; };
 		490D9490219A4CCA00DAE837 /* HotKeywordListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotKeywordListTableViewCell.xib; sourceTree = "<group>"; };
 		490D9493219A4ED200DAE837 /* CollectionView+Tlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+Tlend.swift"; sourceTree = "<group>"; };
+		490D9495219A583700DAE837 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		490D949A219A696100DAE837 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		499EDC692197E85C0088D7A8 /* Tlend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tlend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499EDC6C2197E85C0088D7A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499EDC712197E85C0088D7A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +124,14 @@
 				490D9490219A4CCA00DAE837 /* HotKeywordListTableViewCell.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		490D9497219A5B2400DAE837 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				490D949A219A696100DAE837 /* SearchViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		499EDC602197E85C0088D7A8 = {
@@ -189,6 +201,7 @@
 				499EDC942197ECC20088D7A8 /* More.storyboard */,
 				499EDC752197E85D0088D7A8 /* LaunchScreen.storyboard */,
 				BAFEFEAD2198239F00E39F15 /* Form.storyboard */,
+				490D9495219A583700DAE837 /* Search.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -231,6 +244,7 @@
 			children = (
 				490D94712198434C00DAE837 /* Main */,
 				490D94702198434B00DAE837 /* HotKeyword */,
+				490D9497219A5B2400DAE837 /* Search */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -362,6 +376,7 @@
 				499EDC742197E85D0088D7A8 /* Assets.xcassets in Resources */,
 				BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */,
 				490D948021996F5200DAE837 /* HomeItemsTableViewCell.xib in Resources */,
+				490D9496219A583700DAE837 /* Search.storyboard in Resources */,
 				499EDC952197ECC20088D7A8 /* More.storyboard in Resources */,
 				499EDC722197E85C0088D7A8 /* Main.storyboard in Resources */,
 				499EDC8F2197ECA90088D7A8 /* Home.storyboard in Resources */,
@@ -410,6 +425,7 @@
 				BA3DF9702198320F00B1D42C /* UIStoryboard+Tlend.swift in Sources */,
 				490D947F21996F5200DAE837 /* HomeItemsTableViewCell.swift in Sources */,
 				BA3DF96221982A3D00B1D42C /* FormCheckTableViewCell.swift in Sources */,
+				490D949B219A696100DAE837 /* SearchViewController.swift in Sources */,
 				BA3DF96821982C3C00B1D42C /* StartFormViewController.swift in Sources */,
 				490D948C21998C6400DAE837 /* HotKeywordHeaderTableViewCell.swift in Sources */,
 				490D947B21996CE900DAE837 /* HotKeywordTableViewCell.swift in Sources */,

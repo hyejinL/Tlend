@@ -24,6 +24,10 @@ class HomeMainViewController: UIViewController {
         self.tableViewInit()
     }
     
+    @IBAction func goSearchViewAction(_ sender: Any) {
+        goSearchView()
+    }
+    
     private func setupUI() {
         setWhiteNavigationBar()
         setNavigationLogoTitle()

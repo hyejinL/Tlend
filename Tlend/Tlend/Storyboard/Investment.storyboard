@@ -29,7 +29,7 @@
         <scene sceneID="p9b-wt-bBa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oEs-XO-LSt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="투자" image="icInvest" id="gn9-Ly-3mU"/>
+                    <tabBarItem key="tabBarItem" title="투자" image="icInvestGray" id="gn9-Ly-3mU"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TMw-cr-AOG">
@@ -47,6 +47,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icInvest" width="24" height="24"/>
+        <image name="icInvestGray" width="24" height="24"/>
     </resources>
 </document>
