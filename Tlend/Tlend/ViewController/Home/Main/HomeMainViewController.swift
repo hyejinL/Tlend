@@ -63,7 +63,7 @@ extension HomeMainViewController: UITableViewDataSource {
             return 1
             
         case .FundingItems:
-            return 10
+            return 5
         }
     }
     

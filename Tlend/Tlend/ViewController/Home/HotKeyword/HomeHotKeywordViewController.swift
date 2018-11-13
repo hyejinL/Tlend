@@ -25,13 +25,15 @@ class HomeHotKeywordViewController: UIViewController {
     
 }
 
-extension HomeHotKeywordViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeHotKeywordViewController: UITableViewDelegate {
     private func tableViewInit() {
         self.homeHotKeywordTableView.delegate = self; self.homeHotKeywordTableView.dataSource = self
         
         self.homeHotKeywordTableView.register(HotKeywordListTableViewCell.self)
     }
-    
+}
+
+extension HomeHotKeywordViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return HotKeywordList.allCases.count
     }
@@ -55,8 +57,7 @@ extension HomeHotKeywordViewController: UITableViewDelegate, UITableViewDataSour
             let cell = tableView.dequeue(HotKeywordHeaderTableViewCell.self, for: indexPath)
             return cell
         case .List:
-            let cell = tableView.dequeue(HotKeywordListTableViewCell.self, for: indexPath
-            )
+            let cell = tableView.dequeue(HotKeywordListTableViewCell.self, for: indexPath)
             return cell
         }
     }
