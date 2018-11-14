@@ -16,7 +16,7 @@ class HotKeywordTableViewCell: UITableViewCell {
     
     @IBOutlet weak var hotKeywordCollectionView: UICollectionView!
     
-    struct Const {
+    struct Style {
         static let cellSize: CGSize = CGSize(width: 120, height: 145)
         static let cellInset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         static let cellSpacing: CGFloat = 15
@@ -58,14 +58,14 @@ extension HotKeywordTableViewCell: UICollectionViewDataSource {
 
 extension HotKeywordTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return Const.cellSize
+        return Style.cellSize
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return Const.cellInset
+        return Style.cellInset
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return Const.cellSpacing
+        return Style.cellSpacing
     }
 }

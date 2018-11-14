@@ -14,9 +14,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var suggestionTableView: UITableView!
     @IBOutlet var suggestionTableHeaderView: UIView!
     
-    struct Const {
+    struct Style {
         static let widthRatio: CGFloat = UIScreen.main.bounds.width/375
-        static let searchBarFrame: CGRect = CGRect(x: 0, y: 0, width: 294*Const.widthRatio, height: 21)
+        static let searchBarFrame: CGRect = CGRect(x: 0, y: 0, width: 294*Style.widthRatio, height: 21)
     }
     
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class SearchViewController: UIViewController {
     private func setupUI() {
         self.setWhiteNavigationBar()
         
-        self.naviSearchBar.frame = Const.searchBarFrame
+        self.naviSearchBar.frame = Style.searchBarFrame
         self.naviSearchBar.setImage(#imageLiteral(resourceName: "icSearch"), for: .search, state: .normal)
         self.naviSearchBar.setImage(UIImage(), for: .clear, state: .normal)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: self.naviSearchBar)

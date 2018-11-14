@@ -23,6 +23,7 @@
 		490D9494219A4ED200DAE837 /* CollectionView+Tlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D9493219A4ED200DAE837 /* CollectionView+Tlend.swift */; };
 		490D9496219A583700DAE837 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490D9495219A583700DAE837 /* Search.storyboard */; };
 		490D949B219A696100DAE837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D949A219A696100DAE837 /* SearchViewController.swift */; };
+		490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D949D219A796200DAE837 /* SearchResultViewController.swift */; };
 		499EDC6D2197E85C0088D7A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EDC6C2197E85C0088D7A8 /* AppDelegate.swift */; };
 		499EDC722197E85C0088D7A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC702197E85C0088D7A8 /* Main.storyboard */; };
 		499EDC742197E85D0088D7A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC732197E85D0088D7A8 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		490D9493219A4ED200DAE837 /* CollectionView+Tlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+Tlend.swift"; sourceTree = "<group>"; };
 		490D9495219A583700DAE837 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		490D949A219A696100DAE837 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		490D949D219A796200DAE837 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		499EDC692197E85C0088D7A8 /* Tlend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tlend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499EDC6C2197E85C0088D7A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499EDC712197E85C0088D7A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				490D949A219A696100DAE837 /* SearchViewController.swift */,
+				490D949D219A796200DAE837 /* SearchResultViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				499EDC652197E85C0088D7A8 /* Sources */,
 				499EDC662197E85C0088D7A8 /* Frameworks */,
 				499EDC672197E85C0088D7A8 /* Resources */,
+				4A97F1301AB7A5585B80E2EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -392,6 +396,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4A97F1301AB7A5585B80E2EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tlend/Pods-Tlend-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tlend/Pods-Tlend-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FBBE6ADA46E3EC602768B4E0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -438,6 +464,7 @@
 				499EDC6D2197E85C0088D7A8 /* AppDelegate.swift in Sources */,
 				490D946F2198431300DAE837 /* HomeHotKeywordViewController.swift in Sources */,
 				490D9494219A4ED200DAE837 /* CollectionView+Tlend.swift in Sources */,
+				490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */,
 				490D9491219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,7 +542,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -570,7 +597,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -586,8 +613,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y6J9HAPEME;
 				INFOPLIST_FILE = "$(SRCROOT)/Tlend/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -605,8 +633,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y6J9HAPEME;
 				INFOPLIST_FILE = "$(SRCROOT)/Tlend/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
