@@ -22,7 +22,7 @@
 		499EDC742197E85D0088D7A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC732197E85D0088D7A8 /* Assets.xcassets */; };
 		499EDC772197E85D0088D7A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC752197E85D0088D7A8 /* LaunchScreen.storyboard */; };
 		499EDC8F2197ECA90088D7A8 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC8E2197ECA90088D7A8 /* Home.storyboard */; };
-		499EDC912197ECB40088D7A8 /* Investment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC902197ECB40088D7A8 /* Investment.storyboard */; };
+		499EDC912197ECB40088D7A8 /* Support.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC902197ECB40088D7A8 /* Support.storyboard */; };
 		499EDC932197ECBC0088D7A8 /* Reward.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC922197ECBC0088D7A8 /* Reward.storyboard */; };
 		499EDC952197ECC20088D7A8 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC942197ECC20088D7A8 /* More.storyboard */; };
 		70C2B28376D9880DECBEA354 /* Pods_Tlend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515C28C28C39821D1A718EFA /* Pods_Tlend.framework */; };
@@ -56,7 +56,7 @@
 		499EDC762197E85D0088D7A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		499EDC782197E85D0088D7A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		499EDC8E2197ECA90088D7A8 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		499EDC902197ECB40088D7A8 /* Investment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Investment.storyboard; sourceTree = "<group>"; };
+		499EDC902197ECB40088D7A8 /* Support.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Support.storyboard; sourceTree = "<group>"; };
 		499EDC922197ECBC0088D7A8 /* Reward.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reward.storyboard; sourceTree = "<group>"; };
 		499EDC942197ECC20088D7A8 /* More.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		515C28C28C39821D1A718EFA /* Pods_Tlend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tlend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,7 +173,7 @@
 			children = (
 				499EDC702197E85C0088D7A8 /* Main.storyboard */,
 				499EDC8E2197ECA90088D7A8 /* Home.storyboard */,
-				499EDC902197ECB40088D7A8 /* Investment.storyboard */,
+				499EDC902197ECB40088D7A8 /* Support.storyboard */,
 				499EDC922197ECBC0088D7A8 /* Reward.storyboard */,
 				499EDC942197ECC20088D7A8 /* More.storyboard */,
 				499EDC752197E85D0088D7A8 /* LaunchScreen.storyboard */,
@@ -186,7 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				499EDC8A2197E8FD0088D7A8 /* Home */,
-				499EDC892197E8FC0088D7A8 /* Investment */,
+				499EDC892197E8FC0088D7A8 /* Support */,
 				499EDC882197E8FB0088D7A8 /* Reward */,
 				499EDC872197E8FA0088D7A8 /* More */,
 				BA3DF96421982BF800B1D42C /* Form */,
@@ -208,11 +208,11 @@
 			path = Reward;
 			sourceTree = "<group>";
 		};
-		499EDC892197E8FC0088D7A8 /* Investment */ = {
+		499EDC892197E8FC0088D7A8 /* Support */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Investment;
+			path = Support;
 			sourceTree = "<group>";
 		};
 		499EDC8A2197E8FD0088D7A8 /* Home */ = {
@@ -353,7 +353,7 @@
 				499EDC952197ECC20088D7A8 /* More.storyboard in Resources */,
 				499EDC722197E85C0088D7A8 /* Main.storyboard in Resources */,
 				499EDC8F2197ECA90088D7A8 /* Home.storyboard in Resources */,
-				499EDC912197ECB40088D7A8 /* Investment.storyboard in Resources */,
+				499EDC912197ECB40088D7A8 /* Support.storyboard in Resources */,
 				490D9484219971AC00DAE837 /* HotKeywordCollectionViewCell.xib in Resources */,
 				490D947C21996CE900DAE837 /* HotKeywordTableViewCell.xib in Resources */,
 				499EDC932197ECBC0088D7A8 /* Reward.storyboard in Resources */,
