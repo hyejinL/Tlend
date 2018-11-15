@@ -9,22 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="CTm-t3-dzb">
-            <objects>
-                <viewController id="npz-8A-PQl" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8Am-Fn-39J">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="as1-4E-E7b"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="aCm-sd-w9t"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7NI-85-rI8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="999" y="133"/>
-        </scene>
         <!--서포트-->
         <scene sceneID="p9b-wt-bBa">
             <objects>
@@ -38,15 +22,58 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="npz-8A-PQl" kind="relationship" relationship="rootViewController" id="xGv-Pm-BOq"/>
+                        <segue destination="vn0-dC-IhG" kind="relationship" relationship="rootViewController" id="lOJ-lQ-9jM"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="658-hu-1y2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="250" y="133"/>
         </scene>
+        <!--Idol Support View Controller-->
+        <scene sceneID="UAW-Yl-Sef">
+            <objects>
+                <viewController storyboardIdentifier="IdolSupportViewController" id="vn0-dC-IhG" customClass="IdolSupportViewController" customModule="Tlend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2AL-Ku-LsI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WnK-L9-O7r">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vn0-dC-IhG" id="7kv-fK-ZVy"/>
+                                    <outlet property="delegate" destination="vn0-dC-IhG" id="BjM-FB-BRp"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WnK-L9-O7r" firstAttribute="leading" secondItem="FxC-hY-YYI" secondAttribute="leading" id="0ua-ZF-HAI"/>
+                            <constraint firstItem="WnK-L9-O7r" firstAttribute="top" secondItem="2AL-Ku-LsI" secondAttribute="top" id="RY8-IW-vUa"/>
+                            <constraint firstItem="WnK-L9-O7r" firstAttribute="trailing" secondItem="FxC-hY-YYI" secondAttribute="trailing" id="tv7-xR-NzY"/>
+                            <constraint firstItem="FxC-hY-YYI" firstAttribute="bottom" secondItem="WnK-L9-O7r" secondAttribute="bottom" id="wOs-es-ysT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FxC-hY-YYI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1TQ-T5-v8h">
+                        <barButtonItem key="leftBarButtonItem" image="icClose" id="M9P-ec-Rgm">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="touchUpClose:" destination="vn0-dC-IhG" id="dvN-og-2GW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="WnK-L9-O7r" id="tpF-uS-ncx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRV-IJ-1eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1101.5999999999999" y="130.88455772113943"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="icClose" width="14" height="14"/>
         <image name="icInvestGray" width="24" height="24"/>
     </resources>
 </document>

@@ -6,5 +6,6 @@ target 'Tlend' do
   use_frameworks!
 
   # Pods for Tlend
-
+  pod 'Kingfisher'
+  pod 'SnapKit'
 end
