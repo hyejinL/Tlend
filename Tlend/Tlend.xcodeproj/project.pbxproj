@@ -33,6 +33,7 @@
 		BA3DF96C2198306600B1D42C /* TableView+Tlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF96B2198306600B1D42C /* TableView+Tlend.swift */; };
 		BA3DF9702198320F00B1D42C /* UIStoryboard+Tlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF96F2198320F00B1D42C /* UIStoryboard+Tlend.swift */; };
 		BA3DF972219842E600B1D42C /* StockCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF971219842E600B1D42C /* StockCategoryViewController.swift */; };
+		BA608EFF219DC1B400A3B5F0 /* UIView+Tlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA608EFE219DC1B400A3B5F0 /* UIView+Tlend.swift */; };
 		BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFEFEAD2198239F00E39F15 /* Form.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		BA3DF96B2198306600B1D42C /* TableView+Tlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TableView+Tlend.swift"; sourceTree = "<group>"; };
 		BA3DF96F2198320F00B1D42C /* UIStoryboard+Tlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Tlend.swift"; sourceTree = "<group>"; };
 		BA3DF971219842E600B1D42C /* StockCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCategoryViewController.swift; sourceTree = "<group>"; };
+		BA608EFE219DC1B400A3B5F0 /* UIView+Tlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Tlend.swift"; sourceTree = "<group>"; };
 		BAFEFEAD2198239F00E39F15 /* Form.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Form.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -231,6 +233,7 @@
 				BA3DF96F2198320F00B1D42C /* UIStoryboard+Tlend.swift */,
 				490D9487219981BA00DAE837 /* UIViewController+NavigationBar.swift */,
 				490D9489219982FC00DAE837 /* UIView+Shadow.swift */,
+				BA608EFE219DC1B400A3B5F0 /* UIView+Tlend.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA608EFF219DC1B400A3B5F0 /* UIView+Tlend.swift in Sources */,
 				490D948A219982FC00DAE837 /* UIView+Shadow.swift in Sources */,
 				BA3DF9702198320F00B1D42C /* UIStoryboard+Tlend.swift in Sources */,
 				490D947F21996F5200DAE837 /* HomeItemsTableViewCell.swift in Sources */,
