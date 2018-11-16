@@ -12,7 +12,7 @@ class HomeHotKeywordViewController: UIViewController {
 
     @IBOutlet weak var homeHotKeywordTableView: UITableView!
     
-    enum HotKeywordList: Int, CaseIterable {
+    enum Section: Int, CaseIterable {
         case Header
         case List
     }
@@ -38,11 +38,11 @@ extension HomeHotKeywordViewController: UITableViewDelegate {
 
 extension HomeHotKeywordViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return HotKeywordList.allCases.count
+        return Section.allCases.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let section = HotKeywordList(rawValue: section) else { return 0 }
+        guard let section = Section(rawValue: section) else { return 0 }
         
         switch section {
         case .Header:
@@ -53,7 +53,7 @@ extension HomeHotKeywordViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let section = HotKeywordList(rawValue: indexPath.section) else { return UITableViewCell() }
+        guard let section = Section(rawValue: indexPath.section) else { return UITableViewCell() }
         
         switch section {
         case .Header:

@@ -12,7 +12,7 @@ class HomeMainViewController: UIViewController {
     
     @IBOutlet weak var homeMainTableView: UITableView!
     
-    enum HomeItems: Int, CaseIterable {
+    enum Section: Int, CaseIterable {
         case HotKeyword
         case FundingItems
     }
@@ -56,11 +56,11 @@ extension HomeMainViewController: UITableViewDelegate {
 
 extension HomeMainViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return HomeItems.allCases.count
+        return Section.allCases.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let section = HomeItems(rawValue: section) else { return 0 }
+        guard let section = Section(rawValue: section) else { return 0 }
         
         switch section {
         case .HotKeyword:
@@ -72,7 +72,7 @@ extension HomeMainViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let section = HomeItems(rawValue: indexPath.section) else { return UITableViewCell() }
+        guard let section = Section(rawValue: indexPath.section) else { return UITableViewCell() }
         switch section {
         case .HotKeyword:
             let cell = tableView.dequeue(HotKeywordTableViewCell.self, for: indexPath)

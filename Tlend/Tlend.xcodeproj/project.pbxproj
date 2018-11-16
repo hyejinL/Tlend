@@ -26,6 +26,8 @@
 		490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D949D219A796200DAE837 /* SearchResultViewController.swift */; };
 		49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */; };
 		49202C5A219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */; };
+		49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */; };
+		49202C5F219DC4E8005286E2 /* SearchStarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C5E219DC4E8005286E2 /* SearchStarCollectionViewCell.swift */; };
 		499EDC6D2197E85C0088D7A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EDC6C2197E85C0088D7A8 /* AppDelegate.swift */; };
 		499EDC722197E85C0088D7A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC702197E85C0088D7A8 /* Main.storyboard */; };
 		499EDC742197E85D0088D7A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC732197E85D0088D7A8 /* Assets.xcassets */; };
@@ -80,6 +82,8 @@
 		490D949D219A796200DAE837 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStarImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStarImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMyStarViewController.swift; sourceTree = "<group>"; };
+		49202C5E219DC4E8005286E2 /* SearchStarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStarCollectionViewCell.swift; sourceTree = "<group>"; };
 		499EDC692197E85C0088D7A8 /* Tlend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tlend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499EDC6C2197E85C0088D7A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499EDC712197E85C0088D7A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -176,6 +180,15 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		49202C5B219DC4B5005286E2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */,
+				49202C5E219DC4E8005286E2 /* SearchStarCollectionViewCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		499EDC602197E85C0088D7A8 = {
 			isa = PBXGroup;
 			children = (
@@ -251,6 +264,7 @@
 		499EDC822197E8D20088D7A8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				49202C5B219DC4B5005286E2 /* Main */,
 				499EDC8A2197E8FD0088D7A8 /* Home */,
 				499EDC892197E8FC0088D7A8 /* Support */,
 				499EDC882197E8FB0088D7A8 /* Reward */,
@@ -541,8 +555,10 @@
 				499EDC6D2197E85C0088D7A8 /* AppDelegate.swift in Sources */,
 				BA608EFA219DB34F00A3B5F0 /* IdolInfoTableViewCell.swift in Sources */,
 				BA608EEC219DADD700A3B5F0 /* IdolSupportViewController.swift in Sources */,
+				49202C5F219DC4E8005286E2 /* SearchStarCollectionViewCell.swift in Sources */,
 				490D946F2198431300DAE837 /* HomeHotKeywordViewController.swift in Sources */,
 				490D9494219A4ED200DAE837 /* CollectionView+Tlend.swift in Sources */,
+				49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */,
 				490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */,
 				490D9491219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift in Sources */,
 				BA608F03219DC62200A3B5F0 /* IdolMoreViewController.swift in Sources */,
