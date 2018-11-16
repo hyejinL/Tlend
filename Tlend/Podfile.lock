@@ -1,16 +1,24 @@
 PODS:
+  - Kingfisher (4.10.1)
+  - SnapKit (4.2.0)
   - XLPagerTabStrip (8.1.0)
 
 DEPENDENCIES:
+  - Kingfisher
+  - SnapKit
   - XLPagerTabStrip (~> 8.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Kingfisher
+    - SnapKit
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
 
-PODFILE CHECKSUM: beabfe695bdf5a4d6f48f862596fd1d078abbcf8
+PODFILE CHECKSUM: 9bc3f74ade2a967de5a0c16fd34e9f2012026156
 
 COCOAPODS: 1.5.3

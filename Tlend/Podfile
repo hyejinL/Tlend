@@ -7,4 +7,7 @@ target 'Tlend' do
 
   pod 'XLPagerTabStrip', '~> 8.1.0'
 
+  # Pods for Tlend
+  pod 'Kingfisher'
+  pod 'SnapKit'
 end
