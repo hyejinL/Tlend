@@ -8,32 +8,49 @@
 
 import UIKit
 
+protocol HotKeywordDelegate: class {
+    func hotKeywordCellClickAction()
+}
+
 class HotKeywordTableViewCell: UITableViewCell {
     
     @IBOutlet weak var hotKeywordCollectionView: UICollectionView!
     
+    struct Style {
+        static let cellSize: CGSize = CGSize(width: 120, height: 145)
+        static let cellInset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        static let cellSpacing: CGFloat = 15
+    }
+    
+    weak var delegate: HotKeywordDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
         
         self.collectionViewInit()
     }
 }
 
-extension HotKeywordTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HotKeywordTableViewCell: UICollectionViewDelegate {
     private func collectionViewInit() {
         self.hotKeywordCollectionView.delegate = self; self.hotKeywordCollectionView.dataSource = self
         
-        let nib = UINib(nibName: "HotKeywordCollectionViewCell", bundle: nil)
-        self.hotKeywordCollectionView.register(nib, forCellWithReuseIdentifier: "HotKeywordCollectionViewCell")
+        self.hotKeywordCollectionView.register(HotKeywordCollectionViewCell.self)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let action = delegate?.hotKeywordCellClickAction else { return }
+        action()
+    }
+}
+
+extension HotKeywordTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HotKeywordCollectionViewCell", for: indexPath) as? HotKeywordCollectionViewCell else { return UICollectionViewCell() }
+        let cell = collectionView.dequeue(HotKeywordCollectionViewCell.self, for: indexPath)
         
         return cell
     }
@@ -41,17 +58,14 @@ extension HotKeywordTableViewCell: UICollectionViewDelegate, UICollectionViewDat
 
 extension HotKeywordTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size: CGSize = CGSize(width: 120, height: 145)
-        return size
+        return Style.cellSize
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let inset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-        return inset
+        return Style.cellInset
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        let spacing: CGFloat = 15
-        return spacing
+        return Style.cellSpacing
     }
 }

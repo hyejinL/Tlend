@@ -13,7 +13,7 @@ class HotKeywordCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var hotKeywordImageView: UIImageView!
     @IBOutlet weak var hotKeywordTitleLabel: UILabel!
     
-    struct Const {
+    struct Style {
         static let imageShadowOpacity: Float = 0.16
         static let imageShadowSize: CGSize = CGSize(width: 0, height: 3)
         static let imageShadowBlur: CGFloat = 3
@@ -26,9 +26,9 @@ class HotKeywordCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupUI() {
-        self.hotKeywordImageView.makeShadow(opacity: Const.imageShadowOpacity,
-                                            size: Const.imageShadowSize,
-                                            blur: Const.imageShadowBlur)
+        self.hotKeywordImageView.makeShadow(opacity: Style.imageShadowOpacity,
+                                            size: Style.imageShadowSize,
+                                            blur: Style.imageShadowBlur)
     }
 
 }

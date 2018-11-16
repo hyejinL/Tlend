@@ -18,4 +18,9 @@ extension UIViewController {
     func setNavigationLogoTitle() {
         self.navigationItem.titleView = UIImageView(image: #imageLiteral(resourceName: "logo"))
     }
+    
+    func goSearchView() {
+        guard let navigationController = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "SearchNavigation") as? UINavigationController else { return }
+        self.present(navigationController, animated: true, completion: nil)
+    }
 }

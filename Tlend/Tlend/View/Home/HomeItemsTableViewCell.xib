@@ -27,7 +27,7 @@
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="인기 펀딩" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7Y-lH-Wh2">
                         <rect key="frame" x="20" y="11" width="74" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

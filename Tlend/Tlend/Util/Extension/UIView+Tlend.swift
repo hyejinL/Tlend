@@ -35,12 +35,11 @@ extension UIView {
             return UIColor(cgColor: borderColor)
         }
         set {
-            layer.borderColor = borderColor?.cgColor
+            layer.borderColor = newValue?.cgColor
         }
     }
     
     @discardableResult func roundCorner() -> UIView {
-        self.layoutIfNeeded()
         self.cornerRadius = self.frame.width / 2
         return self
     }

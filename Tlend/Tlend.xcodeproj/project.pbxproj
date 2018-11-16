@@ -17,6 +17,17 @@
 		490D9484219971AC00DAE837 /* HotKeywordCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490D9482219971AC00DAE837 /* HotKeywordCollectionViewCell.xib */; };
 		490D9488219981BA00DAE837 /* UIViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D9487219981BA00DAE837 /* UIViewController+NavigationBar.swift */; };
 		490D948A219982FC00DAE837 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D9489219982FC00DAE837 /* UIView+Shadow.swift */; };
+		490D948C21998C6400DAE837 /* HotKeywordHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D948B21998C6400DAE837 /* HotKeywordHeaderTableViewCell.swift */; };
+		490D9491219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D948F219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift */; };
+		490D9492219A4CCA00DAE837 /* HotKeywordListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490D9490219A4CCA00DAE837 /* HotKeywordListTableViewCell.xib */; };
+		490D9494219A4ED200DAE837 /* CollectionView+Tlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D9493219A4ED200DAE837 /* CollectionView+Tlend.swift */; };
+		490D9496219A583700DAE837 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490D9495219A583700DAE837 /* Search.storyboard */; };
+		490D949B219A696100DAE837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D949A219A696100DAE837 /* SearchViewController.swift */; };
+		490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D949D219A796200DAE837 /* SearchResultViewController.swift */; };
+		49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */; };
+		49202C5A219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */; };
+		49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */; };
+		49202C5F219DC4E8005286E2 /* SearchStarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C5E219DC4E8005286E2 /* SearchStarCollectionViewCell.swift */; };
 		499EDC6D2197E85C0088D7A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499EDC6C2197E85C0088D7A8 /* AppDelegate.swift */; };
 		499EDC722197E85C0088D7A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC702197E85C0088D7A8 /* Main.storyboard */; };
 		499EDC742197E85D0088D7A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 499EDC732197E85D0088D7A8 /* Assets.xcassets */; };
@@ -62,6 +73,17 @@
 		490D9482219971AC00DAE837 /* HotKeywordCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotKeywordCollectionViewCell.xib; sourceTree = "<group>"; };
 		490D9487219981BA00DAE837 /* UIViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 		490D9489219982FC00DAE837 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		490D948B21998C6400DAE837 /* HotKeywordHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeywordHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		490D948F219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeywordListTableViewCell.swift; sourceTree = "<group>"; };
+		490D9490219A4CCA00DAE837 /* HotKeywordListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HotKeywordListTableViewCell.xib; sourceTree = "<group>"; };
+		490D9493219A4ED200DAE837 /* CollectionView+Tlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+Tlend.swift"; sourceTree = "<group>"; };
+		490D9495219A583700DAE837 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		490D949A219A696100DAE837 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		490D949D219A796200DAE837 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStarImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStarImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMyStarViewController.swift; sourceTree = "<group>"; };
+		49202C5E219DC4E8005286E2 /* SearchStarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStarCollectionViewCell.swift; sourceTree = "<group>"; };
 		499EDC692197E85C0088D7A8 /* Tlend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tlend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499EDC6C2197E85C0088D7A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		499EDC712197E85C0088D7A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				490D946E2198431300DAE837 /* HomeHotKeywordViewController.swift */,
+				490D948B21998C6400DAE837 /* HotKeywordHeaderTableViewCell.swift */,
 			);
 			path = HotKeyword;
 			sourceTree = "<group>";
@@ -133,8 +156,37 @@
 				490D947E21996F5200DAE837 /* HomeItemsTableViewCell.xib */,
 				490D9481219971AC00DAE837 /* HotKeywordCollectionViewCell.swift */,
 				490D9482219971AC00DAE837 /* HotKeywordCollectionViewCell.xib */,
+				490D948F219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift */,
+				490D9490219A4CCA00DAE837 /* HotKeywordListTableViewCell.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		490D9497219A5B2400DAE837 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				490D949A219A696100DAE837 /* SearchViewController.swift */,
+				490D949D219A796200DAE837 /* SearchResultViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		49202C56219DBE7E005286E2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */,
+				49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		49202C5B219DC4B5005286E2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */,
+				49202C5E219DC4E8005286E2 /* SearchStarCollectionViewCell.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		499EDC602197E85C0088D7A8 = {
@@ -204,6 +256,7 @@
 				499EDC942197ECC20088D7A8 /* More.storyboard */,
 				499EDC752197E85D0088D7A8 /* LaunchScreen.storyboard */,
 				BAFEFEAD2198239F00E39F15 /* Form.storyboard */,
+				490D9495219A583700DAE837 /* Search.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -211,6 +264,7 @@
 		499EDC822197E8D20088D7A8 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				49202C5B219DC4B5005286E2 /* Main */,
 				499EDC8A2197E8FD0088D7A8 /* Home */,
 				499EDC892197E8FC0088D7A8 /* Support */,
 				499EDC882197E8FB0088D7A8 /* Reward */,
@@ -250,6 +304,7 @@
 			children = (
 				490D94712198434C00DAE837 /* Main */,
 				490D94702198434B00DAE837 /* HotKeyword */,
+				490D9497219A5B2400DAE837 /* Search */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -258,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				BA3DF96B2198306600B1D42C /* TableView+Tlend.swift */,
+				490D9493219A4ED200DAE837 /* CollectionView+Tlend.swift */,
 				BA3DF96F2198320F00B1D42C /* UIStoryboard+Tlend.swift */,
 				490D9487219981BA00DAE837 /* UIViewController+NavigationBar.swift */,
 				490D9489219982FC00DAE837 /* UIView+Shadow.swift */,
@@ -287,6 +343,7 @@
 		BA3DF95A2198292200B1D42C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				49202C56219DBE7E005286E2 /* Main */,
 				BA608EED219DAE5300A3B5F0 /* Idol */,
 				490D947821996CD000DAE837 /* Home */,
 				BA3DF95B219829B600B1D42C /* Form */,
@@ -345,7 +402,7 @@
 				499EDC652197E85C0088D7A8 /* Sources */,
 				499EDC662197E85C0088D7A8 /* Frameworks */,
 				499EDC672197E85C0088D7A8 /* Resources */,
-				8E5FAB2802351AFB34C90EFC /* [CP] Embed Pods Frameworks */,
+				4A97F1301AB7A5585B80E2EE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -398,6 +455,7 @@
 				499EDC742197E85D0088D7A8 /* Assets.xcassets in Resources */,
 				BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */,
 				490D948021996F5200DAE837 /* HomeItemsTableViewCell.xib in Resources */,
+				490D9496219A583700DAE837 /* Search.storyboard in Resources */,
 				BA608EF5219DAF5B00A3B5F0 /* IdolItemTableViewCell.xib in Resources */,
 				499EDC952197ECC20088D7A8 /* More.storyboard in Resources */,
 				499EDC722197E85C0088D7A8 /* Main.storyboard in Resources */,
@@ -408,6 +466,8 @@
 				BA608EFB219DB34F00A3B5F0 /* IdolInfoTableViewCell.xib in Resources */,
 				490D947C21996CE900DAE837 /* HotKeywordTableViewCell.xib in Resources */,
 				499EDC932197ECBC0088D7A8 /* Reward.storyboard in Resources */,
+				490D9492219A4CCA00DAE837 /* HotKeywordListTableViewCell.xib in Resources */,
+				49202C5A219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib in Resources */,
 				BA3DF96321982A3D00B1D42C /* FormCheckTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,7 +475,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8E5FAB2802351AFB34C90EFC /* [CP] Embed Pods Frameworks */ = {
+		4A97F1301AB7A5585B80E2EE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,6 +486,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tlend/Pods-Tlend-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -433,6 +494,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -474,13 +536,16 @@
 				490D947F21996F5200DAE837 /* HomeItemsTableViewCell.swift in Sources */,
 				BA608EF7219DB1D000A3B5F0 /* UIColor+Tlend.swift in Sources */,
 				BA3DF96221982A3D00B1D42C /* FormCheckTableViewCell.swift in Sources */,
+				490D949B219A696100DAE837 /* SearchViewController.swift in Sources */,
 				BA3DF96821982C3C00B1D42C /* StartFormViewController.swift in Sources */,
+				490D948C21998C6400DAE837 /* HotKeywordHeaderTableViewCell.swift in Sources */,
 				BA608EFD219DBC6000A3B5F0 /* UIView+Xib.swift in Sources */,
 				490D947B21996CE900DAE837 /* HotKeywordTableViewCell.swift in Sources */,
 				BA3DF96C2198306600B1D42C /* TableView+Tlend.swift in Sources */,
 				490D9488219981BA00DAE837 /* UIViewController+NavigationBar.swift in Sources */,
 				BA3DF972219842E600B1D42C /* StockCategoryViewController.swift in Sources */,
 				BA3DF96A21982CA700B1D42C /* FundingKindViewController.swift in Sources */,
+				49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */,
 				BA608F01219DC3C700A3B5F0 /* IdolRewardViewController.swift in Sources */,
 				490D946D219842BB00DAE837 /* HomeMainViewController.swift in Sources */,
 				BA608EEF219DAE6400A3B5F0 /* IdolHeaderView.swift in Sources */,
@@ -490,7 +555,12 @@
 				499EDC6D2197E85C0088D7A8 /* AppDelegate.swift in Sources */,
 				BA608EFA219DB34F00A3B5F0 /* IdolInfoTableViewCell.swift in Sources */,
 				BA608EEC219DADD700A3B5F0 /* IdolSupportViewController.swift in Sources */,
+				49202C5F219DC4E8005286E2 /* SearchStarCollectionViewCell.swift in Sources */,
 				490D946F2198431300DAE837 /* HomeHotKeywordViewController.swift in Sources */,
+				490D9494219A4ED200DAE837 /* CollectionView+Tlend.swift in Sources */,
+				49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */,
+				490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */,
+				490D9491219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift in Sources */,
 				BA608F03219DC62200A3B5F0 /* IdolMoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,7 +638,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -623,7 +693,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -639,8 +709,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y6J9HAPEME;
 				INFOPLIST_FILE = "$(SRCROOT)/Tlend/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -658,8 +729,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y6J9HAPEME;
 				INFOPLIST_FILE = "$(SRCROOT)/Tlend/SupportingFiles/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

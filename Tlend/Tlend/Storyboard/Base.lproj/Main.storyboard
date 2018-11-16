@@ -1,13 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qVA-2S-jmv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j1U-pL-YUM">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--내새끼 선택-->
+        <scene sceneID="T9a-XN-HRG">
+            <objects>
+                <viewController storyboardIdentifier="SelectedMyStarViewController" id="67i-cb-ihX" customClass="SelectedMyStarViewController" customModule="Tlend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Oqi-uc-foG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EFV-Ke-9tm">
+                                <rect key="frame" x="0.0" y="88" width="375" height="625"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="25" minimumInteritemSpacing="35" id="zWC-7X-6Jy">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="27"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchStarCollectionViewCell" id="C5O-ie-tY9" customClass="SearchStarCollectionViewCell" customModule="Tlend" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eaf-gI-6zC">
+                                                    <rect key="frame" x="330" y="4" width="35" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="35" id="DeN-MK-UqG"/>
+                                                        <constraint firstAttribute="height" constant="42" id="I59-op-qac"/>
+                                                    </constraints>
+                                                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                    <state key="normal" image="icSearchBk"/>
+                                                </button>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="검색어를 입력해주세요" textAlignment="natural" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TUN-4K-7bs">
+                                                    <rect key="frame" x="20" y="0.0" width="296" height="50"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                                </textField>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Eaf-gI-6zC" firstAttribute="leading" secondItem="TUN-4K-7bs" secondAttribute="trailing" constant="14" id="1kb-Xj-EWI"/>
+                                            <constraint firstAttribute="trailing" secondItem="Eaf-gI-6zC" secondAttribute="trailing" constant="10" id="2Ze-wV-RQP"/>
+                                            <constraint firstItem="TUN-4K-7bs" firstAttribute="top" secondItem="C5O-ie-tY9" secondAttribute="top" id="9nJ-oD-IyR"/>
+                                            <constraint firstItem="TUN-4K-7bs" firstAttribute="leading" secondItem="C5O-ie-tY9" secondAttribute="leading" constant="20" id="BAk-v4-jdk"/>
+                                            <constraint firstAttribute="bottom" secondItem="TUN-4K-7bs" secondAttribute="bottom" id="Woc-fF-TCn"/>
+                                            <constraint firstItem="Eaf-gI-6zC" firstAttribute="centerY" secondItem="C5O-ie-tY9" secondAttribute="centerY" id="sDg-8P-ffa"/>
+                                        </constraints>
+                                        <size key="customSize" width="375" height="50"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3J-bK-6wl">
+                                <rect key="frame" x="0.0" y="713" width="375" height="65"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.58039215690000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="JfF-ti-cMY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="시작하기 (0/3)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y3J-bK-6wl" firstAttribute="top" secondItem="EFV-Ke-9tm" secondAttribute="bottom" id="6VH-6G-ii3"/>
+                            <constraint firstItem="Y3J-bK-6wl" firstAttribute="leading" secondItem="JUz-jh-XO2" secondAttribute="leading" id="OPS-hv-HK4"/>
+                            <constraint firstItem="JUz-jh-XO2" firstAttribute="trailing" secondItem="EFV-Ke-9tm" secondAttribute="trailing" id="W2b-wv-Mas"/>
+                            <constraint firstItem="Y3J-bK-6wl" firstAttribute="bottom" secondItem="JUz-jh-XO2" secondAttribute="bottom" id="X5w-R3-fvr"/>
+                            <constraint firstItem="EFV-Ke-9tm" firstAttribute="top" secondItem="JUz-jh-XO2" secondAttribute="top" id="XsV-Es-qfH"/>
+                            <constraint firstItem="EFV-Ke-9tm" firstAttribute="leading" secondItem="JUz-jh-XO2" secondAttribute="leading" id="au5-UJ-OXS"/>
+                            <constraint firstAttribute="bottom" secondItem="Y3J-bK-6wl" secondAttribute="bottom" constant="34" id="c8F-xV-1iP"/>
+                            <constraint firstItem="Y3J-bK-6wl" firstAttribute="trailing" secondItem="JUz-jh-XO2" secondAttribute="trailing" id="raV-V4-Rbf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JUz-jh-XO2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="내새끼 선택" id="w92-MI-dKV"/>
+                    <connections>
+                        <outlet property="selectedMyStarCollectionView" destination="EFV-Ke-9tm" id="178-5p-ib4"/>
+                        <outlet property="startButton" destination="Y3J-bK-6wl" id="qPu-Yi-muW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZh-z2-6eF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183.19999999999999" y="-237.192118226601"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="pVl-4W-IBX">
+            <objects>
+                <viewController id="UWQ-eJ-Fdm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KIn-3E-CnM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SUe-XP-NCl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Io-Iv-7gT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119.2" y="-237.192118226601"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mwf-Rk-AUB">
             <objects>
@@ -28,7 +135,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVT-B5-1zM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135" y="-237"/>
+            <point key="canvasLocation" x="2076" y="-237.192118226601"/>
         </scene>
         <!--Home-->
         <scene sceneID="7qq-3N-0kH">
@@ -48,7 +155,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSf-h0-MLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2435" y="-431"/>
+            <point key="canvasLocation" x="3376" y="-431.5270935960591"/>
         </scene>
         <!--Reward-->
         <scene sceneID="4rF-bZ-z6R">
@@ -58,7 +165,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Fh-WA-pov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2435" y="-134"/>
+            <point key="canvasLocation" x="3376" y="-134.48275862068965"/>
         </scene>
         <!--More-->
         <scene sceneID="gog-T1-g8E">
@@ -70,5 +177,26 @@
             </objects>
             <point key="canvasLocation" x="2436" y="206"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gPF-Og-D4w">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j1U-pL-YUM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WdS-Fi-kOV">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="67i-cb-ihX" kind="relationship" relationship="rootViewController" id="yPn-E6-PcW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzN-Nu-vQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-574" y="-237"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="icSearchBk" width="15" height="15"/>
+    </resources>
 </document>
