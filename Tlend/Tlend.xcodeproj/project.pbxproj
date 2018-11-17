@@ -57,6 +57,9 @@
 		BA608F01219DC3C700A3B5F0 /* IdolRewardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA608F00219DC3C700A3B5F0 /* IdolRewardViewController.swift */; };
 		BA608F03219DC62200A3B5F0 /* IdolMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA608F02219DC62200A3B5F0 /* IdolMoreViewController.swift */; };
 		BA608F05219DC62E00A3B5F0 /* MoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA608F04219DC62E00A3B5F0 /* MoreTableViewCell.swift */; };
+		BA608F07219DCF2900A3B5F0 /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA608F06219DCF2900A3B5F0 /* Sign.storyboard */; };
+		BA608F0A219DD1EC00A3B5F0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA608F09219DD1EC00A3B5F0 /* SignInViewController.swift */; };
+		BA87B9C2219FF73F001E7D16 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9C1219FF73F001E7D16 /* SignUpViewController.swift */; };
 		BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFEFEAD2198239F00E39F15 /* Form.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +118,9 @@
 		BA608F00219DC3C700A3B5F0 /* IdolRewardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolRewardViewController.swift; sourceTree = "<group>"; };
 		BA608F02219DC62200A3B5F0 /* IdolMoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolMoreViewController.swift; sourceTree = "<group>"; };
 		BA608F04219DC62E00A3B5F0 /* MoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreTableViewCell.swift; sourceTree = "<group>"; };
+		BA608F06219DCF2900A3B5F0 /* Sign.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
+		BA608F09219DD1EC00A3B5F0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		BA87B9C1219FF73F001E7D16 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		BAFEFEAD2198239F00E39F15 /* Form.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Form.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +255,7 @@
 		499EDC812197E8CF0088D7A8 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				BA608F06219DCF2900A3B5F0 /* Sign.storyboard */,
 				499EDC702197E85C0088D7A8 /* Main.storyboard */,
 				499EDC8E2197ECA90088D7A8 /* Home.storyboard */,
 				499EDC902197ECB40088D7A8 /* Support.storyboard */,
@@ -265,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				49202C5B219DC4B5005286E2 /* Main */,
+				BA608F08219DD1DA00A3B5F0 /* Sign */,
 				499EDC8A2197E8FD0088D7A8 /* Home */,
 				499EDC892197E8FC0088D7A8 /* Support */,
 				499EDC882197E8FB0088D7A8 /* Reward */,
@@ -383,6 +391,15 @@
 			path = Idol;
 			sourceTree = "<group>";
 		};
+		BA608F08219DD1DA00A3B5F0 /* Sign */ = {
+			isa = PBXGroup;
+			children = (
+				BA608F09219DD1EC00A3B5F0 /* SignInViewController.swift */,
+				BA87B9C1219FF73F001E7D16 /* SignUpViewController.swift */,
+			);
+			path = Sign;
+			sourceTree = "<group>";
+		};
 		D793D4304F4EDC01F698719E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +476,7 @@
 				BA608EF5219DAF5B00A3B5F0 /* IdolItemTableViewCell.xib in Resources */,
 				499EDC952197ECC20088D7A8 /* More.storyboard in Resources */,
 				499EDC722197E85C0088D7A8 /* Main.storyboard in Resources */,
+				BA608F07219DCF2900A3B5F0 /* Sign.storyboard in Resources */,
 				499EDC8F2197ECA90088D7A8 /* Home.storyboard in Resources */,
 				499EDC912197ECB40088D7A8 /* Support.storyboard in Resources */,
 				490D9484219971AC00DAE837 /* HotKeywordCollectionViewCell.xib in Resources */,
@@ -540,6 +558,7 @@
 				BA3DF96821982C3C00B1D42C /* StartFormViewController.swift in Sources */,
 				490D948C21998C6400DAE837 /* HotKeywordHeaderTableViewCell.swift in Sources */,
 				BA608EFD219DBC6000A3B5F0 /* UIView+Xib.swift in Sources */,
+				BA608F0A219DD1EC00A3B5F0 /* SignInViewController.swift in Sources */,
 				490D947B21996CE900DAE837 /* HotKeywordTableViewCell.swift in Sources */,
 				BA3DF96C2198306600B1D42C /* TableView+Tlend.swift in Sources */,
 				490D9488219981BA00DAE837 /* UIViewController+NavigationBar.swift in Sources */,
@@ -561,6 +580,7 @@
 				49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */,
 				490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */,
 				490D9491219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift in Sources */,
+				BA87B9C2219FF73F001E7D16 /* SignUpViewController.swift in Sources */,
 				BA608F03219DC62200A3B5F0 /* IdolMoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
