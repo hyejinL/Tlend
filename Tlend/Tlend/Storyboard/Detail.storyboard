@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f97-Q8-OO8">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Info View Controller-->
+        <scene sceneID="SBk-ar-YkM">
+            <objects>
+                <viewController storyboardIdentifier="DetailInfoViewController" id="f97-Q8-OO8" customClass="DetailInfoViewController" customModule="Tlend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hg6-Vy-1CZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yWv-ii-kxn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="713"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiX-E5-Tf5">
+                                <rect key="frame" x="0.0" y="713" width="375" height="65"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.58039215690000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="trH-6G-Xo5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="펀딩하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yWv-ii-kxn" firstAttribute="leading" secondItem="etm-Ec-0Zv" secondAttribute="leading" id="DJn-t9-a7e"/>
+                            <constraint firstItem="etm-Ec-0Zv" firstAttribute="trailing" secondItem="yWv-ii-kxn" secondAttribute="trailing" id="IJo-ng-iI3"/>
+                            <constraint firstItem="fiX-E5-Tf5" firstAttribute="top" secondItem="yWv-ii-kxn" secondAttribute="bottom" id="TEa-5q-76k"/>
+                            <constraint firstItem="fiX-E5-Tf5" firstAttribute="leading" secondItem="etm-Ec-0Zv" secondAttribute="leading" id="Ytp-5T-8uI"/>
+                            <constraint firstItem="etm-Ec-0Zv" firstAttribute="bottom" secondItem="fiX-E5-Tf5" secondAttribute="bottom" id="c2w-t4-xpU"/>
+                            <constraint firstItem="etm-Ec-0Zv" firstAttribute="trailing" secondItem="fiX-E5-Tf5" secondAttribute="trailing" id="dAX-dp-X7Y"/>
+                            <constraint firstItem="yWv-ii-kxn" firstAttribute="top" secondItem="Hg6-Vy-1CZ" secondAttribute="top" id="qpJ-r6-srb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="etm-Ec-0Zv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lza-HU-2gt"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="detailTableView" destination="yWv-ii-kxn" id="Drr-TX-UF3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XqR-2t-h7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="22.906403940886701"/>
+        </scene>
+    </scenes>
+</document>

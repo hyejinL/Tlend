@@ -10,8 +10,8 @@ import UIKit
 
 class MyStarImageCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var starImageView: UIImageView!
-    @IBOutlet weak var starChoiceImageView: UIView!
+    @IBOutlet weak var starImageView: CircleImageView!
+    @IBOutlet weak var starChoiceImageView: CircleView!
     @IBOutlet weak var starNameLabel: UILabel!
     
     override func awakeFromNib() {

@@ -202,6 +202,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="icSearch" id="iAd-Tf-SM2">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="goSearchViewAction:" destination="1sH-Dx-rEx" id="8xh-0Z-0Pc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

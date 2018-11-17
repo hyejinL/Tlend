@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="135" height="167"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5qu-oB-wj6">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5qu-oB-wj6" customClass="CircleImageView" customModule="Tlend" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="135" height="135"/>
                         <color key="backgroundColor" red="0.96862745098039216" green="0.94509803921568625" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -40,7 +40,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xna-HH-YRm">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xna-HH-YRm" customClass="CircleView" customModule="Tlend" customModuleProvider="target">
                         <rect key="frame" x="1" y="1" width="133" height="133"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="icChoice" translatesAutoresizingMaskIntoConstraints="NO" id="q5N-df-JHI">

@@ -89,6 +89,18 @@ extension IdolSupportViewController: UITableViewDataSource {
 }
 
 extension IdolSupportViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let section = Section(rawValue: indexPath.section) else { return }
+        
+        switch section {
+        case .items:
+            let viewController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(ofType: DetailInfoViewController.self)
+            self.present(viewController, animated: true, completion: nil)
+            
+        default:
+            break
+        }
+    }
 }
 
 extension IdolSupportViewController {
