@@ -10,4 +10,7 @@ target 'Tlend' do
   # Pods for Tlend
   pod 'Kingfisher'
   pod 'SnapKit'
+  
+  pod 'KeychainAccess'
+  pod 'Alamofire'
 end
