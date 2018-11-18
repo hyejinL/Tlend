@@ -23,6 +23,14 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.setupUI()
+    }
+    
+    private func setupUI() {
+        self.setWhiteNavigationBar()
+    }
+    @IBAction func didTapClose(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

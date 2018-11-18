@@ -106,6 +106,10 @@
 		BA87B9CC21A130EF001E7D16 /* TDialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA87B9CB21A130EF001E7D16 /* TDialogView.xib */; };
 		BA87B9D121A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9CF21A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift */; };
 		BA87B9D221A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA87B9D021A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib */; };
+		BA87B9D421A1645B001E7D16 /* AuthAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9D321A1645B001E7D16 /* AuthAdapter.swift */; };
+		BA87B9D621A16878001E7D16 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9D521A16878001E7D16 /* SplashViewController.swift */; };
+		BA87B9DA21A16B05001E7D16 /* SplashCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9D921A16B05001E7D16 /* SplashCollectionViewCell.swift */; };
+		BA87B9DC21A1829B001E7D16 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9DB21A1829B001E7D16 /* LandingViewController.swift */; };
 		BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFEFEAD2198239F00E39F15 /* Form.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -213,6 +217,10 @@
 		BA87B9CB21A130EF001E7D16 /* TDialogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TDialogView.xib; sourceTree = "<group>"; };
 		BA87B9CF21A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolProductHeaderCellTableViewCell.swift; sourceTree = "<group>"; };
 		BA87B9D021A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdolProductHeaderCellTableViewCell.xib; sourceTree = "<group>"; };
+		BA87B9D321A1645B001E7D16 /* AuthAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAdapter.swift; sourceTree = "<group>"; };
+		BA87B9D521A16878001E7D16 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BA87B9D921A16B05001E7D16 /* SplashCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCollectionViewCell.swift; sourceTree = "<group>"; };
+		BA87B9DB21A1829B001E7D16 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		BAFEFEAD2198239F00E39F15 /* Form.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Form.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -462,6 +470,7 @@
 				49FFB9F021A12B7600F40ABC /* AuthService.swift */,
 				49FFB9F421A12D7F00F40ABC /* DecodingService.swift */,
 				49FFB9F221A12CF900F40ABC /* NetworkService.swift */,
+				BA87B9D321A1645B001E7D16 /* AuthAdapter.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -549,6 +558,9 @@
 			children = (
 				BA608F09219DD1EC00A3B5F0 /* SignInViewController.swift */,
 				BA87B9C1219FF73F001E7D16 /* SignUpViewController.swift */,
+				BA87B9D521A16878001E7D16 /* SplashViewController.swift */,
+				BA87B9D921A16B05001E7D16 /* SplashCollectionViewCell.swift */,
+				BA87B9DB21A1829B001E7D16 /* LandingViewController.swift */,
 			);
 			path = Sign;
 			sourceTree = "<group>";
@@ -744,6 +756,7 @@
 				490D948A219982FC00DAE837 /* UIView+Shadow.swift in Sources */,
 				BA3DF9702198320F00B1D42C /* UIStoryboard+Tlend.swift in Sources */,
 				49A760CC219F24E70007DB48 /* FundingInfoTableViewCell.swift in Sources */,
+				BA87B9DA21A16B05001E7D16 /* SplashCollectionViewCell.swift in Sources */,
 				49FFB9E921A0756B00F40ABC /* SelectedOptionTableViewCell.swift in Sources */,
 				49FFB9E721A0755A00F40ABC /* OptionTableViewCell.swift in Sources */,
 				49A760BE219EC2950007DB48 /* CircleView.swift in Sources */,
@@ -758,6 +771,8 @@
 				49FFB9E521A0755000F40ABC /* ChoiceOptionTableViewCell.swift in Sources */,
 				BA3DF96221982A3D00B1D42C /* FormCheckTableViewCell.swift in Sources */,
 				490D949B219A696100DAE837 /* SearchViewController.swift in Sources */,
+				BA87B9DC21A1829B001E7D16 /* LandingViewController.swift in Sources */,
+				BA87B9D621A16878001E7D16 /* SplashViewController.swift in Sources */,
 				BA3DF96821982C3C00B1D42C /* StartFormViewController.swift in Sources */,
 				4942C0B9219F2C0C00A431A6 /* DetailInfoViewController.swift in Sources */,
 				49A760AC219E92440007DB48 /* PopularContentsTableViewCell.swift in Sources */,
@@ -802,6 +817,7 @@
 				BA87B9C2219FF73F001E7D16 /* SignUpViewController.swift in Sources */,
 				BA608F03219DC62200A3B5F0 /* IdolMoreViewController.swift in Sources */,
 				49A760BA219EBD2A0007DB48 /* MyStarFeedTableViewCell.swift in Sources */,
+				BA87B9D421A1645B001E7D16 /* AuthAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

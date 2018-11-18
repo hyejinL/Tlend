@@ -23,6 +23,15 @@ class SignInViewController: UIViewController {
     private func setupUI() {
         setWhiteNavigationBar()
     }
+    
+    @IBAction func didTapClose(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func touchUpSignUp(_ sender: Any) {
+        let vc = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(ofType: SignUpViewController.self)
+        let navi = UINavigationController(rootViewController: vc)
+        self.present(navi, animated: true, completion: nil)
+    }
 }
 
 extension SignInViewController: UITextFieldDelegate {
