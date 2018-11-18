@@ -48,8 +48,12 @@ class ChoiceFundingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.optionTableViewAnimation(.start)
+        CATransaction.begin()
+        CATransaction.setCompletionBlock({
+            self.optionTableViewAnimation(.start)
+        })
+        optionChoiceTableView.reloadData()
+        CATransaction.commit()
     }
     
     @IBAction func tapBackgroundView(_ sender: Any) {
