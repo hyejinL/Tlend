@@ -100,6 +100,8 @@
 		BA87B9C521A12DD7001E7D16 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9C421A12DD7001E7D16 /* DialogViewController.swift */; };
 		BA87B9CA21A130DF001E7D16 /* TDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9C921A130DF001E7D16 /* TDialogView.swift */; };
 		BA87B9CC21A130EF001E7D16 /* TDialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA87B9CB21A130EF001E7D16 /* TDialogView.xib */; };
+		BA87B9D121A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9CF21A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift */; };
+		BA87B9D221A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA87B9D021A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib */; };
 		BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFEFEAD2198239F00E39F15 /* Form.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -201,6 +203,8 @@
 		BA87B9C421A12DD7001E7D16 /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
 		BA87B9C921A130DF001E7D16 /* TDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDialogView.swift; sourceTree = "<group>"; };
 		BA87B9CB21A130EF001E7D16 /* TDialogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TDialogView.xib; sourceTree = "<group>"; };
+		BA87B9CF21A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolProductHeaderCellTableViewCell.swift; sourceTree = "<group>"; };
+		BA87B9D021A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdolProductHeaderCellTableViewCell.xib; sourceTree = "<group>"; };
 		BAFEFEAD2198239F00E39F15 /* Form.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Form.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -522,6 +526,8 @@
 				BA608EF4219DAF5B00A3B5F0 /* IdolItemTableViewCell.xib */,
 				BA608EF8219DB34F00A3B5F0 /* IdolInfoTableViewCell.swift */,
 				BA608EF9219DB34F00A3B5F0 /* IdolInfoTableViewCell.xib */,
+				BA87B9CF21A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift */,
+				BA87B9D021A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib */,
 			);
 			path = Idol;
 			sourceTree = "<group>";
@@ -628,6 +634,7 @@
 				49A760C0219F1E240007DB48 /* Detail.storyboard in Resources */,
 				49A760C5219F20A90007DB48 /* DetailHeaderTableViewCell.xib in Resources */,
 				499EDC742197E85D0088D7A8 /* Assets.xcassets in Resources */,
+				BA87B9D221A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib in Resources */,
 				4942C0BD219F2CA800A431A6 /* DetailHeaderImageCollectionViewCell.xib in Resources */,
 				49A760B7219EB7730007DB48 /* MyStarMemberListTableViewCell.xib in Resources */,
 				BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */,
@@ -765,6 +772,7 @@
 				490D946F2198431300DAE837 /* HomeHotKeywordViewController.swift in Sources */,
 				490D9494219A4ED200DAE837 /* CollectionView+Tlend.swift in Sources */,
 				49A760C4219F20A90007DB48 /* DetailHeaderTableViewCell.swift in Sources */,
+				BA87B9D121A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift in Sources */,
 				49A760B0219E96E50007DB48 /* MyStarHomeFooterTableViewCell.swift in Sources */,
 				49A760D0219F28890007DB48 /* InfoMenuHeaderView.swift in Sources */,
 				49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */,
