@@ -40,7 +40,7 @@ extension UIView {
     }
     
     @discardableResult func roundCorner() -> UIView {
-        self.cornerRadius = self.frame.width / 2
+        self.cornerRadius = self.bounds.size.width / 2
         return self
     }
 }

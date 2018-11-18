@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,6 +65,7 @@
                     <constraint firstItem="Hhi-Xo-sAY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RGe-LY-lG7" secondAttribute="trailing" constant="12" id="PM0-Ga-5GF"/>
                     <constraint firstItem="RGe-LY-lG7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="Pgq-od-ChM"/>
                     <constraint firstItem="gfX-y6-XHu" firstAttribute="top" secondItem="RGe-LY-lG7" secondAttribute="bottom" constant="4" id="Xip-BM-YNc"/>
+                    <constraint firstAttribute="bottom" secondItem="gfX-y6-XHu" secondAttribute="bottom" priority="999" constant="20" id="fKV-4I-Tsd"/>
                     <constraint firstItem="gfX-y6-XHu" firstAttribute="leading" secondItem="RGe-LY-lG7" secondAttribute="leading" id="fV7-D5-jzf"/>
                     <constraint firstItem="RGe-LY-lG7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="g75-Y3-3zD"/>
                     <constraint firstAttribute="trailing" secondItem="RWK-1Z-RAP" secondAttribute="trailing" id="lWo-pg-aQf"/>
@@ -74,6 +76,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bottomView" destination="RWK-1Z-RAP" id="J7Q-1a-1SB"/>
                 <outlet property="companyLabel" destination="gfX-y6-XHu" id="KYX-Nq-L2D"/>
                 <outlet property="likeButton" destination="gfD-KD-ksj" id="0Wb-XC-KMG"/>
                 <outlet property="likeCountLabel" destination="NFK-J1-h15" id="6Lm-NG-R3r"/>

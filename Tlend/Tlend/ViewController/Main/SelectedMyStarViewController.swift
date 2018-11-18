@@ -55,8 +55,7 @@ class SelectedMyStarViewController: UIViewController {
             self.startButton.backgroundColor = #colorLiteral(red: 0.8823529412, green: 0.8823529412, blue: 0.8823529412, alpha: 1)
         }
         
-        self.startButton.titleLabel?.text = "시작하기 (\(count)/3)"
-        print(count)
+        self.startButton.setTitle("시작하기 (\(count)/3)", for: .normal)
     }
 }
 

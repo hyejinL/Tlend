@@ -10,45 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home Main View Controller-->
-        <scene sceneID="SHZ-nx-GEy">
-            <objects>
-                <viewController storyboardIdentifier="HomeMainViewController" id="RGN-cP-aVg" customClass="HomeMainViewController" customModule="Tlend" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vdg-dh-Wu5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Avx-Ml-Yzv">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Avx-Ml-Yzv" firstAttribute="top" secondItem="Xql-kj-fmh" secondAttribute="top" id="7cb-rv-ctg"/>
-                            <constraint firstItem="Xql-kj-fmh" firstAttribute="trailing" secondItem="Avx-Ml-Yzv" secondAttribute="trailing" id="YXP-vs-YfO"/>
-                            <constraint firstItem="Avx-Ml-Yzv" firstAttribute="leading" secondItem="Xql-kj-fmh" secondAttribute="leading" id="ivA-V5-MCQ"/>
-                            <constraint firstItem="Xql-kj-fmh" firstAttribute="bottom" secondItem="Avx-Ml-Yzv" secondAttribute="bottom" id="n43-LF-2uR"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Xql-kj-fmh"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="USY-2Y-pTr">
-                        <barButtonItem key="backBarButtonItem" title=" " id="jpQ-Qg-Lgc"/>
-                        <barButtonItem key="rightBarButtonItem" image="icSearch" id="lxw-1d-U6S">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="goSearchViewAction:" destination="RGN-cP-aVg" id="ca0-ak-U2j"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="homeMainTableView" destination="Avx-Ml-Yzv" id="sPg-sf-XGN"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jlx-J8-hWX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1016.8" y="98.275862068965523"/>
-        </scene>
         <!--홈-->
         <scene sceneID="Kxc-TR-gX9">
             <objects>
@@ -64,7 +25,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="RGN-cP-aVg" kind="relationship" relationship="rootViewController" id="xAE-ia-Bs9"/>
+                        <segue destination="1sH-Dx-rEx" kind="relationship" relationship="rootViewController" id="wc2-Ql-zk7"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ci0-u7-Mg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,8 +174,50 @@
             </objects>
             <point key="canvasLocation" x="1760.8" y="97.536945812807886"/>
         </scene>
+        <!--Home Main View Controller-->
+        <scene sceneID="iRw-N8-4MW">
+            <objects>
+                <viewController storyboardIdentifier="HomeMainViewController" id="1sH-Dx-rEx" customClass="HomeMainViewController" customModule="Tlend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Hr-9q-3pf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ALO-s1-g8E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ALO-s1-g8E" firstAttribute="trailing" secondItem="kWY-wl-sMf" secondAttribute="trailing" id="Hns-ze-Ybi"/>
+                            <constraint firstItem="ALO-s1-g8E" firstAttribute="leading" secondItem="kWY-wl-sMf" secondAttribute="leading" id="IUx-uB-CqW"/>
+                            <constraint firstItem="kWY-wl-sMf" firstAttribute="bottom" secondItem="ALO-s1-g8E" secondAttribute="bottom" id="n3r-77-6bO"/>
+                            <constraint firstItem="ALO-s1-g8E" firstAttribute="top" secondItem="7Hr-9q-3pf" secondAttribute="top" id="wby-7s-IDb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kWY-wl-sMf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QCY-mf-RHn">
+                        <barButtonItem key="leftBarButtonItem" image="icClose" id="yKB-QP-W9V">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="icSearch" id="iAd-Tf-SM2">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="goSearchViewAction:" destination="1sH-Dx-rEx" id="8xh-0Z-0Pc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="homeMainTableView" destination="ALO-s1-g8E" id="ekD-aL-w6G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X0z-de-gAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="98"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="icClose" width="14" height="14"/>
         <image name="icHome" width="24" height="24"/>
         <image name="icSearch" width="15" height="15"/>
     </resources>

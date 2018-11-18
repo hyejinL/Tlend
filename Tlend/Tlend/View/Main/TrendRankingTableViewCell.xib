@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="KGk-i7-Jjw" customClass="TrendRankingTableViewCell" customModule="Tlend" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="341" height="69.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjS-Y3-pRz">
+                        <rect key="frame" x="35" y="23" width="9" height="22.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ous-5a-hnA">
+                        <rect key="frame" x="25" y="68.5" width="316" height="1"/>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="PcE-oo-uvJ"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtR-9t-hul">
+                        <rect key="frame" x="76" y="25.5" width="39" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⁃" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKZ-DU-z2U">
+                        <rect key="frame" x="125" y="24" width="8" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dtR-9t-hul" firstAttribute="leading" secondItem="BjS-Y3-pRz" secondAttribute="trailing" constant="32" id="6Jr-Nz-TMO"/>
+                    <constraint firstAttribute="trailing" secondItem="ous-5a-hnA" secondAttribute="trailing" id="ASm-c0-NML"/>
+                    <constraint firstItem="ous-5a-hnA" firstAttribute="top" secondItem="BjS-Y3-pRz" secondAttribute="bottom" constant="23" id="Fwu-t1-bek"/>
+                    <constraint firstItem="dtR-9t-hul" firstAttribute="centerY" secondItem="BjS-Y3-pRz" secondAttribute="centerY" id="Jpy-rC-Fue"/>
+                    <constraint firstItem="BjS-Y3-pRz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="P3U-Uo-4vw"/>
+                    <constraint firstItem="BjS-Y3-pRz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="W0O-L1-ifp"/>
+                    <constraint firstItem="yKZ-DU-z2U" firstAttribute="leading" secondItem="dtR-9t-hul" secondAttribute="trailing" constant="10" id="aGC-2E-Ylp"/>
+                    <constraint firstAttribute="bottom" secondItem="ous-5a-hnA" secondAttribute="bottom" id="haG-nu-AHv"/>
+                    <constraint firstItem="yKZ-DU-z2U" firstAttribute="centerY" secondItem="dtR-9t-hul" secondAttribute="centerY" id="q4v-Cm-Wz2"/>
+                    <constraint firstItem="ous-5a-hnA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="ywQ-uz-q3i"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bottomView" destination="ous-5a-hnA" id="qYo-vf-T8F"/>
+                <outlet property="changeRankingViewLabel" destination="yKZ-DU-z2U" id="EhX-2Y-hWA"/>
+                <outlet property="trendRankingLabel" destination="BjS-Y3-pRz" id="JdR-6a-lsa"/>
+                <outlet property="trendStarLabel" destination="dtR-9t-hul" id="SYj-hp-QbV"/>
+            </connections>
+            <point key="canvasLocation" x="53.600000000000001" y="48.575712143928037"/>
+        </tableViewCell>
+    </objects>
+</document>

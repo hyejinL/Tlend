@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="aQU-Mu-6UV" customClass="InfoMenuHeaderView" customModule="Tlend" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6kB-8e-wN4">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gFK-hL-grd">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="48"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmd-gy-GJ2">
+                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="45"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="상세정보">
+                                        <color key="titleColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <state key="selected">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="pressedDetailInfoAction:" destination="aQU-Mu-6UV" eventType="touchUpInside" id="t7U-6x-r2g"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EeC-T1-Cve">
+                                    <rect key="frame" x="0.0" y="45" width="187.5" height="3"/>
+                                    <color key="backgroundColor" red="0.75294117650000003" green="0.58039215690000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="3" id="IA7-jt-t3K"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6qd-G4-ezg">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="48"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3GL-Ue-lOK">
+                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="45"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="기본정보">
+                                        <color key="titleColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <state key="selected">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="pressedInfoAction:" destination="aQU-Mu-6UV" eventType="touchUpInside" id="Mf2-7G-L6Q"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Vd-J2-8Qp">
+                                    <rect key="frame" x="0.0" y="45" width="187.5" height="3"/>
+                                    <color key="backgroundColor" red="0.75294117650000003" green="0.58039215690000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="3" id="nQb-kZ-Rxt"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47.5" id="mgR-5Q-bqd"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ENt-aC-wWk">
+                    <rect key="frame" x="0.0" y="47" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.92156862750000001" green="0.92156862750000001" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="0m9-45-4vo"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="6kB-8e-wN4" firstAttribute="top" secondItem="Ebu-Uc-bAm" secondAttribute="top" id="5H2-lK-c4w"/>
+                <constraint firstItem="6kB-8e-wN4" firstAttribute="leading" secondItem="Ebu-Uc-bAm" secondAttribute="leading" id="KzS-st-gsf"/>
+                <constraint firstItem="ENt-aC-wWk" firstAttribute="bottom" secondItem="Ebu-Uc-bAm" secondAttribute="bottom" id="OcG-SD-QBn"/>
+                <constraint firstItem="ENt-aC-wWk" firstAttribute="leading" secondItem="aQU-Mu-6UV" secondAttribute="leading" id="TGl-Rt-Vyh"/>
+                <constraint firstAttribute="trailing" secondItem="ENt-aC-wWk" secondAttribute="trailing" id="YNN-FW-9iE"/>
+                <constraint firstItem="6kB-8e-wN4" firstAttribute="trailing" secondItem="Ebu-Uc-bAm" secondAttribute="trailing" id="dSk-pK-4uQ"/>
+                <constraint firstItem="Ebu-Uc-bAm" firstAttribute="bottom" secondItem="6kB-8e-wN4" secondAttribute="bottom" id="fs2-0o-hmc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Ebu-Uc-bAm"/>
+            <connections>
+                <outlet property="detailInfoBottomView" destination="EeC-T1-Cve" id="iwz-Da-6Ea"/>
+                <outlet property="detailInfoButton" destination="bmd-gy-GJ2" id="tii-i6-VJt"/>
+                <outlet property="infoBottomView" destination="8Vd-J2-8Qp" id="aHR-pt-GMf"/>
+                <outlet property="infoButton" destination="3GL-Ue-lOK" id="0aj-4Z-35S"/>
+            </connections>
+            <point key="canvasLocation" x="728.79999999999995" y="-226.6866566716642"/>
+        </view>
+    </objects>
+</document>
