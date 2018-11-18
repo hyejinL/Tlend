@@ -12,6 +12,9 @@ class MyStarListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var myStarListCollectionView: UICollectionView!
     
+    public var sendDelegate: SendDataViewControllerDelegate?
+    public var myBabies: [Idol] = []
+    
     struct Style {
         static let widthRatio: CGFloat = UIScreen.main.bounds.width/375
         
@@ -31,6 +34,11 @@ class MyStarListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    public func configure(_ data: [Idol]) {
+        self.myBabies = data
+        self.myStarListCollectionView.reloadData()
+    }
+    
 }
 
 extension MyStarListTableViewCell: UICollectionViewDelegate {
@@ -39,15 +47,20 @@ extension MyStarListTableViewCell: UICollectionViewDelegate {
         
         self.myStarListCollectionView.register(MyStarImageCollectionViewCell.self)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        sendDelegate?.sendData(data: Int.self, myBabies[indexPath.row].idolIdx)
+    }
 }
 
 extension MyStarListTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return myBabies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(MyStarImageCollectionViewCell.self, for: indexPath)
+        cell.configure(type: .idol, idol: myBabies[indexPath.row])
         return cell
     }
 }

@@ -16,6 +16,15 @@ class TrendRankingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var bottomView: UIView!
     
+    var starIdx: Int?
+    var popularType: [PopularType] = [.up, .up, .line, .up, .line, .line, .line]
+    
+    enum PopularType: String {
+        case up = "▴"
+        case line = "-"
+        case down = "▾"
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +34,12 @@ class TrendRankingTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    public func configure(_ data: Idol, index: Int) {
+        self.starIdx = data.idolIdx
+        self.trendStarLabel.text = data.idolName
+        self.changeRankingViewLabel.text = popularType[index].rawValue
     }
     
 }

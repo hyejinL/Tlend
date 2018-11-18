@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MyStarImageCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var starImageView: CircleImageView!
     @IBOutlet weak var starChoiceImageView: CircleView!
     @IBOutlet weak var starNameLabel: UILabel!
+    
+    var starIdx: Int?
+    
+    enum DataType {
+        case idol
+        case member
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,12 +30,25 @@ class MyStarImageCollectionViewCell: UICollectionViewCell {
     
     private func setupUI() {
         self.starImageView.layoutIfNeeded()
-//        self.starImageView.roundCorner()
-//        self.starChoiceImageView.roundCorner()
         
         self.starChoiceImageView.alpha = 0
         
         self.starNameLabel.text = "블랙핑크"
+    }
+    
+    public func configure(type: DataType,
+                          idol: Idol? = nil,
+                          member: IdolMember? = nil) {
+        switch type {
+        case .idol:
+            self.starIdx = idol?.idolIdx
+            self.starNameLabel.text = idol?.idolName
+            self.starImageView.kf.setImage(with: URL(string: idol?.imageKey ?? ""))
+        case .member:
+            self.starIdx = member?.memberIdx
+            self.starNameLabel.text = member?.memberName
+            self.starImageView.kf.setImage(with: URL(string: member?.memberImgKey ?? ""))
+        }
     }
     
     public func selectedCell() {

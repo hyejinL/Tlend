@@ -19,13 +19,21 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WfB-hq-2e5">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1li-rI-TQ4">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1li-rI-TQ4" secondAttribute="trailing" id="O0t-ZE-T5k"/>
                 <constraint firstItem="WfB-hq-2e5" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="XUb-Yj-har"/>
+                <constraint firstItem="1li-rI-TQ4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Yxl-VS-TjN"/>
                 <constraint firstItem="WfB-hq-2e5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="g5R-oO-RZC"/>
                 <constraint firstItem="WfB-hq-2e5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jXT-nc-4Eu"/>
                 <constraint firstItem="WfB-hq-2e5" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="lOE-hR-nmR"/>
+                <constraint firstItem="1li-rI-TQ4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uWv-M6-pAZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1li-rI-TQ4" secondAttribute="bottom" id="zNQ-yz-jvd"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

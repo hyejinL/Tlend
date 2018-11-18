@@ -47,6 +47,7 @@ extension DetailInfoViewController: SendDataViewControllerDelegate {
             self.buttonType = data
             
             self.detailTableView.beginUpdates()
+            self.detailTableView.reloadRows(at: [.init(row: 0, section: Section.Info.rawValue)], with: .none)
             self.detailTableView.endUpdates()
             self.detailTableView.layer.removeAllAnimations()
         }

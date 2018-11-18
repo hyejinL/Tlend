@@ -39,18 +39,18 @@
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Hhi-Xo-sAY">
-                        <rect key="frame" x="242" y="27" width="54" height="15"/>
+                        <rect key="frame" x="250.5" y="27" width="45.5" height="15"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfD-KD-ksj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfD-KD-ksj">
                                 <rect key="frame" x="0.0" y="0.0" width="17" height="15"/>
-                                <color key="backgroundColor" red="0.75294117650000003" green="0.58039215690000001" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="9D6-18-ZEb"/>
                                     <constraint firstAttribute="width" constant="17" id="eQc-jP-QuP"/>
                                 </constraints>
+                                <state key="normal" image="icLike"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFK-J1-h15">
-                                <rect key="frame" x="23" y="0.0" width="31" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.1k" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFK-J1-h15">
+                                <rect key="frame" x="23" y="0.0" width="22.5" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -85,4 +85,7 @@
             <point key="canvasLocation" x="137.59999999999999" y="179.46026986506749"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="icLike" width="17" height="15"/>
+    </resources>
 </document>

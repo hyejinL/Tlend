@@ -12,6 +12,8 @@ class MyStarMemberListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var myStarListCollectionView: UICollectionView!
     
+    private var member: [IdolMember] = []
+    
     struct Style {
         static let widthRatio: CGFloat = UIScreen.main.bounds.width/375
         
@@ -31,6 +33,11 @@ class MyStarMemberListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    public func configure(_ data: [IdolMember]) {
+        self.member = data
+        self.myStarListCollectionView.reloadData()
+    }
+    
 }
 
 extension MyStarMemberListTableViewCell: UICollectionViewDelegate {
@@ -43,11 +50,12 @@ extension MyStarMemberListTableViewCell: UICollectionViewDelegate {
 
 extension MyStarMemberListTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return self.member.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeue(MyStarImageCollectionViewCell.self, for: indexPath)
+        cell.configure(type: .member, member: self.member[indexPath.row])
         return cell
     }
 }

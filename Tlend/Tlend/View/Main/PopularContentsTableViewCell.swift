@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PopularContentsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var popularContentsImageView: UIImageView!
     @IBOutlet weak var popularContentsTitleLabel: UILabel!
+    
+    var mediaIdx: Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +25,12 @@ class PopularContentsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    public func configure(_ data: Media) {
+        self.mediaIdx = data.mediaIdx
+        self.popularContentsImageView.kf.setImage(with: URL(string: data.imageKey))
+        self.popularContentsTitleLabel.text = data.mediaTitle
     }
     
 }

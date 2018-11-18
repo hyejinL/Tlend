@@ -20,4 +20,9 @@ class IdolInfoTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    public func configure(_ data: Idol) {
+        self.titleLabel.text = data.idolName
+        self.companyLabel.text = data.idolCompany
+    }
 }

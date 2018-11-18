@@ -15,6 +15,10 @@ class IdolHeaderView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.idolImageView.kf.setImage(with: URL(string:"https://www.grammy.com/sites/com/files/styles/news_detail_header/public/gettyimages-877192122.jpg?itok=gW_QMOgT"))
     }
+    
+    public func configure(_ imageURL: String) {
+        self.idolImageView.kf.setImage(with: URL(string: imageURL))
+    }
+    
 }

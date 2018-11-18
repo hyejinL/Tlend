@@ -12,10 +12,28 @@ class MyStarHomeViewController: UIViewController {
 
     @IBOutlet weak var myStarTableView: UITableView!
     
+    private var myBabies: [Idol] = []
+    private var idolRanking: [Idol] = []
+    private var media: [Media] = []
+    
+    struct Const {
+        static let headerString: [String] = ["내새끼", "실시간 트랜드 랭킹", "인기 컨텐츠"]
+    }
+    
     enum Section: Int, CaseIterable {
         case MyStarList
         case TrendRaking
         case PopularContents
+        
+        var headerFooterCount: Int {
+            switch self {
+            case .MyStarList,
+                 .TrendRaking:
+                return 2
+            case .PopularContents:
+                return 1
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -23,10 +41,43 @@ class MyStarHomeViewController: UIViewController {
 
         self.setupUI()
         self.tableViewInit()
+        
+        self.setupData()
     }
 
     private func setupUI() {
         setNavigationLogoTitle()
+    }
+    
+    private func setupData() {
+        HomeService.shared.getHomeData { [weak self] (result) in
+            switch result {
+            case .success(let data):
+                self?.myBabies = data.mybaby
+                self?.idolRanking = data.idolName
+                self?.media = data.media
+                self?.myStarTableView.reloadData()
+            case .error(let err):
+                print(err.localizedDescription)
+            }
+            
+        }
+    }
+    
+    private func goMainTabbar(_ starIdx: Int) {
+        let tabbarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController")
+        guard let navigationController = tabbarController.children.first as? UINavigationController,
+        let viewController = navigationController.viewControllers.first as? HomeMainViewController else { return }
+        viewController.starIdx = starIdx
+        self.present(tabbarController, animated: true, completion: nil)
+    }
+}
+
+extension MyStarHomeViewController: SendDataViewControllerDelegate {
+    func sendData<T>(data type: T.Type, _ data: T) {
+        if let data = data as? Int {
+            self.goMainTabbar(data)
+        }
     }
 }
 
@@ -46,9 +97,8 @@ extension MyStarHomeViewController: UITableViewDelegate {
         
         switch section {
         case .TrendRaking:
-            let tabbarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController")
-            self.present(tabbarController, animated: true, completion: nil)
-            
+            guard indexPath.row > 0 else { return }
+            self.goMainTabbar(self.idolRanking[indexPath.row - 1].idolIdx)
         default:
             break
         }
@@ -65,11 +115,11 @@ extension MyStarHomeViewController: UITableViewDataSource {
         
         switch section {
         case .MyStarList:
-            return 3
+            return 1 + section.headerFooterCount
         case .TrendRaking:
-            return 5
+            return self.idolRanking.count + section.headerFooterCount
         case .PopularContents:
-            return 4
+            return self.media.count + section.headerFooterCount
         }
     }
     
@@ -78,7 +128,7 @@ extension MyStarHomeViewController: UITableViewDataSource {
         
         guard indexPath.row != 0 else {
             let cell = tableView.dequeue(MyStarHomeTitleTableViewCell.self, for: indexPath)
-            cell.titleLabel.text = "내새끼"
+            cell.titleLabel.text = Const.headerString[indexPath.section]
             return cell
         }
         
@@ -91,9 +141,14 @@ extension MyStarHomeViewController: UITableViewDataSource {
         switch section {
         case .MyStarList:
             let cell = tableView.dequeue(MyStarListTableViewCell.self, for: indexPath)
+            cell.sendDelegate = self
+            cell.configure(self.myBabies)
             return cell
         case .TrendRaking:
+            guard self.idolRanking.count > indexPath.row - 1 else { return UITableViewCell() }
             let cell = tableView.dequeue(TrendRankingTableViewCell.self, for: indexPath)
+            cell.trendRankingLabel.text = "\(indexPath.row)"
+            cell.configure(self.idolRanking[indexPath.row - 1], index: indexPath.row - 1)
             
             if indexPath.row == 3 {
                 cell.bottomView.isHidden = true
@@ -101,8 +156,9 @@ extension MyStarHomeViewController: UITableViewDataSource {
             
             return cell
         case .PopularContents:
+            guard self.media.count > indexPath.row - 1 else { return UITableViewCell() }
             let cell = tableView.dequeue(PopularContentsTableViewCell.self, for: indexPath)
-            cell.popularContentsTitleLabel.text = "BTS가 빌보드를 뒤집어 놓으셨다!"
+            cell.configure(self.media[indexPath.row - 1])
             return cell
         }
     }

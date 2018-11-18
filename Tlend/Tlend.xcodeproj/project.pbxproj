@@ -24,6 +24,8 @@
 		490D9496219A583700DAE837 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490D9495219A583700DAE837 /* Search.storyboard */; };
 		490D949B219A696100DAE837 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D949A219A696100DAE837 /* SearchViewController.swift */; };
 		490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D949D219A796200DAE837 /* SearchResultViewController.swift */; };
+		491DBDC421A1D5A600D12EC0 /* IdolHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDC321A1D5A600D12EC0 /* IdolHome.swift */; };
+		491DBDC621A1D5D100D12EC0 /* Idol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDC521A1D5D100D12EC0 /* Idol.swift */; };
 		49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */; };
 		49202C5A219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */; };
 		49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */; };
@@ -136,6 +138,8 @@
 		490D9495219A583700DAE837 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		490D949A219A696100DAE837 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		490D949D219A796200DAE837 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		491DBDC321A1D5A600D12EC0 /* IdolHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolHome.swift; sourceTree = "<group>"; };
+		491DBDC521A1D5D100D12EC0 /* Idol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idol.swift; sourceTree = "<group>"; };
 		49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStarImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStarImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMyStarViewController.swift; sourceTree = "<group>"; };
@@ -375,6 +379,8 @@
 			children = (
 				49FFB9F821A190A400F40ABC /* DataModel.swift */,
 				49FFB9F621A18ECC00F40ABC /* Home.swift */,
+				491DBDC521A1D5D100D12EC0 /* Idol.swift */,
+				491DBDC321A1D5A600D12EC0 /* IdolHome.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -797,6 +803,7 @@
 				490D9488219981BA00DAE837 /* UIViewController+NavigationBar.swift in Sources */,
 				BA3DF972219842E600B1D42C /* StockCategoryViewController.swift in Sources */,
 				BA3DF96A21982CA700B1D42C /* FundingKindViewController.swift in Sources */,
+				491DBDC621A1D5D100D12EC0 /* Idol.swift in Sources */,
 				49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */,
 				BA608F01219DC3C700A3B5F0 /* IdolRewardViewController.swift in Sources */,
 				49202C69219E8DFE005286E2 /* MyStarListTableViewCell.swift in Sources */,
@@ -823,6 +830,7 @@
 				49A760D0219F28890007DB48 /* InfoMenuHeaderView.swift in Sources */,
 				49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */,
 				490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */,
+				491DBDC421A1D5A600D12EC0 /* IdolHome.swift in Sources */,
 				490D9491219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift in Sources */,
 				49FFB9E321A0749400F40ABC /* ChoiceFundingViewController.swift in Sources */,
 				BA87B9C2219FF73F001E7D16 /* SignUpViewController.swift in Sources */,

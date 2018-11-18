@@ -12,14 +12,25 @@ struct HomeService: APIService, DecodingService {
     static let shared = HomeService()
     
     public func getHomeData(completion: @escaping (Result<Home>) -> Void) {
-        let params = [
+        let header = [
             "user_idx" : "10"
         ]
         
-        NetworkService.shared.request(url("home"), headers: params) { (result) in
+        NetworkService.shared.request(url("home"), headers: header) { (result) in
             switch result {
             case .success(let data):
                 completion(self.decodeJSONData(Home.self, data: data))
+            case .error(let err):
+                completion(.error(err))
+            }
+        }
+    }
+    
+    public func getIdolHomeData(_ starIdx: Int, completion: @escaping (Result<IdolHome>) -> Void) {
+        NetworkService.shared.request(url("idol/\(starIdx)/home")) { (result) in
+            switch result {
+            case .success(let data):
+                completion(self.decodeJSONData(IdolHome.self, data: data))
             case .error(let err):
                 completion(.error(err))
             }

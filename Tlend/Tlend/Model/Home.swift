@@ -9,8 +9,8 @@
 import Foundation
 
 struct Home: Codable {
-    let mybaby: [String]
-    let idolName: [IdolName]
+    let mybaby: [Idol]
+    let idolName: [Idol]
     let media: [Media]
     
     enum CodingKeys: String, CodingKey {

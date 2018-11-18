@@ -12,7 +12,12 @@ class HomeMainViewController: UIViewController {
     
     @IBOutlet weak var homeMainTableView: UITableView!
     
-    lazy var headerView = IdolHeaderView.loadFromXib()
+    lazy var headerView: IdolHeaderView = IdolHeaderView.loadFromXib()
+    
+    public var starIdx: Int?
+    private var myBaby: Idol?
+    private var member: [IdolMember] = []
+    private var media: [Media] = []
     
     struct Style {
         static let defaultHeaderHeight: CGFloat = 350
@@ -29,6 +34,8 @@ class HomeMainViewController: UIViewController {
 
         self.setupUI()
         self.tableViewInit()
+        
+        self.setupData()
     }
     
     @IBAction func goSearchViewAction(_ sender: Any) {
@@ -37,8 +44,22 @@ class HomeMainViewController: UIViewController {
     
     private func setupUI() {
         setWhiteNavigationBar()
-        
         self.navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    private func setupData() {
+        HomeService.shared.getIdolHomeData(self.starIdx ?? 0) { [weak self] (result) in
+            switch result {
+            case .success(let data):
+                self?.headerView.configure(data.idolGroup.groupTitleImg ?? "")
+                self?.myBaby = data.idolGroup
+                self?.member = data.idolMember
+                self?.media = data.media
+                self?.homeMainTableView.reloadData()
+            case .error(let err):
+                print(err.localizedDescription)
+            }
+        }
     }
     
 }
@@ -80,7 +101,7 @@ extension HomeMainViewController: UITableViewDataSource {
         case .member:
             return 1
         case .items:
-            return 5
+            return self.media.count + 1
         }
     }
     
@@ -92,9 +113,13 @@ extension HomeMainViewController: UITableViewDataSource {
             if cell.bottomView != nil {
                 cell.bottomView.removeFromSuperview()
             }
+            if let idol = self.myBaby {
+                cell.configure(idol)
+            }
             return cell
         case .member:
             let cell = tableView.dequeue(MyStarMemberListTableViewCell.self, for: indexPath)
+            cell.configure(self.member)
             return cell
         case .items:
             guard indexPath.row != 0 else {
@@ -104,6 +129,7 @@ extension HomeMainViewController: UITableViewDataSource {
             }
             
             let cell = tableView.dequeue(MyStarFeedTableViewCell.self, for: indexPath)
+            cell.configure(self.media[indexPath.row - 1])
             return cell
         }
     }

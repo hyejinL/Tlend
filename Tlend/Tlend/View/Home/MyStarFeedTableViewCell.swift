@@ -14,6 +14,8 @@ class MyStarFeedTableViewCell: UITableViewCell {
     @IBOutlet weak var feedTitleLabel: UILabel!
     @IBOutlet weak var feedContentsLabel: UILabel!
     
+    var mediaIdx: Int?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,6 +25,12 @@ class MyStarFeedTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    public func configure(_ data: Media) {
+        self.mediaIdx = data.mediaIdx
+        self.feedImageView.kf.setImage(with: URL(string: data.imageKey))
+        self.feedTitleLabel.text = data.mediaTitle
     }
     
 }
