@@ -13,6 +13,7 @@ class IdolSupportViewController: UIViewController {
     
     struct Const {
         static let defaultHeaderHeight: CGFloat = 320
+        static let detailNavi: String = "DetailViewNavigationController"
     }
 
     enum Section: Int, CaseIterable {
@@ -95,8 +96,8 @@ extension IdolSupportViewController: UITableViewDelegate {
         
         switch section {
         case .items:
-            let viewController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(ofType: DetailInfoViewController.self)
-            self.present(viewController, animated: true, completion: nil)
+            let navigationController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: Const.detailNavi)
+            self.present(navigationController, animated: true, completion: nil)
             
         default:
             break
