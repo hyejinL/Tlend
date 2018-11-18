@@ -22,9 +22,8 @@ extension DecodingService {
                 decoder.dateDecodingStrategy = dateFormat
             }
             
-            let decodeData = try decoder.decode(T.self, from: data)
-            
-            return .success(decodeData)
+            let decodeData = try decoder.decode(DataModel<T>.self, from: data)
+            return .success(decodeData.data)
         } catch let err {
             return .error(err)
         }

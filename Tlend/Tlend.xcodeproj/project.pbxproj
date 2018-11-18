@@ -77,6 +77,9 @@
 		49FFB9F121A12B7600F40ABC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9F021A12B7600F40ABC /* AuthService.swift */; };
 		49FFB9F321A12CF900F40ABC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9F221A12CF900F40ABC /* NetworkService.swift */; };
 		49FFB9F521A12D7F00F40ABC /* DecodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9F421A12D7F00F40ABC /* DecodingService.swift */; };
+		49FFB9F721A18ECC00F40ABC /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9F621A18ECC00F40ABC /* Home.swift */; };
+		49FFB9F921A190A400F40ABC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9F821A190A400F40ABC /* DataModel.swift */; };
+		49FFB9FB21A1913900F40ABC /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9FA21A1913900F40ABC /* HomeService.swift */; };
 		70C2B28376D9880DECBEA354 /* Pods_Tlend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515C28C28C39821D1A718EFA /* Pods_Tlend.framework */; };
 		BA3DF96221982A3D00B1D42C /* FormCheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF96021982A3D00B1D42C /* FormCheckTableViewCell.swift */; };
 		BA3DF96321982A3D00B1D42C /* FormCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3DF96121982A3D00B1D42C /* FormCheckTableViewCell.xib */; };
@@ -188,6 +191,9 @@
 		49FFB9F021A12B7600F40ABC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		49FFB9F221A12CF900F40ABC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		49FFB9F421A12D7F00F40ABC /* DecodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingService.swift; sourceTree = "<group>"; };
+		49FFB9F621A18ECC00F40ABC /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		49FFB9F821A190A400F40ABC /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		49FFB9FA21A1913900F40ABC /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		515C28C28C39821D1A718EFA /* Pods_Tlend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tlend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3DF96021982A3D00B1D42C /* FormCheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCheckTableViewCell.swift; sourceTree = "<group>"; };
 		BA3DF96121982A3D00B1D42C /* FormCheckTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormCheckTableViewCell.xib; sourceTree = "<group>"; };
@@ -367,6 +373,8 @@
 		499EDC7F2197E8CD0088D7A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				49FFB9F821A190A400F40ABC /* DataModel.swift */,
+				49FFB9F621A18ECC00F40ABC /* Home.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -471,6 +479,7 @@
 				49FFB9F421A12D7F00F40ABC /* DecodingService.swift */,
 				49FFB9F221A12CF900F40ABC /* NetworkService.swift */,
 				BA87B9D321A1645B001E7D16 /* AuthAdapter.swift */,
+				49FFB9FA21A1913900F40ABC /* HomeService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -757,6 +766,7 @@
 				BA3DF9702198320F00B1D42C /* UIStoryboard+Tlend.swift in Sources */,
 				49A760CC219F24E70007DB48 /* FundingInfoTableViewCell.swift in Sources */,
 				BA87B9DA21A16B05001E7D16 /* SplashCollectionViewCell.swift in Sources */,
+				49FFB9F721A18ECC00F40ABC /* Home.swift in Sources */,
 				49FFB9E921A0756B00F40ABC /* SelectedOptionTableViewCell.swift in Sources */,
 				49FFB9E721A0755A00F40ABC /* OptionTableViewCell.swift in Sources */,
 				49A760BE219EC2950007DB48 /* CircleView.swift in Sources */,
@@ -764,6 +774,7 @@
 				49A760C8219F231D0007DB48 /* ShareAndSaveButtonTableViewCell.swift in Sources */,
 				490D947F21996F5200DAE837 /* HomeItemsTableViewCell.swift in Sources */,
 				49FFB9F121A12B7600F40ABC /* AuthService.swift in Sources */,
+				49FFB9FB21A1913900F40ABC /* HomeService.swift in Sources */,
 				49A760B6219EB7730007DB48 /* MyStarMemberListTableViewCell.swift in Sources */,
 				BA608EF7219DB1D000A3B5F0 /* UIColor+Tlend.swift in Sources */,
 				49202C73219E9134005286E2 /* TrendRankingTableViewCell.swift in Sources */,
@@ -818,6 +829,7 @@
 				BA608F03219DC62200A3B5F0 /* IdolMoreViewController.swift in Sources */,
 				49A760BA219EBD2A0007DB48 /* MyStarFeedTableViewCell.swift in Sources */,
 				BA87B9D421A1645B001E7D16 /* AuthAdapter.swift in Sources */,
+				49FFB9F921A190A400F40ABC /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
