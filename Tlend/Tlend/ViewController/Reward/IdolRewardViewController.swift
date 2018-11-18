@@ -43,7 +43,7 @@ class IdolRewardViewController: UIViewController {
     private func setupTableView() {
         tableView.tableFooterView = UIView(frame: .zero)
         tableView.register(IdolItemTableViewCell.self)
-        tableView.register(IdolInfoTableViewCell.self)
+        tableView.register(IdolProductHeaderCellTableViewCell.self)
         let backgroundView = UIView(frame: .init(x: 0,
                                                  y: 0,
                                                  width: UIScreen.main.bounds.width,
@@ -77,7 +77,8 @@ extension IdolRewardViewController: UITableViewDataSource {
         guard let section = Section(rawValue: indexPath.section) else { return UITableViewCell() }
         switch section {
         case .info:
-            let cell = tableView.dequeue(IdolInfoTableViewCell.self, for: indexPath)
+            let cell = tableView.dequeue(IdolProductHeaderCellTableViewCell.self, for: indexPath)
+            cell.configure(.reward)
             return cell
         case .items:
             let cell = tableView.dequeue(IdolItemTableViewCell.self, for: indexPath)

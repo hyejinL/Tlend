@@ -101,6 +101,11 @@
 		BA608F07219DCF2900A3B5F0 /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA608F06219DCF2900A3B5F0 /* Sign.storyboard */; };
 		BA608F0A219DD1EC00A3B5F0 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA608F09219DD1EC00A3B5F0 /* SignInViewController.swift */; };
 		BA87B9C2219FF73F001E7D16 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9C1219FF73F001E7D16 /* SignUpViewController.swift */; };
+		BA87B9C521A12DD7001E7D16 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9C421A12DD7001E7D16 /* DialogViewController.swift */; };
+		BA87B9CA21A130DF001E7D16 /* TDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9C921A130DF001E7D16 /* TDialogView.swift */; };
+		BA87B9CC21A130EF001E7D16 /* TDialogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA87B9CB21A130EF001E7D16 /* TDialogView.xib */; };
+		BA87B9D121A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9CF21A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift */; };
+		BA87B9D221A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA87B9D021A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib */; };
 		BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFEFEAD2198239F00E39F15 /* Form.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -203,6 +208,11 @@
 		BA608F06219DCF2900A3B5F0 /* Sign.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
 		BA608F09219DD1EC00A3B5F0 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		BA87B9C1219FF73F001E7D16 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		BA87B9C421A12DD7001E7D16 /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
+		BA87B9C921A130DF001E7D16 /* TDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDialogView.swift; sourceTree = "<group>"; };
+		BA87B9CB21A130EF001E7D16 /* TDialogView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TDialogView.xib; sourceTree = "<group>"; };
+		BA87B9CF21A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolProductHeaderCellTableViewCell.swift; sourceTree = "<group>"; };
+		BA87B9D021A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdolProductHeaderCellTableViewCell.xib; sourceTree = "<group>"; };
 		BAFEFEAD2198239F00E39F15 /* Form.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Form.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -390,6 +400,7 @@
 				499EDC872197E8FA0088D7A8 /* More */,
 				BA3DF96421982BF800B1D42C /* Form */,
 				4942C0B7219F2BE200A431A6 /* Detail */,
+				BA87B9C321A12DC9001E7D16 /* Dialog */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -494,6 +505,7 @@
 				490D947821996CD000DAE837 /* Home */,
 				BA3DF95B219829B600B1D42C /* Form */,
 				49A760C1219F20490007DB48 /* Detail */,
+				BA87B9C821A130B2001E7D16 /* Dialog */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -526,6 +538,8 @@
 				BA608EF4219DAF5B00A3B5F0 /* IdolItemTableViewCell.xib */,
 				BA608EF8219DB34F00A3B5F0 /* IdolInfoTableViewCell.swift */,
 				BA608EF9219DB34F00A3B5F0 /* IdolInfoTableViewCell.xib */,
+				BA87B9CF21A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift */,
+				BA87B9D021A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib */,
 			);
 			path = Idol;
 			sourceTree = "<group>";
@@ -537,6 +551,23 @@
 				BA87B9C1219FF73F001E7D16 /* SignUpViewController.swift */,
 			);
 			path = Sign;
+			sourceTree = "<group>";
+		};
+		BA87B9C321A12DC9001E7D16 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				BA87B9C421A12DD7001E7D16 /* DialogViewController.swift */,
+			);
+			path = Dialog;
+			sourceTree = "<group>";
+		};
+		BA87B9C821A130B2001E7D16 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				BA87B9C921A130DF001E7D16 /* TDialogView.swift */,
+				BA87B9CB21A130EF001E7D16 /* TDialogView.xib */,
+			);
+			path = Dialog;
 			sourceTree = "<group>";
 		};
 		D793D4304F4EDC01F698719E /* Frameworks */ = {
@@ -608,12 +639,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A760D1219F28890007DB48 /* InfoMenuHeaderView.xib in Resources */,
+				BA87B9CC21A130EF001E7D16 /* TDialogView.xib in Resources */,
 				499EDC772197E85D0088D7A8 /* LaunchScreen.storyboard in Resources */,
 				49A760B1219E96E50007DB48 /* MyStarHomeFooterTableViewCell.xib in Resources */,
 				49A760BB219EBD2A0007DB48 /* MyStarFeedTableViewCell.xib in Resources */,
 				49A760C0219F1E240007DB48 /* Detail.storyboard in Resources */,
 				49A760C5219F20A90007DB48 /* DetailHeaderTableViewCell.xib in Resources */,
 				499EDC742197E85D0088D7A8 /* Assets.xcassets in Resources */,
+				BA87B9D221A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.xib in Resources */,
 				4942C0BD219F2CA800A431A6 /* DetailHeaderImageCollectionViewCell.xib in Resources */,
 				49A760B7219EB7730007DB48 /* MyStarMemberListTableViewCell.xib in Resources */,
 				BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */,
@@ -731,6 +764,7 @@
 				49FFB9F521A12D7F00F40ABC /* DecodingService.swift in Sources */,
 				490D948C21998C6400DAE837 /* HotKeywordHeaderTableViewCell.swift in Sources */,
 				BA608EFD219DBC6000A3B5F0 /* UIView+Xib.swift in Sources */,
+				BA87B9CA21A130DF001E7D16 /* TDialogView.swift in Sources */,
 				BA608F0A219DD1EC00A3B5F0 /* SignInViewController.swift in Sources */,
 				490D947B21996CE900DAE837 /* HotKeywordTableViewCell.swift in Sources */,
 				BA3DF96C2198306600B1D42C /* TableView+Tlend.swift in Sources */,
@@ -744,6 +778,7 @@
 				49202C65219E8D67005286E2 /* MyStarHomeTitleTableViewCell.swift in Sources */,
 				49FFB9EB21A0761100F40ABC /* TotalAmountTableViewCell.swift in Sources */,
 				BA608EEF219DAE6400A3B5F0 /* IdolHeaderView.swift in Sources */,
+				BA87B9C521A12DD7001E7D16 /* DialogViewController.swift in Sources */,
 				BA608F05219DC62E00A3B5F0 /* MoreTableViewCell.swift in Sources */,
 				490D9483219971AC00DAE837 /* HotKeywordCollectionViewCell.swift in Sources */,
 				49FFB9F321A12CF900F40ABC /* NetworkService.swift in Sources */,
@@ -757,6 +792,7 @@
 				490D946F2198431300DAE837 /* HomeHotKeywordViewController.swift in Sources */,
 				490D9494219A4ED200DAE837 /* CollectionView+Tlend.swift in Sources */,
 				49A760C4219F20A90007DB48 /* DetailHeaderTableViewCell.swift in Sources */,
+				BA87B9D121A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift in Sources */,
 				49A760B0219E96E50007DB48 /* MyStarHomeFooterTableViewCell.swift in Sources */,
 				49A760D0219F28890007DB48 /* InfoMenuHeaderView.swift in Sources */,
 				49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */,
