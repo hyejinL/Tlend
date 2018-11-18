@@ -25,9 +25,20 @@ class DetailInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setupUI()
         self.tableViewInit()
     }
     
+    @IBAction func dismissAction(_ sender: Any) {
+        if let navi = self.parent as? UINavigationController {
+            navi.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    private func setupUI() {
+        setWhiteNavigationBar()
+        self.navigationController?.navigationBar.isTranslucent = true
+    }
 }
 
 extension DetailInfoViewController: SendDataViewControllerDelegate {

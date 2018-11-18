@@ -48,6 +48,7 @@ class ChoiceFundingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         CATransaction.begin()
         CATransaction.setCompletionBlock({
             self.optionTableViewAnimation(.start)
@@ -63,7 +64,7 @@ class ChoiceFundingViewController: UIViewController {
     }
     
     private func optionTableViewAnimation(_ type: StartAction, completion: (()->Void)? = nil) {
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: 0.15, animations: {
             switch type {
             case .start:
                 self.tableViewTopConstraint.isActive = false
@@ -77,16 +78,18 @@ class ChoiceFundingViewController: UIViewController {
     }
     
     private func tableViewReloadAnimation(_ tableView: UITableView, indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? ChoiceOptionTableViewCell else { return }
+        let index = IndexPath(row: 0, section: Section.option.rawValue)
+        guard let cell = tableView.cellForRow(at: index) as? ChoiceOptionTableViewCell else { return }
+        let bottomViewHeight: CGFloat = choiceArray.count > 0 ? 0 : 32
         
-        UIView.animate(withDuration: 0.18) {
+        UIView.animate(withDuration: 0.15) {
             switch self.selectType {
             case .none:
                 cell.optionView.borderColor = #colorLiteral(red: 0.862745098, green: 0.862745098, blue: 0.862745098, alpha: 1)
             case .select:
                 cell.optionView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             }
-            self.tableViewHeight.constant = self.optionChoiceTableView.contentSize.height + 32
+            self.tableViewHeight.constant = self.optionChoiceTableView.contentSize.height + bottomViewHeight
             print(self.optionChoiceTableView.contentSize.height)
             self.view.layoutIfNeeded()
         }
