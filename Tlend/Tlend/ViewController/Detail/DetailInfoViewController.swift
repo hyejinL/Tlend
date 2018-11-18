@@ -13,7 +13,7 @@ class DetailInfoViewController: UIViewController {
     @IBOutlet weak var detailTableView: UITableView!
     
     var buttonType: InfoMenuHeaderView.ButtonType = .Detail
-    lazy var InfoHeaderView: InfoMenuHeaderView = .loadFromXib()
+    lazy var infoHeaderView: InfoMenuHeaderView = .loadFromXib()
     
     enum Section: Int, CaseIterable {
         case Header
@@ -59,6 +59,26 @@ extension DetailInfoViewController: UITableViewDataSource {
         return Section.allCases.count
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let section = Section(rawValue: section) else { return UITableViewCell() }
+        
+        if section == .Info {
+            let view = infoHeaderView
+            view.delegate = self
+            return view
+        }
+        return nil
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        guard let section = Section(rawValue: section) else { return 0 }
+        
+        if section == .Info {
+            return 48.0
+        }
+        return 0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -86,25 +106,5 @@ extension DetailInfoViewController: UITableViewDataSource {
                 return cell
             }
         }
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let section = Section(rawValue: section) else { return UITableViewCell() }
-        
-        if section == .Info {
-            let view = InfoHeaderView
-            view.delegate = self
-            return view
-        }
-        return nil
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        guard let section = Section(rawValue: section) else { return 0 }
-        
-        if section == .Info {
-            return 48.0
-        }
-        return 0
     }
 }

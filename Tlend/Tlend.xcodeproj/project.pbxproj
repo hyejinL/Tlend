@@ -68,6 +68,11 @@
 		49A760CD219F24E70007DB48 /* FundingInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A760CB219F24E70007DB48 /* FundingInfoTableViewCell.xib */; };
 		49A760D0219F28890007DB48 /* InfoMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A760CE219F28890007DB48 /* InfoMenuHeaderView.swift */; };
 		49A760D1219F28890007DB48 /* InfoMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A760CF219F28890007DB48 /* InfoMenuHeaderView.xib */; };
+		49FFB9E321A0749400F40ABC /* ChoiceFundingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9E221A0749400F40ABC /* ChoiceFundingViewController.swift */; };
+		49FFB9E521A0755000F40ABC /* ChoiceOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9E421A0755000F40ABC /* ChoiceOptionTableViewCell.swift */; };
+		49FFB9E721A0755A00F40ABC /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9E621A0755A00F40ABC /* OptionTableViewCell.swift */; };
+		49FFB9E921A0756B00F40ABC /* SelectedOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9E821A0756B00F40ABC /* SelectedOptionTableViewCell.swift */; };
+		49FFB9EB21A0761100F40ABC /* TotalAmountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9EA21A0761100F40ABC /* TotalAmountTableViewCell.swift */; };
 		70C2B28376D9880DECBEA354 /* Pods_Tlend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515C28C28C39821D1A718EFA /* Pods_Tlend.framework */; };
 		BA3DF96221982A3D00B1D42C /* FormCheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF96021982A3D00B1D42C /* FormCheckTableViewCell.swift */; };
 		BA3DF96321982A3D00B1D42C /* FormCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3DF96121982A3D00B1D42C /* FormCheckTableViewCell.xib */; };
@@ -158,6 +163,11 @@
 		49A760CB219F24E70007DB48 /* FundingInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FundingInfoTableViewCell.xib; sourceTree = "<group>"; };
 		49A760CE219F28890007DB48 /* InfoMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMenuHeaderView.swift; sourceTree = "<group>"; };
 		49A760CF219F28890007DB48 /* InfoMenuHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoMenuHeaderView.xib; sourceTree = "<group>"; };
+		49FFB9E221A0749400F40ABC /* ChoiceFundingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceFundingViewController.swift; sourceTree = "<group>"; };
+		49FFB9E421A0755000F40ABC /* ChoiceOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceOptionTableViewCell.swift; sourceTree = "<group>"; };
+		49FFB9E621A0755A00F40ABC /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
+		49FFB9E821A0756B00F40ABC /* SelectedOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedOptionTableViewCell.swift; sourceTree = "<group>"; };
+		49FFB9EA21A0761100F40ABC /* TotalAmountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAmountTableViewCell.swift; sourceTree = "<group>"; };
 		515C28C28C39821D1A718EFA /* Pods_Tlend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tlend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3DF96021982A3D00B1D42C /* FormCheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCheckTableViewCell.swift; sourceTree = "<group>"; };
 		BA3DF96121982A3D00B1D42C /* FormCheckTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormCheckTableViewCell.xib; sourceTree = "<group>"; };
@@ -272,6 +282,11 @@
 			isa = PBXGroup;
 			children = (
 				4942C0B8219F2C0C00A431A6 /* DetailInfoViewController.swift */,
+				49FFB9E221A0749400F40ABC /* ChoiceFundingViewController.swift */,
+				49FFB9E421A0755000F40ABC /* ChoiceOptionTableViewCell.swift */,
+				49FFB9E621A0755A00F40ABC /* OptionTableViewCell.swift */,
+				49FFB9E821A0756B00F40ABC /* SelectedOptionTableViewCell.swift */,
+				49FFB9EA21A0761100F40ABC /* TotalAmountTableViewCell.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -661,6 +676,8 @@
 				490D948A219982FC00DAE837 /* UIView+Shadow.swift in Sources */,
 				BA3DF9702198320F00B1D42C /* UIStoryboard+Tlend.swift in Sources */,
 				49A760CC219F24E70007DB48 /* FundingInfoTableViewCell.swift in Sources */,
+				49FFB9E921A0756B00F40ABC /* SelectedOptionTableViewCell.swift in Sources */,
+				49FFB9E721A0755A00F40ABC /* OptionTableViewCell.swift in Sources */,
 				49A760BE219EC2950007DB48 /* CircleView.swift in Sources */,
 				4942C0C5219FF27C00A431A6 /* DetailInfoImageTableViewCell.swift in Sources */,
 				49A760C8219F231D0007DB48 /* ShareAndSaveButtonTableViewCell.swift in Sources */,
@@ -669,6 +686,7 @@
 				BA608EF7219DB1D000A3B5F0 /* UIColor+Tlend.swift in Sources */,
 				49202C73219E9134005286E2 /* TrendRankingTableViewCell.swift in Sources */,
 				4942C0C0219F2FCF00A431A6 /* DetailInfoTableViewCell.swift in Sources */,
+				49FFB9E521A0755000F40ABC /* ChoiceOptionTableViewCell.swift in Sources */,
 				BA3DF96221982A3D00B1D42C /* FormCheckTableViewCell.swift in Sources */,
 				490D949B219A696100DAE837 /* SearchViewController.swift in Sources */,
 				BA3DF96821982C3C00B1D42C /* StartFormViewController.swift in Sources */,
@@ -686,6 +704,7 @@
 				49202C69219E8DFE005286E2 /* MyStarListTableViewCell.swift in Sources */,
 				490D946D219842BB00DAE837 /* HomeMainViewController.swift in Sources */,
 				49202C65219E8D67005286E2 /* MyStarHomeTitleTableViewCell.swift in Sources */,
+				49FFB9EB21A0761100F40ABC /* TotalAmountTableViewCell.swift in Sources */,
 				BA608EEF219DAE6400A3B5F0 /* IdolHeaderView.swift in Sources */,
 				BA608F05219DC62E00A3B5F0 /* MoreTableViewCell.swift in Sources */,
 				490D9483219971AC00DAE837 /* HotKeywordCollectionViewCell.swift in Sources */,
@@ -704,6 +723,7 @@
 				49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */,
 				490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */,
 				490D9491219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift in Sources */,
+				49FFB9E321A0749400F40ABC /* ChoiceFundingViewController.swift in Sources */,
 				BA608F03219DC62200A3B5F0 /* IdolMoreViewController.swift in Sources */,
 				49A760BA219EBD2A0007DB48 /* MyStarFeedTableViewCell.swift in Sources */,
 			);
