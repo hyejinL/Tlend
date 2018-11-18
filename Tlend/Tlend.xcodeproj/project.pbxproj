@@ -73,6 +73,10 @@
 		49FFB9E721A0755A00F40ABC /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9E621A0755A00F40ABC /* OptionTableViewCell.swift */; };
 		49FFB9E921A0756B00F40ABC /* SelectedOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9E821A0756B00F40ABC /* SelectedOptionTableViewCell.swift */; };
 		49FFB9EB21A0761100F40ABC /* TotalAmountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9EA21A0761100F40ABC /* TotalAmountTableViewCell.swift */; };
+		49FFB9EF21A1284900F40ABC /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9EE21A1284900F40ABC /* APIService.swift */; };
+		49FFB9F121A12B7600F40ABC /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9F021A12B7600F40ABC /* AuthService.swift */; };
+		49FFB9F321A12CF900F40ABC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9F221A12CF900F40ABC /* NetworkService.swift */; };
+		49FFB9F521A12D7F00F40ABC /* DecodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9F421A12D7F00F40ABC /* DecodingService.swift */; };
 		70C2B28376D9880DECBEA354 /* Pods_Tlend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515C28C28C39821D1A718EFA /* Pods_Tlend.framework */; };
 		BA3DF96221982A3D00B1D42C /* FormCheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3DF96021982A3D00B1D42C /* FormCheckTableViewCell.swift */; };
 		BA3DF96321982A3D00B1D42C /* FormCheckTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA3DF96121982A3D00B1D42C /* FormCheckTableViewCell.xib */; };
@@ -176,6 +180,10 @@
 		49FFB9E621A0755A00F40ABC /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
 		49FFB9E821A0756B00F40ABC /* SelectedOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedOptionTableViewCell.swift; sourceTree = "<group>"; };
 		49FFB9EA21A0761100F40ABC /* TotalAmountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAmountTableViewCell.swift; sourceTree = "<group>"; };
+		49FFB9EE21A1284900F40ABC /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		49FFB9F021A12B7600F40ABC /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		49FFB9F221A12CF900F40ABC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		49FFB9F421A12D7F00F40ABC /* DecodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodingService.swift; sourceTree = "<group>"; };
 		515C28C28C39821D1A718EFA /* Pods_Tlend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tlend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA3DF96021982A3D00B1D42C /* FormCheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormCheckTableViewCell.swift; sourceTree = "<group>"; };
 		BA3DF96121982A3D00B1D42C /* FormCheckTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormCheckTableViewCell.xib; sourceTree = "<group>"; };
@@ -450,6 +458,10 @@
 		499EDC8D2197EA9D0088D7A8 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				49FFB9EE21A1284900F40ABC /* APIService.swift */,
+				49FFB9F021A12B7600F40ABC /* AuthService.swift */,
+				49FFB9F421A12D7F00F40ABC /* DecodingService.swift */,
+				49FFB9F221A12CF900F40ABC /* NetworkService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -677,6 +689,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tlend/Pods-Tlend-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
@@ -685,6 +699,8 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
@@ -724,6 +740,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA608EFF219DC1B400A3B5F0 /* UIView+Tlend.swift in Sources */,
+				49FFB9EF21A1284900F40ABC /* APIService.swift in Sources */,
 				490D948A219982FC00DAE837 /* UIView+Shadow.swift in Sources */,
 				BA3DF9702198320F00B1D42C /* UIStoryboard+Tlend.swift in Sources */,
 				49A760CC219F24E70007DB48 /* FundingInfoTableViewCell.swift in Sources */,
@@ -733,6 +750,7 @@
 				4942C0C5219FF27C00A431A6 /* DetailInfoImageTableViewCell.swift in Sources */,
 				49A760C8219F231D0007DB48 /* ShareAndSaveButtonTableViewCell.swift in Sources */,
 				490D947F21996F5200DAE837 /* HomeItemsTableViewCell.swift in Sources */,
+				49FFB9F121A12B7600F40ABC /* AuthService.swift in Sources */,
 				49A760B6219EB7730007DB48 /* MyStarMemberListTableViewCell.swift in Sources */,
 				BA608EF7219DB1D000A3B5F0 /* UIColor+Tlend.swift in Sources */,
 				49202C73219E9134005286E2 /* TrendRankingTableViewCell.swift in Sources */,
@@ -743,6 +761,7 @@
 				BA3DF96821982C3C00B1D42C /* StartFormViewController.swift in Sources */,
 				4942C0B9219F2C0C00A431A6 /* DetailInfoViewController.swift in Sources */,
 				49A760AC219E92440007DB48 /* PopularContentsTableViewCell.swift in Sources */,
+				49FFB9F521A12D7F00F40ABC /* DecodingService.swift in Sources */,
 				490D948C21998C6400DAE837 /* HotKeywordHeaderTableViewCell.swift in Sources */,
 				BA608EFD219DBC6000A3B5F0 /* UIView+Xib.swift in Sources */,
 				BA87B9CA21A130DF001E7D16 /* TDialogView.swift in Sources */,
@@ -762,6 +781,7 @@
 				BA87B9C521A12DD7001E7D16 /* DialogViewController.swift in Sources */,
 				BA608F05219DC62E00A3B5F0 /* MoreTableViewCell.swift in Sources */,
 				490D9483219971AC00DAE837 /* HotKeywordCollectionViewCell.swift in Sources */,
+				49FFB9F321A12CF900F40ABC /* NetworkService.swift in Sources */,
 				BA608EF3219DAF4C00A3B5F0 /* IdolItemTableViewCell.swift in Sources */,
 				499EDC6D2197E85C0088D7A8 /* AppDelegate.swift in Sources */,
 				49A760B3219E97510007DB48 /* MyStarHomeViewController.swift in Sources */,
