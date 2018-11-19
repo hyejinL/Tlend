@@ -316,28 +316,39 @@
                                 <state key="normal" title="펀딩하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="startFundingAction:" destination="Sa4-gb-8b7" eventType="touchUpInside" id="HoQ-d7-Pux"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10F-GL-ngr">
                                 <rect key="frame" x="0.0" y="778" width="375" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9C-UQ-ABl">
+                                <rect key="frame" x="0.0" y="713" width="375" height="99"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2lN-km-pyW" firstAttribute="bottom" secondItem="ylQ-Sr-eLY" secondAttribute="bottom" id="0WF-0P-A5s"/>
                             <constraint firstItem="ylQ-Sr-eLY" firstAttribute="bottom" secondItem="8DY-R4-Oh6" secondAttribute="bottom" id="366-Sq-iGz"/>
+                            <constraint firstAttribute="bottom" secondItem="F9C-UQ-ABl" secondAttribute="bottom" id="FxQ-az-UXZ"/>
                             <constraint firstItem="Wbk-Ta-xyJ" firstAttribute="trailing" secondItem="ylQ-Sr-eLY" secondAttribute="trailing" id="GYz-9L-9IB"/>
                             <constraint firstItem="2lN-km-pyW" firstAttribute="trailing" secondItem="ylQ-Sr-eLY" secondAttribute="trailing" id="GqR-sc-Y3M"/>
                             <constraint firstItem="10F-GL-ngr" firstAttribute="leading" secondItem="qnW-CM-Bmp" secondAttribute="leading" id="Idr-aX-9xJ"/>
                             <constraint firstItem="Wbk-Ta-xyJ" firstAttribute="leading" secondItem="ylQ-Sr-eLY" secondAttribute="leading" id="KPB-eK-cib"/>
                             <constraint firstItem="10F-GL-ngr" firstAttribute="top" secondItem="2lN-km-pyW" secondAttribute="bottom" id="Kep-dB-o1t"/>
                             <constraint firstItem="2lN-km-pyW" firstAttribute="leading" secondItem="ylQ-Sr-eLY" secondAttribute="leading" id="Sft-yt-G0Q"/>
+                            <constraint firstItem="F9C-UQ-ABl" firstAttribute="trailing" secondItem="Wbk-Ta-xyJ" secondAttribute="trailing" id="Ue7-LB-43s"/>
                             <constraint firstItem="Wbk-Ta-xyJ" firstAttribute="top" secondItem="8DY-R4-Oh6" secondAttribute="top" id="bRe-M0-3kE"/>
                             <constraint firstItem="8DY-R4-Oh6" firstAttribute="top" secondItem="Wbk-Ta-xyJ" secondAttribute="bottom" priority="900" id="is2-HQ-0fl"/>
+                            <constraint firstItem="F9C-UQ-ABl" firstAttribute="leading" secondItem="Wbk-Ta-xyJ" secondAttribute="leading" id="k62-ZE-qfe"/>
                             <constraint firstItem="2lN-km-pyW" firstAttribute="top" secondItem="qnW-CM-Bmp" secondAttribute="top" id="o7d-FS-coY"/>
                             <constraint firstAttribute="bottom" secondItem="10F-GL-ngr" secondAttribute="bottom" id="oKe-6E-689"/>
                             <constraint firstAttribute="trailing" secondItem="10F-GL-ngr" secondAttribute="trailing" id="qjT-Ds-bit"/>
                             <constraint firstItem="8DY-R4-Oh6" firstAttribute="leading" secondItem="ylQ-Sr-eLY" secondAttribute="leading" id="r8Q-Mr-RV7"/>
+                            <constraint firstItem="F9C-UQ-ABl" firstAttribute="top" secondItem="Wbk-Ta-xyJ" secondAttribute="top" id="rz6-Lt-fad"/>
                             <constraint firstItem="8DY-R4-Oh6" firstAttribute="trailing" secondItem="ylQ-Sr-eLY" secondAttribute="trailing" id="xus-ut-CE4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ylQ-Sr-eLY"/>
@@ -345,6 +356,7 @@
                     <navigationItem key="navigationItem" id="tu7-XY-3rM"/>
                     <connections>
                         <outlet property="optionChoiceTableView" destination="Wbk-Ta-xyJ" id="kh1-OW-2IX"/>
+                        <outlet property="tableHiddenView" destination="F9C-UQ-ABl" id="IEy-IU-gt3"/>
                         <outlet property="tableViewHeight" destination="MR9-Wi-6Kj" id="CVK-eh-QWT"/>
                         <outlet property="tableViewTopConstraint" destination="bRe-M0-3kE" id="NfB-wR-ojX"/>
                     </connections>
@@ -356,7 +368,56 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1649" y="23"/>
+            <point key="canvasLocation" x="1648.8" y="22.906403940886701"/>
+        </scene>
+        <!--펀딩완료-->
+        <scene sceneID="6x4-qF-Nhe">
+            <objects>
+                <viewController storyboardIdentifier="FinishFundingViewController" id="Ill-H1-6Kg" customClass="FinishFundingViewController" customModule="Tlend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bby-yl-MTI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nm8-1f-VFs">
+                                <rect key="frame" x="0.0" y="88" width="375" height="625"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNh-fo-RZK">
+                                <rect key="frame" x="0.0" y="713" width="375" height="65"/>
+                                <color key="backgroundColor" red="0.75294117650000003" green="0.58039215690000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="koi-tX-EtE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="확인">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedConfirmAction:" destination="Ill-H1-6Kg" eventType="touchUpInside" id="UkV-Vf-46K"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WNh-fo-RZK" firstAttribute="leading" secondItem="Mse-x4-WdD" secondAttribute="leading" id="7YA-oN-bff"/>
+                            <constraint firstItem="WNh-fo-RZK" firstAttribute="trailing" secondItem="Mse-x4-WdD" secondAttribute="trailing" id="8j0-HN-5GR"/>
+                            <constraint firstItem="nm8-1f-VFs" firstAttribute="leading" secondItem="Mse-x4-WdD" secondAttribute="leading" id="ATy-Uq-3sd"/>
+                            <constraint firstItem="nm8-1f-VFs" firstAttribute="top" secondItem="Mse-x4-WdD" secondAttribute="top" id="BWl-04-fly"/>
+                            <constraint firstItem="WNh-fo-RZK" firstAttribute="top" secondItem="nm8-1f-VFs" secondAttribute="bottom" id="FB0-Zv-CO6"/>
+                            <constraint firstItem="Mse-x4-WdD" firstAttribute="trailing" secondItem="nm8-1f-VFs" secondAttribute="trailing" id="Hbn-Ql-4MW"/>
+                            <constraint firstItem="nm8-1f-VFs" firstAttribute="top" secondItem="Mse-x4-WdD" secondAttribute="top" id="NOW-ix-uQO"/>
+                            <constraint firstItem="WNh-fo-RZK" firstAttribute="bottom" secondItem="Mse-x4-WdD" secondAttribute="bottom" id="Wzu-Ed-3Hq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mse-x4-WdD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="펀딩완료" id="PRh-Hm-Y7m"/>
+                    <connections>
+                        <outlet property="finishFundingTableView" destination="nm8-1f-VFs" id="44P-CC-uF7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aqF-aK-DM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3208.8000000000002" y="22.906403940886701"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Dn-L6-fCE">
@@ -375,6 +436,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VSl-KJ-Gsv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116" y="23"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="25m-QJ-dTb">
+            <objects>
+                <navigationController storyboardIdentifier="FundingEndNavi" automaticallyAdjustsScrollViewInsets="NO" id="gcl-JL-drD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HtE-tH-bgI">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ill-H1-6Kg" kind="relationship" relationship="rootViewController" id="AhI-it-cBu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXr-Iv-U5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2442" y="23"/>
         </scene>
     </scenes>
     <resources>
