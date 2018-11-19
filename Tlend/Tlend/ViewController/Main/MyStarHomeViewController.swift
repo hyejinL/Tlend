@@ -90,7 +90,8 @@ extension MyStarHomeViewController: SendDataViewControllerDelegate {
 
 extension MyStarHomeViewController: UITableViewDelegate {
     private func tableViewInit() {
-        self.myStarTableView.delegate = self; self.myStarTableView.dataSource = self
+        self.myStarTableView.delegate = self
+        self.myStarTableView.dataSource = self
         
         self.myStarTableView.register(MyStarHomeTitleTableViewCell.self)
         self.myStarTableView.register(MyStarHomeFooterTableViewCell.self)

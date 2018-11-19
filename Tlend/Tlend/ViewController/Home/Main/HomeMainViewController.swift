@@ -69,7 +69,8 @@ class HomeMainViewController: UIViewController {
 
 extension HomeMainViewController: UITableViewDelegate {
     private func tableViewInit() {
-        self.homeMainTableView.delegate = self; self.homeMainTableView.dataSource = self
+        self.homeMainTableView.delegate = self
+        self.homeMainTableView.dataSource = self
         
         self.homeMainTableView.tableFooterView = UIView(frame: .zero)
         self.homeMainTableView.register(IdolInfoTableViewCell.self)
