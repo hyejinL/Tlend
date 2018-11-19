@@ -69,7 +69,8 @@ class HomeMainViewController: UIViewController {
 
 extension HomeMainViewController: UITableViewDelegate {
     private func tableViewInit() {
-        self.homeMainTableView.delegate = self; self.homeMainTableView.dataSource = self
+        self.homeMainTableView.delegate = self
+        self.homeMainTableView.dataSource = self
         
         self.homeMainTableView.tableFooterView = UIView(frame: .zero)
         self.homeMainTableView.register(IdolInfoTableViewCell.self)
@@ -88,6 +89,18 @@ extension HomeMainViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let section = Section(rawValue: indexPath.section) else { return }
+        
+        switch section {
+        case .items:
+            guard indexPath.row > 0 else { return }
+            let vc = UIStoryboard(name: "Content", bundle: nil).instantiateViewController(ofType: ContentDetailViewController.self)
+            vc.mediaID = self.media[indexPath.row - 1].mediaIdx
+            self.navigationController?.pushViewController(vc, animated: true)
+        default:
+            break
+        }
+
     }
 }
 

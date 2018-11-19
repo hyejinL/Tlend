@@ -90,7 +90,8 @@ extension MyStarHomeViewController: SendDataViewControllerDelegate {
 
 extension MyStarHomeViewController: UITableViewDelegate {
     private func tableViewInit() {
-        self.myStarTableView.delegate = self; self.myStarTableView.dataSource = self
+        self.myStarTableView.delegate = self
+        self.myStarTableView.dataSource = self
         
         self.myStarTableView.register(MyStarHomeTitleTableViewCell.self)
         self.myStarTableView.register(MyStarHomeFooterTableViewCell.self)
@@ -106,6 +107,11 @@ extension MyStarHomeViewController: UITableViewDelegate {
         case .TrendRaking:
             guard indexPath.row > 0 else { return }
             self.goMainTabbar(self.idolRanking[indexPath.row - 1].idolIdx)
+        case .PopularContents:
+            guard indexPath.row > 0 else { return }
+            let vc = UIStoryboard(name: "Content", bundle: nil).instantiateViewController(ofType: ContentDetailViewController.self)
+            vc.mediaID = self.media[indexPath.row - 1].mediaIdx
+            self.navigationController?.pushViewController(vc, animated: true)
         default:
             break
         }
