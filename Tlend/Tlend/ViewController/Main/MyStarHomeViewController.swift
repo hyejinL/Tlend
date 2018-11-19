@@ -26,6 +26,7 @@ class MyStarHomeViewController: UIViewController {
     }
 
     private func setupUI() {
+        setWhiteNavigationBar()
         setNavigationLogoTitle()
     }
 }

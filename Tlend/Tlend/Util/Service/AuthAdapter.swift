@@ -13,7 +13,7 @@ class AuthAdapter: RequestAdapter {
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
         urlRequest.setValue(AuthService.shared.currentToken ?? "",
-                            forHTTPHeaderField: "token")
+                            forHTTPHeaderField: "user_idx")
         return urlRequest
     }
 }
