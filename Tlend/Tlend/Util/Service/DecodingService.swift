@@ -15,10 +15,13 @@ protocol DecodingService {}
 extension DecodingService {
     func decodeJSONData<T: Codable>(_ type: T.Type,
                                     dateFormatter: DateFormat? = nil,
+                                    dateDecodingStrategy: JSONDecoder.DateDecodingStrategy? = nil,
                                     data: Data) -> Result<T> {
         let decoder = JSONDecoder()
         do {
             if let dateFormat = dateFormatter {
+                decoder.dateDecodingStrategy = dateFormat
+            } else if let dateFormat = dateDecodingStrategy {
                 decoder.dateDecodingStrategy = dateFormat
             }
             

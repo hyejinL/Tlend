@@ -13,6 +13,8 @@ class DetailHeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var detailImageCollectionView: UICollectionView!
     @IBOutlet weak var imagePageControl: UIPageControl!
     
+    var detailData: Data?
+    
     struct Style {
         static let widthRatio: CGFloat = UIScreen.main.bounds.width/375
         
@@ -31,6 +33,15 @@ class DetailHeaderTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+//    public func configureSupport(data: Detail) {
+//        self.detailData = data
+//        self.detailImageCollectionView.reloadData()
+//    }
+    
+//    public func configureReward(data: RewardDetail) {
+//        self.rewardDetail = data
+//        self.detailImageCollectionView.reloadData()
+//    }
 }
 
 extension DetailHeaderTableViewCell: UICollectionViewDelegate {

@@ -12,8 +12,14 @@ class DetailInfoViewController: UIViewController {
 
     @IBOutlet weak var detailTableView: UITableView!
     
-    var buttonType: InfoMenuHeaderView.ButtonType = .Detail
+    var detailType: DetailType?
+    var buttonType: DetailInfoType = .Detail
     lazy var infoHeaderView: InfoMenuHeaderView = .loadFromXib()
+    
+    var starIdx: Int?
+    var detailIdx: Int?
+    var supportDetail: SupportDetail?
+    var rewardDetail: RewardDetail?
     
     enum Section: Int, CaseIterable {
         case Header
@@ -39,11 +45,41 @@ class DetailInfoViewController: UIViewController {
         setWhiteNavigationBar()
         self.navigationController?.navigationBar.isTranslucent = true
     }
+    
+    private func setupData() {
+        guard let type = self.detailType else { return }
+        let service = DetailService.shared
+        
+        switch type {
+        case .support:
+            service.getSupportDetail(self.starIdx ?? 0,
+                                     detailIdx: self.detailIdx ?? 0,
+                                     info: .Default) { (result) in
+                                        switch result {
+                                        case .success(let data):
+                                            self.supportDetail = data
+                                        case .error(let err):
+                                            print(err)
+                                        }
+            }
+        case .reward:
+            service.getRewardDetail(self.starIdx ?? 0,
+                                    detailIdx: self.detailIdx ?? 0,
+                                    info: .Default) { (result) in
+                                        switch result {
+                                        case .success(let data):
+                                            self.rewardDetail = data
+                                        case .error(let err):
+                                            print(err)
+                                        }
+            }
+        }
+    }
 }
 
 extension DetailInfoViewController: SendDataViewControllerDelegate {
     func sendData<T>(data type: T.Type, _ data: T) {
-        if let data = data as? InfoMenuHeaderView.ButtonType {
+        if let data = data as? DetailInfoType {
             self.buttonType = data
             
             self.detailTableView.beginUpdates()
@@ -113,7 +149,7 @@ extension DetailInfoViewController: UITableViewDataSource {
             case .Detail:
                 let cell = tableView.dequeue(DetailInfoImageTableViewCell.self, for: indexPath)
                 return cell
-            case .Info:
+            case .Default:
                 let cell = tableView.dequeue(DetailInfoTableViewCell.self, for: indexPath)
                 return cell
             }
