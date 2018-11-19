@@ -424,6 +424,7 @@
 				BAF439F521A2839700704002 /* IdolReward.swift */,
 				491DBDC921A2866800D12EC0 /* Detail.swift */,
 				BAAF215821A28F60004983A6 /* MediaDetailContent.swift */,
+				491DBDC921A2866800D12EC0 /* Detail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -535,6 +536,7 @@
 				BAF439EF21A27E2700704002 /* IdolService.swift */,
 				491DBDC721A2840800D12EC0 /* DetailService.swift */,
 				BAAF215621A28ED4004983A6 /* ContentService.swift */,
+				491DBDC721A2840800D12EC0 /* DetailService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
