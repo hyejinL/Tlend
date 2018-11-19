@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxKeyboard
 
 class SignUpViewController: UIViewController {
     
@@ -20,6 +23,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nicknameBox: UIView!
     @IBOutlet weak var addressField: UITextField!
     @IBOutlet weak var addressBox: UIView!
+    @IBOutlet weak var signUpBottomConstraint: NSLayoutConstraint!
+    
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +34,46 @@ class SignUpViewController: UIViewController {
     
     private func setupUI() {
         self.setWhiteNavigationBar()
+        RxKeyboard.instance.visibleHeight.drive(onNext: { [weak self] height in
+            guard let `self` = self else { return }
+            
+            let const = height - self.view.safeAreaInsets.bottom
+            self.signUpBottomConstraint.constant = const > 0 ? const : 0
+            self.view.layoutIfNeeded()
+        }).disposed(by: disposeBag)
+        
+        let gesture = UITapGestureRecognizer()
+        self.view.addGestureRecognizer(gesture)
+        
+        gesture.rx.event.asDriver().drive(onNext: { [weak self] _ in
+            self?.view.endEditing(true)
+        }).disposed(by: disposeBag)
     }
     @IBAction func didTapClose(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func didTapSignUp(_ sender: Any) {
+        guard !(self.emailField.text?.isEmpty ?? true),
+            !(self.pwField.text?.isEmpty ?? true),
+            !(self.pwcField.text?.isEmpty ?? true),
+            !(self.nicknameField.text?.isEmpty ?? true)
+            else { return }
+        SignService.shared.signUp(id: emailField.text ?? "",
+                                  pw: pwField.text ?? "",
+                                  nickname: nicknameField.text ?? "",
+                                  completion: { [weak self] _ in
+                                    let dialog = DialogViewController(title: "가입이 완료되었습니다",
+                                                                      content: "트렌드를 이용하기 위해 내새끼를 선택해주세요!",
+                                                                      confirmAction: { [weak self] dialog in
+                                                                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(ofType: SelectedMyStarViewController.self)
+                                                                        let navi = UINavigationController(rootViewController: vc)
+                                                                        dialog.dismiss(animated: true, completion: { [weak self] in
+                                                                            self?.present(navi, animated: true, completion: nil)
+                                                                        })
+                                    })
+                                    dialog.dialog.cancelButton.removeFromSuperview()
+                                    self?.present(dialog, animated: true, completion: nil)
+                                    })
     }
 }
 
@@ -48,6 +91,10 @@ extension SignUpViewController: UITextFieldDelegate {
         } else if textField.tag == 4 {
             addressBox.borderColor = .liliac
         }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        resetBoxBorder()
     }
     
     func resetBoxBorder() {

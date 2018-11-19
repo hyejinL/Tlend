@@ -13,4 +13,8 @@ target 'Tlend' do
   
   pod 'KeychainAccess'
   pod 'Alamofire'
+  
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxKeyboard'
 end

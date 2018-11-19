@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGd-e4-EkN">
                                 <rect key="frame" x="24" y="139" width="327" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="아이디를 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRv-M8-kBE">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tlend@tlend.com" placeholder="아이디를 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRv-M8-kBE">
                                         <rect key="frame" x="11" y="16" width="305" height="22"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -60,11 +60,11 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSF-LX-sng">
                                 <rect key="frame" x="24" y="256" width="327" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호를 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Non-Ea-V9c">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123" placeholder="비밀번호를 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Non-Ea-V9c">
                                         <rect key="frame" x="11" y="16" width="305" height="22"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="Zxl-Qz-bwI" id="2vo-p1-Cw3"/>
                                         </connections>
@@ -148,6 +148,9 @@
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchUpSignIn:" destination="Zxl-Qz-bwI" eventType="touchUpInside" id="ra8-eZ-IeE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,10 +160,10 @@
                             <constraint firstItem="Y0b-iw-07g" firstAttribute="top" secondItem="BtC-Ix-m2J" secondAttribute="top" constant="26" id="3rv-an-KIr"/>
                             <constraint firstItem="BtC-Ix-m2J" firstAttribute="trailing" secondItem="LjI-hT-0sz" secondAttribute="trailing" id="4Te-T9-HsV"/>
                             <constraint firstItem="zus-39-n5z" firstAttribute="centerX" secondItem="BtC-Ix-m2J" secondAttribute="centerX" id="5jm-y6-6qC"/>
-                            <constraint firstItem="BtC-Ix-m2J" firstAttribute="bottom" secondItem="LjI-hT-0sz" secondAttribute="bottom" id="8rL-br-weh"/>
                             <constraint firstItem="BtC-Ix-m2J" firstAttribute="trailing" secondItem="YGd-e4-EkN" secondAttribute="trailing" constant="24" id="Hcm-AG-EKt"/>
                             <constraint firstItem="RwK-rw-SzM" firstAttribute="leading" secondItem="Y0b-iw-07g" secondAttribute="leading" id="S8s-rf-0WP"/>
                             <constraint firstItem="Y0b-iw-07g" firstAttribute="leading" secondItem="BtC-Ix-m2J" secondAttribute="leading" constant="24" id="ZCs-8i-WL4"/>
+                            <constraint firstItem="LjI-hT-0sz" firstAttribute="bottom" secondItem="BtC-Ix-m2J" secondAttribute="bottom" id="ZGO-C0-QWP"/>
                             <constraint firstItem="YGd-e4-EkN" firstAttribute="leading" secondItem="Y0b-iw-07g" secondAttribute="leading" id="mA5-t3-2Bb"/>
                             <constraint firstItem="RwK-rw-SzM" firstAttribute="top" secondItem="YGd-e4-EkN" secondAttribute="bottom" constant="42" id="oOg-mm-yrX"/>
                             <constraint firstItem="vSF-LX-sng" firstAttribute="leading" secondItem="RwK-rw-SzM" secondAttribute="leading" id="pLr-50-18o"/>
@@ -184,6 +187,7 @@
                     <connections>
                         <outlet property="idBoxView" destination="YGd-e4-EkN" id="nBc-W2-YTm"/>
                         <outlet property="idField" destination="aRv-M8-kBE" id="Sba-gF-H7d"/>
+                        <outlet property="loginBottomConstraint" destination="ZGO-C0-QWP" id="Pc6-EZ-zIo"/>
                         <outlet property="pwBoxView" destination="vSF-LX-sng" id="R57-fb-NRJ"/>
                         <outlet property="pwField" destination="Non-Ea-V9c" id="Bcj-5d-qCW"/>
                     </connections>
@@ -210,6 +214,9 @@
                                 <state key="normal" title="회원가입">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapSignUp:" destination="Isj-pT-7M8" eventType="touchUpInside" id="OHI-6I-zpR"/>
+                                </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVC-cw-Ass">
                                 <rect key="frame" x="0.0" y="88" width="375" height="764"/>
@@ -224,7 +231,7 @@
                                                         <rect key="frame" x="11" y="16" width="305" height="22"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="Isj-pT-7M8" id="8Bz-5C-azv"/>
                                                         </connections>
@@ -269,7 +276,7 @@
                                                         <rect key="frame" x="11" y="16" width="305" height="22"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="Isj-pT-7M8" id="thz-bm-Mra"/>
                                                         </connections>
@@ -302,7 +309,7 @@
                                                         <rect key="frame" x="11" y="16" width="305" height="22"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartDashesType="no"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="Isj-pT-7M8" id="0HU-DB-UD9"/>
                                                         </connections>
@@ -347,7 +354,7 @@
                                                         <rect key="frame" x="11" y="16" width="305" height="22"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="Isj-pT-7M8" id="ZpH-WE-TNv"/>
                                                         </connections>
@@ -376,11 +383,11 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wsk-cu-fnf">
                                                 <rect key="frame" x="24" y="519" width="327" height="50"/>
                                                 <subviews>
-                                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소를 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8e-V2-L2t">
+                                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소를 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8e-V2-L2t">
                                                         <rect key="frame" x="11" y="16" width="305" height="22"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="Isj-pT-7M8" id="tbe-T3-cJt"/>
                                                         </connections>
@@ -489,6 +496,7 @@
                         <outlet property="pwField" destination="540-TO-GNb" id="ODL-Cd-NBX"/>
                         <outlet property="pwcBox" destination="0xD-Yl-aZp" id="Iki-cj-hND"/>
                         <outlet property="pwcField" destination="Iuv-jT-aEm" id="2cC-jy-Nd3"/>
+                        <outlet property="signUpBottomConstraint" destination="69z-92-2bw" id="x5i-qh-vp4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wx1-Kd-AAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
