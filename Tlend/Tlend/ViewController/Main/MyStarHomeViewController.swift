@@ -68,8 +68,14 @@ class MyStarHomeViewController: UIViewController {
     private func goMainTabbar(_ starIdx: Int) {
         let tabbarController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainTabBarController")
         guard let navigationController = tabbarController.children.first as? UINavigationController,
-        let viewController = navigationController.viewControllers.first as? HomeMainViewController else { return }
+        let viewController = navigationController.viewControllers.first as? HomeMainViewController,
+        let navigationController2 = tabbarController.children[1] as? UINavigationController,
+        let viewController2 = navigationController2.viewControllers.first as? IdolSupportViewController,
+        let navigationController3 = tabbarController.children[2] as? UINavigationController,
+        let viewController3 = navigationController3.viewControllers.first as? IdolRewardViewController else { return }
         viewController.starIdx = starIdx
+        viewController2.starIdx = starIdx
+        viewController3.starIdx = starIdx
         self.present(tabbarController, animated: true, completion: nil)
     }
 }

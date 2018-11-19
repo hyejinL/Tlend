@@ -59,6 +59,9 @@
                     <navigationItem key="navigationItem" id="ZAD-y8-ksA">
                         <barButtonItem key="leftBarButtonItem" image="icClose" id="4o6-Du-1EQ">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="touchUpClose:" destination="VOH-rT-7Mn" id="2G0-gU-W15"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

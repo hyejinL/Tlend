@@ -45,6 +45,10 @@ class IdolMoreViewController: UIViewController {
     private func setupTableView() {
         tableView.tableFooterView = UIView(frame: .zero)
     }
+    @IBAction func touchUpClose(_ sender: Any) {
+        self.dismiss(animated: true
+            , completion: nil)
+    }
     
 }
 

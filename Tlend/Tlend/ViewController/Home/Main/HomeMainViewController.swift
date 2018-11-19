@@ -61,6 +61,9 @@ class HomeMainViewController: UIViewController {
             }
         }
     }
+    @IBAction func touchUpClose(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 }
 
