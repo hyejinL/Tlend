@@ -117,6 +117,7 @@
 		BA87B9DC21A1829B001E7D16 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9DB21A1829B001E7D16 /* LandingViewController.swift */; };
 		BA87B9DE21A19572001E7D16 /* SignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9DD21A19572001E7D16 /* SignService.swift */; };
 		BA87B9E021A19620001E7D16 /* UserIdx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9DF21A19620001E7D16 /* UserIdx.swift */; };
+		BAF439EE21A2753B00704002 /* FirstIdols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF439ED21A2753B00704002 /* FirstIdols.swift */; };
 		BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFEFEAD2198239F00E39F15 /* Form.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -235,6 +236,7 @@
 		BA87B9DB21A1829B001E7D16 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		BA87B9DD21A19572001E7D16 /* SignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignService.swift; sourceTree = "<group>"; };
 		BA87B9DF21A19620001E7D16 /* UserIdx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdx.swift; sourceTree = "<group>"; };
+		BAF439ED21A2753B00704002 /* FirstIdols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstIdols.swift; sourceTree = "<group>"; };
 		BAFEFEAD2198239F00E39F15 /* Form.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Form.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -386,6 +388,7 @@
 				491DBDC521A1D5D100D12EC0 /* Idol.swift */,
 				491DBDC321A1D5A600D12EC0 /* IdolHome.swift */,
 				BA87B9DF21A19620001E7D16 /* UserIdx.swift */,
+				BAF439ED21A2753B00704002 /* FirstIdols.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -818,6 +821,7 @@
 				490D9488219981BA00DAE837 /* UIViewController+NavigationBar.swift in Sources */,
 				BA3DF972219842E600B1D42C /* StockCategoryViewController.swift in Sources */,
 				BA3DF96A21982CA700B1D42C /* FundingKindViewController.swift in Sources */,
+				BAF439EE21A2753B00704002 /* FirstIdols.swift in Sources */,
 				491DBDC621A1D5D100D12EC0 /* Idol.swift in Sources */,
 				49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */,
 				BA608F01219DC3C700A3B5F0 /* IdolRewardViewController.swift in Sources */,

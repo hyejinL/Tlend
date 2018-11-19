@@ -60,15 +60,4 @@ struct NetworkService: APIService, DecodingService {
         return manager.request(url, method: method, parameters: parameters,
                                  encoding: JSONEncoding.default, headers: headers)
     }
-    
-//    func setUser(completion: @escaping (Result<User>) -> ()) {
-//        self.request("") { (result) in
-//            switch result {
-//            case .success(let data):
-//                completion(self.decodeJSONData(User.self, data: data))
-//            case .error(let err):
-//                completion(.error(err))
-//            }
-//        }
-//    }
 }
