@@ -61,9 +61,8 @@ class SignInViewController: UIViewController {
                                     switch result {
                                     case .success(let data):
                                         try? AuthService.shared.saveToken("\(data.userIDX)")
-                                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(ofType: MyStarHomeViewController.self)
-                                        let navi = UINavigationController(rootViewController: vc)
-                                        self.present(navi, animated: true, completion: nil)
+                                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyStarNavigation")
+                                        self.present(vc, animated: true, completion: nil)
                                     case .error(let error):
                                         print(error.localizedDescription)
                                     }

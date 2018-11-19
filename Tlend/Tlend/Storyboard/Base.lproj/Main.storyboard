@@ -76,7 +76,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UWQ-eJ-Fdm" kind="push" id="Ocp-ik-Ptx"/>
+                                    <action selector="touchUpStart:" destination="67i-cb-ihX" eventType="touchUpInside" id="jLT-hA-seS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZh-z2-6eF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="183.19999999999999" y="-237.192118226601"/>
+            <point key="canvasLocation" x="-292" y="-237"/>
         </scene>
         <!--My Star Home View Controller-->
         <scene sceneID="pVl-4W-IBX">
@@ -138,7 +138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Io-Iv-7gT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119.2" y="-237.192118226601"/>
+            <point key="canvasLocation" x="2061.5999999999999" y="-237.192118226601"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mwf-Rk-AUB">
@@ -161,7 +161,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVT-B5-1zM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2076" y="-237.192118226601"/>
+            <point key="canvasLocation" x="3018.4000000000001" y="-237.192118226601"/>
         </scene>
         <!--Home-->
         <scene sceneID="7qq-3N-0kH">
@@ -181,7 +181,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSf-h0-MLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376" y="-431.5270935960591"/>
+            <point key="canvasLocation" x="4318.3999999999996" y="-431.5270935960591"/>
         </scene>
         <!--Reward-->
         <scene sceneID="4rF-bZ-z6R">
@@ -191,7 +191,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Fh-WA-pov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376" y="-134.48275862068965"/>
+            <point key="canvasLocation" x="4318.3999999999996" y="-134.48275862068965"/>
         </scene>
         <!--More-->
         <scene sceneID="gog-T1-g8E">
@@ -206,7 +206,7 @@
         <!--Navigation Controller-->
         <scene sceneID="gPF-Og-D4w">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j1U-pL-YUM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SelectStarNavigation" automaticallyAdjustsScrollViewInsets="NO" id="j1U-pL-YUM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WdS-Fi-kOV">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -220,7 +220,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzN-Nu-vQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-574" y="-237"/>
+            <point key="canvasLocation" x="-1122" y="-237"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xE8-b3-tlY">
+            <objects>
+                <navigationController storyboardIdentifier="MyStarNavigation" automaticallyAdjustsScrollViewInsets="NO" id="UJW-kD-r0S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N0Y-MD-613">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UWQ-eJ-Fdm" kind="relationship" relationship="rootViewController" id="lFL-dV-Din"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gUO-tP-QL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1119.2" y="-237.192118226601"/>
         </scene>
     </scenes>
     <resources>

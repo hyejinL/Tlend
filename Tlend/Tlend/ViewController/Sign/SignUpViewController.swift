@@ -65,10 +65,9 @@ class SignUpViewController: UIViewController {
                                     let dialog = DialogViewController(title: "가입이 완료되었습니다",
                                                                       content: "트렌드를 이용하기 위해 내새끼를 선택해주세요!",
                                                                       confirmAction: { [weak self] dialog in
-                                                                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(ofType: SelectedMyStarViewController.self)
-                                                                        let navi = UINavigationController(rootViewController: vc)
+                                                                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectStarNavigation")
                                                                         dialog.dismiss(animated: true, completion: { [weak self] in
-                                                                            self?.present(navi, animated: true, completion: nil)
+                                                                            self?.present(vc, animated: true, completion: nil)
                                                                         })
                                     })
                                     dialog.dialog.cancelButton.removeFromSuperview()

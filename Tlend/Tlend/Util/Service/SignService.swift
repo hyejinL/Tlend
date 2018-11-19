@@ -30,7 +30,10 @@ struct SignService: APIService, DecodingService {
         let params = [
             "id": id,
             "pw": pw,
-            "nickname": nickname
+            "nickname": nickname,
+            "idolName1": "방탄소년단",
+            "idolName2": "비투비",
+            "idolName3": "슈퍼주니어"
         ]
         NetworkService.shared.request(url("user/signup"), method: .post, parameters: params) { result in
             switch result {
@@ -42,11 +45,11 @@ struct SignService: APIService, DecodingService {
         }
     }
     
-    func getIdols(completion: @escaping (Result<Void>) -> Void) {
+    func getIdols(completion: @escaping (Result<FirstIdols>) -> Void) {
         NetworkService.shared.request(url("idol"), method: .get) { result in
             switch result {
-            case .success:
-                completion(.success(()))
+            case .success(let data):
+                completion(self.decodeJSONData(FirstIdols.self, data: data))
             case .error(let err):
                 completion(.error(err))
             }

@@ -13,6 +13,7 @@ class SelectedMyStarViewController: UIViewController {
     @IBOutlet weak var selectedMyStarCollectionView: UICollectionView!
     @IBOutlet weak var startButton: UIButton!
     
+    var idols: [Idol] = []
     private var myStarIndexArray: NSMutableArray = []
     
     struct Style {
@@ -37,6 +38,20 @@ class SelectedMyStarViewController: UIViewController {
 
         self.setupUI()
         self.collectionViewInit()
+        setupData()
+        
+    }
+    
+    private func setupData() {
+        SignService.shared.getIdols { [weak self] result in
+            switch result {
+            case .success(let data):
+                self?.idols = data.idol
+                self?.selectedMyStarCollectionView.reloadData()
+            case .error(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     private func setupUI() {
@@ -56,6 +71,10 @@ class SelectedMyStarViewController: UIViewController {
         }
         
         self.startButton.setTitle("시작하기 (\(count)/3)", for: .normal)
+    }
+    @IBAction func touchUpStart(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyStarNavigation")
+        self.present(vc, animated: true, completion: nil)
     }
 }
 
@@ -118,7 +137,7 @@ extension SelectedMyStarViewController: UICollectionViewDataSource {
         case .SearchHeader:
             return 1
         case .MyStarList:
-            return 10
+            return idols.count
         }
     }
     
@@ -130,7 +149,9 @@ extension SelectedMyStarViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeue(SearchStarCollectionViewCell.self, for: indexPath)
             return cell
         case .MyStarList:
+            guard idols.count > indexPath.item else { return UICollectionViewCell() }
             let cell = collectionView.dequeue(MyStarImageCollectionViewCell.self, for: indexPath)
+            cell.configure(type: .idol, idol: idols[indexPath.item])
             cell.selectedCell()
             return cell
         }
