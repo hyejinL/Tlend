@@ -47,6 +47,7 @@ extension DetailInfoViewController: SendDataViewControllerDelegate {
             self.buttonType = data
             
             self.detailTableView.beginUpdates()
+
             self.detailTableView.endUpdates()
             self.detailTableView.layer.removeAllAnimations()
         }

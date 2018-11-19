@@ -2,6 +2,14 @@ PODS:
   - Alamofire (4.7.3)
   - KeychainAccess (3.1.2)
   - Kingfisher (4.10.1)
+  - RxAtomic (4.4.0)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxKeyboard (0.9.0):
+    - RxCocoa (>= 4.3.1)
+    - RxSwift (>= 4.3.1)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
   - SnapKit (4.2.0)
   - XLPagerTabStrip (8.1.0)
 
@@ -9,6 +17,9 @@ DEPENDENCIES:
   - Alamofire
   - KeychainAccess
   - Kingfisher
+  - RxCocoa
+  - RxKeyboard
+  - RxSwift
   - SnapKit
   - XLPagerTabStrip (~> 8.1.0)
 
@@ -17,6 +28,10 @@ SPEC REPOS:
     - Alamofire
     - KeychainAccess
     - Kingfisher
+    - RxAtomic
+    - RxCocoa
+    - RxKeyboard
+    - RxSwift
     - SnapKit
     - XLPagerTabStrip
 
@@ -24,9 +39,13 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   KeychainAccess: b3816fddcf28aa29d94b10ec305cd52be14c472b
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxKeyboard: 4f782303f499f41577b41c96c6a9a5d7acd51a47
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
 
-PODFILE CHECKSUM: 7674f5952a2fc91a9a05f479e1023eb0640669f6
+PODFILE CHECKSUM: 5846da23b97b892cb43b415eda23aabbde9fe059
 
 COCOAPODS: 1.5.3
