@@ -23,11 +23,15 @@ class IdolSupportViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    lazy var headerView = IdolHeaderView.loadFromXib()
+    lazy var headerView: IdolHeaderView = IdolHeaderView.loadFromXib()
+    var banner: Banner?
+    var supports: [Support] = []
+    var starIdx: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        getData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +43,20 @@ class IdolSupportViewController: UIViewController {
     
     private func setupUI() {
         setupTableView()
+    }
+    
+    private func getData() {
+        IdolService.shared.getSupportData(idolIdx: self.starIdx ?? 0) { [weak self] result in
+            switch result {
+            case .success(let data):
+                self?.banner = data.banner
+                self?.supports = data.support
+                self?.updateHeader()
+                self?.tableView.reloadData()
+            case .error(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     private func setupTableView() {
@@ -55,6 +73,12 @@ class IdolSupportViewController: UIViewController {
         }
         tableView.tableHeaderView = backgroundView
     }
+    
+    private func updateHeader() {
+        guard let banner = banner else { return }
+        headerView.configure(banner.bannerImage)
+    }
+    
     @IBAction func touchUpClose(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -70,7 +94,7 @@ extension IdolSupportViewController: UITableViewDataSource {
         case .info:
             return 1
         case .items:
-            return 10
+            return supports.count
         }
     }
     
@@ -82,8 +106,9 @@ extension IdolSupportViewController: UITableViewDataSource {
             cell.configure(.support)
             return cell
         case .items:
+            guard supports.count > indexPath.row else { return UITableViewCell() }
             let cell = tableView.dequeue(IdolItemTableViewCell.self, for: indexPath)
-            cell.configure(type: .support)
+            cell.configure(type: .support, support: supports[indexPath.row])
             return cell
         }
 

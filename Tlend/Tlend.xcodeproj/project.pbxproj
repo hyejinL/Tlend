@@ -118,6 +118,10 @@
 		BA87B9DE21A19572001E7D16 /* SignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9DD21A19572001E7D16 /* SignService.swift */; };
 		BA87B9E021A19620001E7D16 /* UserIdx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA87B9DF21A19620001E7D16 /* UserIdx.swift */; };
 		BAF439EE21A2753B00704002 /* FirstIdols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF439ED21A2753B00704002 /* FirstIdols.swift */; };
+		BAF439F021A27E2700704002 /* IdolService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF439EF21A27E2700704002 /* IdolService.swift */; };
+		BAF439F221A27E9200704002 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF439F121A27E9200704002 /* Banner.swift */; };
+		BAF439F421A27EA100704002 /* IdolSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF439F321A27EA100704002 /* IdolSupport.swift */; };
+		BAF439F621A2839700704002 /* IdolReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF439F521A2839700704002 /* IdolReward.swift */; };
 		BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAFEFEAD2198239F00E39F15 /* Form.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -237,6 +241,10 @@
 		BA87B9DD21A19572001E7D16 /* SignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignService.swift; sourceTree = "<group>"; };
 		BA87B9DF21A19620001E7D16 /* UserIdx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdx.swift; sourceTree = "<group>"; };
 		BAF439ED21A2753B00704002 /* FirstIdols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstIdols.swift; sourceTree = "<group>"; };
+		BAF439EF21A27E2700704002 /* IdolService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolService.swift; sourceTree = "<group>"; };
+		BAF439F121A27E9200704002 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		BAF439F321A27EA100704002 /* IdolSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolSupport.swift; sourceTree = "<group>"; };
+		BAF439F521A2839700704002 /* IdolReward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolReward.swift; sourceTree = "<group>"; };
 		BAFEFEAD2198239F00E39F15 /* Form.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Form.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -389,6 +397,9 @@
 				491DBDC321A1D5A600D12EC0 /* IdolHome.swift */,
 				BA87B9DF21A19620001E7D16 /* UserIdx.swift */,
 				BAF439ED21A2753B00704002 /* FirstIdols.swift */,
+				BAF439F121A27E9200704002 /* Banner.swift */,
+				BAF439F321A27EA100704002 /* IdolSupport.swift */,
+				BAF439F521A2839700704002 /* IdolReward.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -495,6 +506,7 @@
 				BA87B9D321A1645B001E7D16 /* AuthAdapter.swift */,
 				49FFB9FA21A1913900F40ABC /* HomeService.swift */,
 				BA87B9DD21A19572001E7D16 /* SignService.swift */,
+				BAF439EF21A27E2700704002 /* IdolService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -787,6 +799,7 @@
 				BA608EFF219DC1B400A3B5F0 /* UIView+Tlend.swift in Sources */,
 				49FFB9EF21A1284900F40ABC /* APIService.swift in Sources */,
 				490D948A219982FC00DAE837 /* UIView+Shadow.swift in Sources */,
+				BAF439F221A27E9200704002 /* Banner.swift in Sources */,
 				BA3DF9702198320F00B1D42C /* UIStoryboard+Tlend.swift in Sources */,
 				49A760CC219F24E70007DB48 /* FundingInfoTableViewCell.swift in Sources */,
 				BA87B9DA21A16B05001E7D16 /* SplashCollectionViewCell.swift in Sources */,
@@ -807,6 +820,7 @@
 				BA3DF96221982A3D00B1D42C /* FormCheckTableViewCell.swift in Sources */,
 				490D949B219A696100DAE837 /* SearchViewController.swift in Sources */,
 				BA87B9DC21A1829B001E7D16 /* LandingViewController.swift in Sources */,
+				BAF439F421A27EA100704002 /* IdolSupport.swift in Sources */,
 				BA87B9D621A16878001E7D16 /* SplashViewController.swift in Sources */,
 				BA3DF96821982C3C00B1D42C /* StartFormViewController.swift in Sources */,
 				4942C0B9219F2C0C00A431A6 /* DetailInfoViewController.swift in Sources */,
@@ -828,10 +842,12 @@
 				49202C69219E8DFE005286E2 /* MyStarListTableViewCell.swift in Sources */,
 				490D946D219842BB00DAE837 /* HomeMainViewController.swift in Sources */,
 				49202C65219E8D67005286E2 /* MyStarHomeTitleTableViewCell.swift in Sources */,
+				BAF439F021A27E2700704002 /* IdolService.swift in Sources */,
 				49FFB9EB21A0761100F40ABC /* TotalAmountTableViewCell.swift in Sources */,
 				BA608EEF219DAE6400A3B5F0 /* IdolHeaderView.swift in Sources */,
 				BA87B9C521A12DD7001E7D16 /* DialogViewController.swift in Sources */,
 				BA608F05219DC62E00A3B5F0 /* MoreTableViewCell.swift in Sources */,
+				BAF439F621A2839700704002 /* IdolReward.swift in Sources */,
 				490D9483219971AC00DAE837 /* HotKeywordCollectionViewCell.swift in Sources */,
 				49FFB9F321A12CF900F40ABC /* NetworkService.swift in Sources */,
 				BA608EF3219DAF4C00A3B5F0 /* IdolItemTableViewCell.swift in Sources */,

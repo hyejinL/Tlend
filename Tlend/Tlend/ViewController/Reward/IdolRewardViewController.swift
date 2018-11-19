@@ -22,11 +22,15 @@ class IdolRewardViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    lazy var headerView = IdolHeaderView.loadFromXib()
+    lazy var headerView: IdolHeaderView = IdolHeaderView.loadFromXib()
+    var starIdx: Int?
+    var banner: RewardBanner?
+    var rewards: [Reward] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        getData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +42,20 @@ class IdolRewardViewController: UIViewController {
     
     private func setupUI() {
         setupTableView()
+    }
+    
+    private func getData() {
+        IdolService.shared.getRewardData(idolIdx: starIdx ?? 0) { [weak self] result in
+            switch result {
+            case .success(let data):
+                self?.banner = data.banner
+                self?.rewards = data.reward
+                self?.tableView.reloadData()
+                self?.updateHeader()
+            case .error(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     private func setupTableView() {
@@ -54,6 +72,12 @@ class IdolRewardViewController: UIViewController {
         }
         tableView.tableHeaderView = backgroundView
     }
+    
+    private func updateHeader() {
+        guard let banner = banner else { return }
+        headerView.configure(banner.bannerImage)
+    }
+    
     @IBAction func touchUpClose(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -69,7 +93,7 @@ extension IdolRewardViewController: UITableViewDataSource {
         case .info:
             return 1
         case .items:
-            return 10
+            return rewards.count
         }
     }
     
@@ -81,8 +105,9 @@ extension IdolRewardViewController: UITableViewDataSource {
             cell.configure(.reward)
             return cell
         case .items:
+            guard rewards.count > indexPath.row else { return UITableViewCell() }
             let cell = tableView.dequeue(IdolItemTableViewCell.self, for: indexPath)
-            cell.configure(type: .reward)
+            cell.configure(type: .reward, reward: rewards[indexPath.row])
             return cell
         }
         
