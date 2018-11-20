@@ -119,7 +119,6 @@ class ChoiceFundingViewController: UIViewController {
     private func tableViewReloadAnimation(_ tableView: UITableView, indexPath: IndexPath) {
         let index = IndexPath(row: 0, section: Section.option.rawValue)
         guard let cell = tableView.cellForRow(at: index) as? ChoiceOptionTableViewCell else { return }
-        let bottomViewHeight: CGFloat = choiceArray.count > 0 ? 0 : 32
         
         UIView.animate(withDuration: 0.15) {
             switch self.selectType {
@@ -128,6 +127,13 @@ class ChoiceFundingViewController: UIViewController {
             case .select:
                 cell.optionView.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
             }
+        }
+        updateHeight()
+    }
+    
+    private func updateHeight() {
+        UIView.animate(withDuration: 0.15) {
+            let bottomViewHeight: CGFloat = self.choiceArray.count > 0 ? 0 : 32
             self.tableViewHeight.constant = self.optionChoiceTableView.contentSize.height + bottomViewHeight
             print(self.optionChoiceTableView.contentSize.height)
             self.view.layoutIfNeeded()
@@ -155,6 +161,10 @@ class ChoiceFundingViewController: UIViewController {
 extension ChoiceFundingViewController: UITableViewDelegate {
     private func tableViewInit() {
         self.optionChoiceTableView.delegate = self; self.optionChoiceTableView.dataSource = self
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        self.updateHeight()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
