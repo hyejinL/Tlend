@@ -26,6 +26,8 @@
 		490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490D949D219A796200DAE837 /* SearchResultViewController.swift */; };
 		491DBDC421A1D5A600D12EC0 /* IdolHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDC321A1D5A600D12EC0 /* IdolHome.swift */; };
 		491DBDC621A1D5D100D12EC0 /* Idol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDC521A1D5D100D12EC0 /* Idol.swift */; };
+		491DBDC821A2840800D12EC0 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDC721A2840800D12EC0 /* DetailService.swift */; };
+		491DBDCA21A2866800D12EC0 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDC921A2866800D12EC0 /* Detail.swift */; };
 		49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */; };
 		49202C5A219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */; };
 		49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */; };
@@ -156,6 +158,8 @@
 		490D949D219A796200DAE837 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		491DBDC321A1D5A600D12EC0 /* IdolHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolHome.swift; sourceTree = "<group>"; };
 		491DBDC521A1D5D100D12EC0 /* Idol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idol.swift; sourceTree = "<group>"; };
+		491DBDC721A2840800D12EC0 /* DetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailService.swift; sourceTree = "<group>"; };
+		491DBDC921A2866800D12EC0 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStarImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStarImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMyStarViewController.swift; sourceTree = "<group>"; };
@@ -418,6 +422,7 @@
 				BAF439F121A27E9200704002 /* Banner.swift */,
 				BAF439F321A27EA100704002 /* IdolSupport.swift */,
 				BAF439F521A2839700704002 /* IdolReward.swift */,
+				491DBDC921A2866800D12EC0 /* Detail.swift */,
 				BAAF215821A28F60004983A6 /* MediaDetailContent.swift */,
 			);
 			path = Model;
@@ -528,6 +533,7 @@
 				49FFB9FA21A1913900F40ABC /* HomeService.swift */,
 				BA87B9DD21A19572001E7D16 /* SignService.swift */,
 				BAF439EF21A27E2700704002 /* IdolService.swift */,
+				491DBDC721A2840800D12EC0 /* DetailService.swift */,
 				BAAF215621A28ED4004983A6 /* ContentService.swift */,
 			);
 			path = Service;
@@ -915,8 +921,10 @@
 				49A760C4219F20A90007DB48 /* DetailHeaderTableViewCell.swift in Sources */,
 				BA87B9D121A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift in Sources */,
 				49A760B0219E96E50007DB48 /* MyStarHomeFooterTableViewCell.swift in Sources */,
+				491DBDCA21A2866800D12EC0 /* Detail.swift in Sources */,
 				49A760D0219F28890007DB48 /* InfoMenuHeaderView.swift in Sources */,
 				49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */,
+				491DBDC821A2840800D12EC0 /* DetailService.swift in Sources */,
 				490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */,
 				491DBDC421A1D5A600D12EC0 /* IdolHome.swift in Sources */,
 				490D9491219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift in Sources */,

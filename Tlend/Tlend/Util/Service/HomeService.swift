@@ -12,11 +12,7 @@ struct HomeService: APIService, DecodingService {
     static let shared = HomeService()
     
     public func getHomeData(completion: @escaping (Result<Home>) -> Void) {
-        let header = [
-            "user_idx" : "10"
-        ]
-        
-        NetworkService.shared.request(url("home"), headers: header) { (result) in
+        NetworkService.shared.request(url("home")) { (result) in
             switch result {
             case .success(let data):
                 completion(self.decodeJSONData(Home.self, data: data))
