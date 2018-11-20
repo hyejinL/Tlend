@@ -32,8 +32,8 @@ class DetailSupportInfoTableViewCell: UITableViewCell {
     public func configure(_ data: SupportDefault) {
         self.nameLabel.text = data.title
         self.optionLabel.text = data.optionName
-        self.targetBillingLabel.text = "\(data.goalMoney ?? 0) 원"
-        self.currentBillingLabel.text = "\(data.currentMoney) 원"
+        self.targetBillingLabel.text = (data.goalMoney?.getDecimalNumber() ?? "") + " 원"
+        self.currentBillingLabel.text = (data.currentMoney.getDecimalNumber() ?? "") + " 원"
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy년 MM월 dd일"

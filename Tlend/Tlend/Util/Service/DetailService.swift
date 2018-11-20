@@ -11,6 +11,15 @@ import Foundation
 enum DetailType: String {
     case reward
     case support
+    
+    var text: String {
+        switch self {
+        case .support:
+            return "서포트"
+        case .reward:
+            return "배송"
+        }
+    }
 }
 
 enum DetailInfoType {

@@ -11,7 +11,14 @@ import SnapKit
 
 class IdolRewardViewController: UIViewController {
     
+    lazy var underNaviView: UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: Const.screenWidth, height: 88))
+        view.backgroundColor = .white
+        return view
+    }()
+    
     struct Const {
+        static let screenWidth: CGFloat = UIScreen.main.bounds.width
         static let defaultHeaderHeight: CGFloat = 320
         static let detailNavi: String = "DetailViewNavigationController"
     }
@@ -43,6 +50,9 @@ class IdolRewardViewController: UIViewController {
     
     private func setupUI() {
         setupTableView()
+        
+        self.view.addSubview(self.underNaviView)
+        setNavigationWhenDidScroll(self.tableView, underNavi: self.underNaviView, completion: nil)
     }
     
     private func getData() {
@@ -138,6 +148,7 @@ extension IdolRewardViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
         guard offset <= 0.0 else {
+            setNavigationWhenDidScroll(self.tableView, underNavi: self.underNaviView, completion: nil)
             return
         }
         

@@ -32,10 +32,10 @@ class DetailInfoTableViewCell: UITableViewCell {
     
     public func configure(_ data: RewardDefault) {
         self.nameLabel.text = data.title
-        self.deliveryPayLabel.text = "\(data.shipping ?? 0) 원"
+        self.deliveryPayLabel.text = (data.shipping?.getDecimalNumber() ?? "") + " 원"
         self.optionLabel.text = data.optionName
-        self.targetBillingLabel.text = "\(data.goalMoney ?? 0) 원"
-        self.currentBillingLabel.text = "\(data.currentMoney) 원"
+        self.targetBillingLabel.text = (data.goalMoney?.getDecimalNumber() ?? "") + " 원"
+        self.currentBillingLabel.text = (data.currentMoney.getDecimalNumber() ?? "") + " 원"
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy년 MM월 dd일"

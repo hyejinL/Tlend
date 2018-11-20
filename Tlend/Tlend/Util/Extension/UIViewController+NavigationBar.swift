@@ -27,6 +27,7 @@ extension UIViewController {
     // View controller-based status bar appearance
     func setNavigationWhenDidScroll(_ scrollView: UIScrollView,
                                     underNavi view: UIView,
+                                    barButton action: Bool = true,
                                     completion: ((CGPoint) -> Void)?) {
         let offset = scrollView.contentOffset
         guard offset.y >= 20 else {
@@ -45,24 +46,26 @@ extension UIViewController {
         }
         setNeedsStatusBarAppearanceUpdate()
         
-        let color: CGFloat = ratio*255
-//        guard color >= 0 else {
-//            color = 0
-//            return
-//        }
-        let buttonColor = UIColor(red: color, green: color, blue: color, alpha: 1.0)
-        
-        if let buttons = self.navigationItem.leftBarButtonItems {
-            for button in buttons {
-                button.tintColor = buttonColor
+        if action {
+            let color: CGFloat = ratio*255
+//            guard color >= 0 else {
+//                color = 0
+//                return
+//            }
+            let buttonColor = UIColor(red: color, green: color, blue: color, alpha: 1.0)
+            
+            if let buttons = self.navigationItem.leftBarButtonItems {
+                for button in buttons {
+                    button.tintColor = buttonColor
+                }
             }
-        }
-        if let buttons = self.navigationItem.rightBarButtonItems {
-            for button in buttons {
-                button.tintColor = buttonColor
+            if let buttons = self.navigationItem.rightBarButtonItems {
+                for button in buttons {
+                    button.tintColor = buttonColor
+                }
             }
+            
         }
-        
         completion?(offset)
     }
 }

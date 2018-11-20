@@ -11,6 +11,9 @@ import UIKit
 class DetailInfoImageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var detailInfoImageView: UIImageView!
+    @IBOutlet weak var imageViewHeight: NSLayoutConstraint!
+    
+    weak var delegate: ContentImageProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +27,9 @@ class DetailInfoImageTableViewCell: UITableViewCell {
     }
     
     func configure(_ data: String) {
-        self.detailInfoImageView.kf.setImage(with: URL(string: data))
+        self.detailInfoImageView.kf.setImage(with: URL(string: data)) { [weak self] (_, _, _, _) in
+            self?.delegate?.setImageHeight()
+        }
     }
     
 }

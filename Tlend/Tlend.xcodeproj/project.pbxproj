@@ -37,6 +37,7 @@
 		491DBDDA21A31D1900D12EC0 /* FinishFundingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDD921A31D1900D12EC0 /* FinishFundingViewController.swift */; };
 		491DBDDD21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDDB21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift */; };
 		491DBDDE21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491DBDDC21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib */; };
+		491DBDE021A46F2900D12EC0 /* Int+Tlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDDF21A46F2900D12EC0 /* Int+Tlend.swift */; };
 		49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */; };
 		49202C5A219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */; };
 		49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */; };
@@ -178,6 +179,7 @@
 		491DBDD921A31D1900D12EC0 /* FinishFundingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishFundingViewController.swift; sourceTree = "<group>"; };
 		491DBDDB21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSupportInfoTableViewCell.swift; sourceTree = "<group>"; };
 		491DBDDC21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSupportInfoTableViewCell.xib; sourceTree = "<group>"; };
+		491DBDDF21A46F2900D12EC0 /* Int+Tlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Tlend.swift"; sourceTree = "<group>"; };
 		49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStarImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStarImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMyStarViewController.swift; sourceTree = "<group>"; };
@@ -550,6 +552,7 @@
 				BA608EFE219DC1B400A3B5F0 /* UIView+Tlend.swift */,
 				BA608EF6219DB1D000A3B5F0 /* UIColor+Tlend.swift */,
 				BA608EFC219DBC6000A3B5F0 /* UIView+Xib.swift */,
+				491DBDDF21A46F2900D12EC0 /* Int+Tlend.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -958,6 +961,7 @@
 				BA608EEC219DADD700A3B5F0 /* IdolSupportViewController.swift in Sources */,
 				4942C0BC219F2CA800A431A6 /* DetailHeaderImageCollectionViewCell.swift in Sources */,
 				49202C5F219DC4E8005286E2 /* SearchStarCollectionViewCell.swift in Sources */,
+				491DBDE021A46F2900D12EC0 /* Int+Tlend.swift in Sources */,
 				490D946F2198431300DAE837 /* HomeHotKeywordViewController.swift in Sources */,
 				490D9494219A4ED200DAE837 /* CollectionView+Tlend.swift in Sources */,
 				49A760C4219F20A90007DB48 /* DetailHeaderTableViewCell.swift in Sources */,

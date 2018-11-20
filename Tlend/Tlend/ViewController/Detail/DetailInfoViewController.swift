@@ -15,6 +15,15 @@ class DetailInfoViewController: UIViewController {
     var detailType: DetailType?
     var buttonType: DetailInfoType = .detail
     lazy var infoHeaderView: InfoMenuHeaderView = .loadFromXib()
+    lazy var underNaviView: UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: Const.screenWidth, height: 88))
+        view.backgroundColor = .white
+        return view
+    }()
+    
+    struct Const {
+        static let screenWidth: CGFloat = UIScreen.main.bounds.width
+    }
     
     var starIdx: Int?
     var detailIdx: Int?
@@ -47,6 +56,9 @@ class DetailInfoViewController: UIViewController {
     private func setupUI() {
         setWhiteNavigationBar()
         self.navigationController?.navigationBar.isTranslucent = true
+        
+        self.view.addSubview(self.underNaviView)
+        setNavigationWhenDidScroll(self.detailTableView, underNavi: self.underNaviView, barButton: false, completion: nil)
     }
     
     private func setupData() {
@@ -96,6 +108,13 @@ extension DetailInfoViewController: SendDataViewControllerDelegate {
     }
 }
 
+extension DetailInfoViewController: ContentImageProtocol {
+    func setImageHeight() {
+        self.detailTableView.beginUpdates()
+        self.detailTableView.endUpdates()
+    }
+}
+
 extension DetailInfoViewController: UITableViewDelegate {
     private func tableViewInit() {
         self.detailTableView.delegate = self; self.detailTableView.dataSource = self
@@ -106,6 +125,10 @@ extension DetailInfoViewController: UITableViewDelegate {
         self.detailTableView.register(DetailInfoTableViewCell.self)
         self.detailTableView.register(DetailInfoImageTableViewCell.self)
         self.detailTableView.register(DetailSupportInfoTableViewCell.self)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        setNavigationWhenDidScroll(scrollView, underNavi: self.underNaviView, barButton: false, completion: nil)
     }
 }
 
@@ -144,18 +167,20 @@ extension DetailInfoViewController: UITableViewDataSource {
         switch section {
         case .Header:
             let cell = tableView.dequeue(DetailHeaderTableViewCell.self, for: indexPath)
-            cell.configure(self.common?.itemImages ?? [])
+            cell.configure(self.common)
             return cell
         case .ShareAndSaveButton:
             let cell = tableView.dequeue(ShareAndSaveButtonTableViewCell.self, for: indexPath)
             return cell
         case .FundingProgress:
             let cell = tableView.dequeue(FundingInfoTableViewCell.self, for: indexPath)
+            cell.configure(type: self.detailType, self.common)
             return cell
         case .Info:
             switch buttonType {
             case .detail:
                 let cell = tableView.dequeue(DetailInfoImageTableViewCell.self, for: indexPath)
+                cell.delegate = self
                 cell.configure(self.detailData?.imageKey ?? "")
                 return cell
             case .default:

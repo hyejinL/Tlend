@@ -27,7 +27,7 @@ protocol CommonType {
     var currentMoney: Int { set get }
     var dDay: Int { set get }
     var percent: Int { set get }
-    var schedule: String { set get }
+    var schedule: Date { set get }
 }
 
 struct SupportCommon: Codable, CommonType {
@@ -37,7 +37,7 @@ struct SupportCommon: Codable, CommonType {
     var currentMoney: Int
     var dDay: Int
     var percent: Int
-    var schedule: String
+    var schedule: Date
     
     enum CodingKeys: String, CodingKey {
         case itemImages = "item_images"
@@ -56,7 +56,7 @@ struct RewardCommon: Codable, CommonType {
     var currentMoney: Int
     var dDay: Int
     var percent: Int
-    var schedule: String
+    var schedule: Date
     
     enum CodingKeys: String, CodingKey {
         case itemImages = "item_images"
