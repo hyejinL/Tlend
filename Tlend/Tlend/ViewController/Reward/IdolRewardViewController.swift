@@ -11,8 +11,16 @@ import SnapKit
 
 class IdolRewardViewController: UIViewController {
     
+    lazy var underNaviView: UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: Const.screenWidth, height: 88))
+        view.backgroundColor = .white
+        return view
+    }()
+    
     struct Const {
+        static let screenWidth: CGFloat = UIScreen.main.bounds.width
         static let defaultHeaderHeight: CGFloat = 320
+        static let detailNavi: String = "DetailViewNavigationController"
     }
     
     enum Section: Int, CaseIterable {
@@ -42,6 +50,9 @@ class IdolRewardViewController: UIViewController {
     
     private func setupUI() {
         setupTableView()
+        
+        self.view.addSubview(self.underNaviView)
+        setNavigationWhenDidScroll(self.tableView, underNavi: self.underNaviView, completion: nil)
     }
     
     private func getData() {
@@ -115,12 +126,29 @@ extension IdolRewardViewController: UITableViewDataSource {
 }
 
 extension IdolRewardViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let section = Section(rawValue: indexPath.section) else { return }
+        
+        switch section {
+        case .items:
+            let navigationController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: Const.detailNavi)
+            guard let viewController = navigationController.children.first as? DetailInfoViewController else { return }
+            viewController.detailType = .reward
+            viewController.starIdx = self.starIdx
+            viewController.detailIdx = self.rewards[indexPath.row].rewardIdx
+            self.present(navigationController, animated: true, completion: nil)
+            
+        default:
+            break
+        }
+    }
 }
 
 extension IdolRewardViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
         guard offset <= 0.0 else {
+            setNavigationWhenDidScroll(self.tableView, underNavi: self.underNaviView, completion: nil)
             return
         }
         

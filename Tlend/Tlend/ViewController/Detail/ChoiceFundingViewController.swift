@@ -15,12 +15,15 @@ class ChoiceFundingViewController: UIViewController {
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet var tableViewTopConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var tableHiddenView: UIView!
+    
     var selectType: SelectType = .none
     var array: [String] = ["블랙", "화이트", "챠콜", "브라운"]
     var choiceArray: [String] = []
     
     struct Const {
         static let header: String = "CloseHeaderCell"
+        static let navigation: String = "FundingEndNavi"
     }
     
     enum StartAction {
@@ -40,9 +43,15 @@ class ChoiceFundingViewController: UIViewController {
         case select
     }
     
+    enum DialogStartType {
+        case end
+        case start
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setupUI()
         self.tableViewInit()
     }
     
@@ -61,6 +70,36 @@ class ChoiceFundingViewController: UIViewController {
         self.optionTableViewAnimation(.end) {
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func startFundingAction(_ sender: Any) {
+        if self.choiceArray.count > 0 {
+            self.tableHiddenViewAnimation(.start)
+            
+            let text = """
+            펀딩 시 결제가 예약되며
+            목표금액 미달성 시 결제가 취소되고
+            달성 시 상품 마감일에 일괄 결제 됩니다.
+            """
+            guard let presentingViewController = self.presentingViewController else { return }
+            let dialogViewController = DialogViewController(title: "잠깐", content: text, confirmAction: { (dialog) in
+                dialog.dismiss(animated: false, completion: {
+                    self.dismiss(animated: false, completion: {
+                        let navigationController = UIStoryboard(name: "Detail", bundle: nil)
+                            .instantiateViewController(withIdentifier: Const.navigation)
+                        presentingViewController.present(navigationController, animated: true, completion: nil)
+                    })
+                })
+            }) { [weak self] (_) in
+                self?.tableHiddenViewAnimation(.end)
+            }
+            self.present(dialogViewController, animated: true, completion: nil)
+        }
+    }
+    
+    private func setupUI() {
+        self.tableHiddenView.alpha = 0
+        self.tableHiddenView.isHidden = true
     }
     
     private func optionTableViewAnimation(_ type: StartAction, completion: (()->Void)? = nil) {
@@ -92,6 +131,23 @@ class ChoiceFundingViewController: UIViewController {
             self.tableViewHeight.constant = self.optionChoiceTableView.contentSize.height + bottomViewHeight
             print(self.optionChoiceTableView.contentSize.height)
             self.view.layoutIfNeeded()
+        }
+    }
+    
+    private func tableHiddenViewAnimation(_ type: DialogStartType) {
+        switch type {
+        case .end:
+            UIView.animate(withDuration: 0.1, animations: { [weak self] in
+                self?.tableHiddenView.alpha = 0
+            }) { [weak self] (_) in
+                self?.tableHiddenView.isHidden = true
+            }
+        case .start:
+            UIView.animate(withDuration: 0.1, animations: { [weak self] in
+                self?.tableHiddenView.alpha = 1
+            }) { [weak self] (_) in
+                self?.tableHiddenView.isHidden = false
+            }
         }
     }
 }

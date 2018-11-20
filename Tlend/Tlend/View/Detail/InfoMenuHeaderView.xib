@@ -70,8 +70,9 @@
                             </subviews>
                         </stackView>
                     </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="47.5" id="mgR-5Q-bqd"/>
+                        <constraint firstAttribute="height" constant="48" id="G19-P7-NE2"/>
                     </constraints>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ENt-aC-wWk">

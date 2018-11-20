@@ -28,6 +28,16 @@
 		491DBDC621A1D5D100D12EC0 /* Idol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDC521A1D5D100D12EC0 /* Idol.swift */; };
 		491DBDC821A2840800D12EC0 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDC721A2840800D12EC0 /* DetailService.swift */; };
 		491DBDCA21A2866800D12EC0 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDC921A2866800D12EC0 /* Detail.swift */; };
+		491DBDCE21A313EA00D12EC0 /* ItemInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDCC21A313EA00D12EC0 /* ItemInfoTableViewCell.swift */; };
+		491DBDCF21A313EA00D12EC0 /* ItemInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491DBDCD21A313EA00D12EC0 /* ItemInfoTableViewCell.xib */; };
+		491DBDD221A3182000D12EC0 /* BuyerInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDD021A3182000D12EC0 /* BuyerInfoTableViewCell.swift */; };
+		491DBDD321A3182000D12EC0 /* BuyerInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491DBDD121A3182000D12EC0 /* BuyerInfoTableViewCell.xib */; };
+		491DBDD721A31A0900D12EC0 /* BillingInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDD521A31A0900D12EC0 /* BillingInfoTableViewCell.swift */; };
+		491DBDD821A31A0900D12EC0 /* BillingInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491DBDD621A31A0900D12EC0 /* BillingInfoTableViewCell.xib */; };
+		491DBDDA21A31D1900D12EC0 /* FinishFundingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDD921A31D1900D12EC0 /* FinishFundingViewController.swift */; };
+		491DBDDD21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDDB21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift */; };
+		491DBDDE21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491DBDDC21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib */; };
+		491DBDE021A46F2900D12EC0 /* Int+Tlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDDF21A46F2900D12EC0 /* Int+Tlend.swift */; };
 		49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */; };
 		49202C5A219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */; };
 		49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */; };
@@ -160,6 +170,16 @@
 		491DBDC521A1D5D100D12EC0 /* Idol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idol.swift; sourceTree = "<group>"; };
 		491DBDC721A2840800D12EC0 /* DetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailService.swift; sourceTree = "<group>"; };
 		491DBDC921A2866800D12EC0 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		491DBDCC21A313EA00D12EC0 /* ItemInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoTableViewCell.swift; sourceTree = "<group>"; };
+		491DBDCD21A313EA00D12EC0 /* ItemInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemInfoTableViewCell.xib; sourceTree = "<group>"; };
+		491DBDD021A3182000D12EC0 /* BuyerInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerInfoTableViewCell.swift; sourceTree = "<group>"; };
+		491DBDD121A3182000D12EC0 /* BuyerInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BuyerInfoTableViewCell.xib; sourceTree = "<group>"; };
+		491DBDD521A31A0900D12EC0 /* BillingInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingInfoTableViewCell.swift; sourceTree = "<group>"; };
+		491DBDD621A31A0900D12EC0 /* BillingInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillingInfoTableViewCell.xib; sourceTree = "<group>"; };
+		491DBDD921A31D1900D12EC0 /* FinishFundingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishFundingViewController.swift; sourceTree = "<group>"; };
+		491DBDDB21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSupportInfoTableViewCell.swift; sourceTree = "<group>"; };
+		491DBDDC21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSupportInfoTableViewCell.xib; sourceTree = "<group>"; };
+		491DBDDF21A46F2900D12EC0 /* Int+Tlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Tlend.swift"; sourceTree = "<group>"; };
 		49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStarImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStarImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMyStarViewController.swift; sourceTree = "<group>"; };
@@ -327,6 +347,19 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		491DBDCB21A313C500D12EC0 /* Funding End */ = {
+			isa = PBXGroup;
+			children = (
+				491DBDCC21A313EA00D12EC0 /* ItemInfoTableViewCell.swift */,
+				491DBDCD21A313EA00D12EC0 /* ItemInfoTableViewCell.xib */,
+				491DBDD021A3182000D12EC0 /* BuyerInfoTableViewCell.swift */,
+				491DBDD121A3182000D12EC0 /* BuyerInfoTableViewCell.xib */,
+				491DBDD521A31A0900D12EC0 /* BillingInfoTableViewCell.swift */,
+				491DBDD621A31A0900D12EC0 /* BillingInfoTableViewCell.xib */,
+			);
+			path = "Funding End";
+			sourceTree = "<group>";
+		};
 		49202C56219DBE7E005286E2 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +398,7 @@
 				49FFB9E621A0755A00F40ABC /* OptionTableViewCell.swift */,
 				49FFB9E821A0756B00F40ABC /* SelectedOptionTableViewCell.swift */,
 				49FFB9EA21A0761100F40ABC /* TotalAmountTableViewCell.swift */,
+				491DBDD921A31D1900D12EC0 /* FinishFundingViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -422,8 +456,8 @@
 				BAF439F121A27E9200704002 /* Banner.swift */,
 				BAF439F321A27EA100704002 /* IdolSupport.swift */,
 				BAF439F521A2839700704002 /* IdolReward.swift */,
-				491DBDC921A2866800D12EC0 /* Detail.swift */,
 				BAAF215821A28F60004983A6 /* MediaDetailContent.swift */,
+				491DBDC921A2866800D12EC0 /* Detail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -518,6 +552,7 @@
 				BA608EFE219DC1B400A3B5F0 /* UIView+Tlend.swift */,
 				BA608EF6219DB1D000A3B5F0 /* UIColor+Tlend.swift */,
 				BA608EFC219DBC6000A3B5F0 /* UIView+Xib.swift */,
+				491DBDDF21A46F2900D12EC0 /* Int+Tlend.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -533,8 +568,8 @@
 				49FFB9FA21A1913900F40ABC /* HomeService.swift */,
 				BA87B9DD21A19572001E7D16 /* SignService.swift */,
 				BAF439EF21A27E2700704002 /* IdolService.swift */,
-				491DBDC721A2840800D12EC0 /* DetailService.swift */,
 				BAAF215621A28ED4004983A6 /* ContentService.swift */,
+				491DBDC721A2840800D12EC0 /* DetailService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -554,8 +589,11 @@
 				49A760CF219F28890007DB48 /* InfoMenuHeaderView.xib */,
 				4942C0BE219F2FCF00A431A6 /* DetailInfoTableViewCell.swift */,
 				4942C0BF219F2FCF00A431A6 /* DetailInfoTableViewCell.xib */,
+				491DBDDB21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift */,
+				491DBDDC21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib */,
 				4942C0C3219FF27C00A431A6 /* DetailInfoImageTableViewCell.swift */,
 				4942C0C4219FF27C00A431A6 /* DetailInfoImageTableViewCell.xib */,
+				491DBDCB21A313C500D12EC0 /* Funding End */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -748,9 +786,12 @@
 				49A760B7219EB7730007DB48 /* MyStarMemberListTableViewCell.xib in Resources */,
 				BAFEFEAE2198239F00E39F15 /* Form.storyboard in Resources */,
 				49A760C9219F231D0007DB48 /* ShareAndSaveButtonTableViewCell.xib in Resources */,
+				491DBDCF21A313EA00D12EC0 /* ItemInfoTableViewCell.xib in Resources */,
 				49202C74219E9134005286E2 /* TrendRankingTableViewCell.xib in Resources */,
 				490D948021996F5200DAE837 /* HomeItemsTableViewCell.xib in Resources */,
+				491DBDDE21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib in Resources */,
 				490D9496219A583700DAE837 /* Search.storyboard in Resources */,
+				491DBDD321A3182000D12EC0 /* BuyerInfoTableViewCell.xib in Resources */,
 				4942C0C1219F2FCF00A431A6 /* DetailInfoTableViewCell.xib in Resources */,
 				BAAF215E21A296B4004983A6 /* CoverA.xib in Resources */,
 				BA608EF5219DAF5B00A3B5F0 /* IdolItemTableViewCell.xib in Resources */,
@@ -762,6 +803,7 @@
 				BA608F07219DCF2900A3B5F0 /* Sign.storyboard in Resources */,
 				499EDC8F2197ECA90088D7A8 /* Home.storyboard in Resources */,
 				499EDC912197ECB40088D7A8 /* Support.storyboard in Resources */,
+				491DBDD821A31A0900D12EC0 /* BillingInfoTableViewCell.xib in Resources */,
 				490D9484219971AC00DAE837 /* HotKeywordCollectionViewCell.xib in Resources */,
 				BA608EF1219DAE8B00A3B5F0 /* IdolHeaderView.xib in Resources */,
 				BA608EFB219DB34F00A3B5F0 /* IdolInfoTableViewCell.xib in Resources */,
@@ -852,6 +894,7 @@
 				BA608EFF219DC1B400A3B5F0 /* UIView+Tlend.swift in Sources */,
 				49FFB9EF21A1284900F40ABC /* APIService.swift in Sources */,
 				490D948A219982FC00DAE837 /* UIView+Shadow.swift in Sources */,
+				491DBDD721A31A0900D12EC0 /* BillingInfoTableViewCell.swift in Sources */,
 				BAF439F221A27E9200704002 /* Banner.swift in Sources */,
 				BA3DF9702198320F00B1D42C /* UIStoryboard+Tlend.swift in Sources */,
 				49A760CC219F24E70007DB48 /* FundingInfoTableViewCell.swift in Sources */,
@@ -880,6 +923,7 @@
 				BA3DF96821982C3C00B1D42C /* StartFormViewController.swift in Sources */,
 				4942C0B9219F2C0C00A431A6 /* DetailInfoViewController.swift in Sources */,
 				BAAF215D21A296B4004983A6 /* CoverA.swift in Sources */,
+				491DBDDA21A31D1900D12EC0 /* FinishFundingViewController.swift in Sources */,
 				49A760AC219E92440007DB48 /* PopularContentsTableViewCell.swift in Sources */,
 				49FFB9F521A12D7F00F40ABC /* DecodingService.swift in Sources */,
 				490D948C21998C6400DAE837 /* HotKeywordHeaderTableViewCell.swift in Sources */,
@@ -893,6 +937,7 @@
 				BA3DF96A21982CA700B1D42C /* FundingKindViewController.swift in Sources */,
 				BAF439EE21A2753B00704002 /* FirstIdols.swift in Sources */,
 				491DBDC621A1D5D100D12EC0 /* Idol.swift in Sources */,
+				491DBDDD21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift in Sources */,
 				49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */,
 				BA608F01219DC3C700A3B5F0 /* IdolRewardViewController.swift in Sources */,
 				49202C69219E8DFE005286E2 /* MyStarListTableViewCell.swift in Sources */,
@@ -916,6 +961,7 @@
 				BA608EEC219DADD700A3B5F0 /* IdolSupportViewController.swift in Sources */,
 				4942C0BC219F2CA800A431A6 /* DetailHeaderImageCollectionViewCell.swift in Sources */,
 				49202C5F219DC4E8005286E2 /* SearchStarCollectionViewCell.swift in Sources */,
+				491DBDE021A46F2900D12EC0 /* Int+Tlend.swift in Sources */,
 				490D946F2198431300DAE837 /* HomeHotKeywordViewController.swift in Sources */,
 				490D9494219A4ED200DAE837 /* CollectionView+Tlend.swift in Sources */,
 				49A760C4219F20A90007DB48 /* DetailHeaderTableViewCell.swift in Sources */,
@@ -930,8 +976,10 @@
 				490D9491219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift in Sources */,
 				49FFB9E321A0749400F40ABC /* ChoiceFundingViewController.swift in Sources */,
 				BA87B9C2219FF73F001E7D16 /* SignUpViewController.swift in Sources */,
+				491DBDCE21A313EA00D12EC0 /* ItemInfoTableViewCell.swift in Sources */,
 				BA608F03219DC62200A3B5F0 /* IdolMoreViewController.swift in Sources */,
 				49A760BA219EBD2A0007DB48 /* MyStarFeedTableViewCell.swift in Sources */,
+				491DBDD221A3182000D12EC0 /* BuyerInfoTableViewCell.swift in Sources */,
 				BAAF215121A28BD9004983A6 /* ContentImageTableViewCell.swift in Sources */,
 				BAAF215321A28BE0004983A6 /* ContentVideoTableViewCell.swift in Sources */,
 				BA87B9D421A1645B001E7D16 /* AuthAdapter.swift in Sources */,

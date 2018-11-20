@@ -13,13 +13,23 @@ class DetailInfoViewController: UIViewController {
     @IBOutlet weak var detailTableView: UITableView!
     
     var detailType: DetailType?
-    var buttonType: DetailInfoType = .Detail
+    var buttonType: DetailInfoType = .detail
     lazy var infoHeaderView: InfoMenuHeaderView = .loadFromXib()
+    lazy var underNaviView: UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: Const.screenWidth, height: 88))
+        view.backgroundColor = .white
+        return view
+    }()
+    
+    struct Const {
+        static let screenWidth: CGFloat = UIScreen.main.bounds.width
+    }
     
     var starIdx: Int?
     var detailIdx: Int?
-    var supportDetail: SupportDetail?
-    var rewardDetail: RewardDetail?
+    var common: CommonType?
+    var detailData: ItemImage?
+    var defaultData: ItemDefault?
     
     enum Section: Int, CaseIterable {
         case Header
@@ -33,6 +43,8 @@ class DetailInfoViewController: UIViewController {
 
         self.setupUI()
         self.tableViewInit()
+        
+        self.setupData()
     }
     
     @IBAction func dismissAction(_ sender: Any) {
@@ -44,6 +56,9 @@ class DetailInfoViewController: UIViewController {
     private func setupUI() {
         setWhiteNavigationBar()
         self.navigationController?.navigationBar.isTranslucent = true
+        
+        self.view.addSubview(self.underNaviView)
+        setNavigationWhenDidScroll(self.detailTableView, underNavi: self.underNaviView, barButton: false, completion: nil)
     }
     
     private func setupData() {
@@ -52,27 +67,30 @@ class DetailInfoViewController: UIViewController {
         
         switch type {
         case .support:
-            service.getSupportDetail(self.starIdx ?? 0,
-                                     detailIdx: self.detailIdx ?? 0,
-                                     info: .Default) { (result) in
-                                        switch result {
-                                        case .success(let data):
-                                            self.supportDetail = data
-                                        case .error(let err):
-                                            print(err)
-                                        }
+            service.getSupportDetail(self.starIdx ?? 0, detailIdx: self.detailIdx ?? 0) { [weak self] (result) in
+                switch result {
+                case .success(let data):
+                    self?.common = data.common
+                    self?.detailData = data.itemDetail
+                    self?.defaultData = data.itemDefault
+                    self?.detailTableView.reloadData()
+                case .error(let err):
+                    print(err.localizedDescription)
+                }
             }
         case .reward:
-            service.getRewardDetail(self.starIdx ?? 0,
-                                    detailIdx: self.detailIdx ?? 0,
-                                    info: .Default) { (result) in
-                                        switch result {
-                                        case .success(let data):
-                                            self.rewardDetail = data
-                                        case .error(let err):
-                                            print(err)
-                                        }
+            service.getRewardDetail(self.starIdx ?? 0, detailIdx: self.detailIdx ?? 0) { [weak self] (result) in
+                switch result {
+                case .success(let data):
+                    self?.common = data.common
+                    self?.detailData = data.itemDetail
+                    self?.defaultData = data.itemDefault
+                    self?.detailTableView.reloadData()
+                case .error(let err):
+                    print(err.localizedDescription)
+                }
             }
+            
         }
     }
 }
@@ -90,6 +108,13 @@ extension DetailInfoViewController: SendDataViewControllerDelegate {
     }
 }
 
+extension DetailInfoViewController: ContentImageProtocol {
+    func setImageHeight() {
+        self.detailTableView.beginUpdates()
+        self.detailTableView.endUpdates()
+    }
+}
+
 extension DetailInfoViewController: UITableViewDelegate {
     private func tableViewInit() {
         self.detailTableView.delegate = self; self.detailTableView.dataSource = self
@@ -99,6 +124,11 @@ extension DetailInfoViewController: UITableViewDelegate {
         self.detailTableView.register(FundingInfoTableViewCell.self)
         self.detailTableView.register(DetailInfoTableViewCell.self)
         self.detailTableView.register(DetailInfoImageTableViewCell.self)
+        self.detailTableView.register(DetailSupportInfoTableViewCell.self)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        setNavigationWhenDidScroll(scrollView, underNavi: self.underNaviView, barButton: false, completion: nil)
     }
 }
 
@@ -137,21 +167,36 @@ extension DetailInfoViewController: UITableViewDataSource {
         switch section {
         case .Header:
             let cell = tableView.dequeue(DetailHeaderTableViewCell.self, for: indexPath)
+            cell.configure(self.common)
             return cell
         case .ShareAndSaveButton:
             let cell = tableView.dequeue(ShareAndSaveButtonTableViewCell.self, for: indexPath)
             return cell
         case .FundingProgress:
             let cell = tableView.dequeue(FundingInfoTableViewCell.self, for: indexPath)
+            cell.configure(type: self.detailType, self.common)
             return cell
         case .Info:
             switch buttonType {
-            case .Detail:
+            case .detail:
                 let cell = tableView.dequeue(DetailInfoImageTableViewCell.self, for: indexPath)
+                cell.delegate = self
+                cell.configure(self.detailData?.imageKey ?? "")
                 return cell
-            case .Default:
-                let cell = tableView.dequeue(DetailInfoTableViewCell.self, for: indexPath)
-                return cell
+            case .default:
+                guard let detailType = self.detailType else { return UITableViewCell() }
+                switch detailType {
+                case .support:
+                    guard let data = self.defaultData as? SupportDefault else { return UITableViewCell() }
+                    let cell = tableView.dequeue(DetailSupportInfoTableViewCell.self, for: indexPath)
+                    cell.configure(data)
+                    return cell
+                case .reward:
+                    guard let data = self.defaultData as? RewardDefault else { return UITableViewCell() }
+                    let cell = tableView.dequeue(DetailInfoTableViewCell.self, for: indexPath)
+                    cell.configure(data)
+                    return cell
+                }
             }
         }
     }

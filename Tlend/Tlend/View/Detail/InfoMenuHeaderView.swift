@@ -21,47 +21,42 @@ class InfoMenuHeaderView: UIView {
     @IBOutlet weak var infoBottomView: UIView!
     
     weak var delegate: SendDataViewControllerDelegate?
-    var type: DetailInfoType = .Detail
-//
-//    enum DetailInfoType {
-//        case Detail
-//        case Default
-//    }
-//
+    var type: DetailInfoType = .detail
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.infoButtonAction(.Detail)
+        self.infoButtonAction(.detail)
     }
     
     @IBAction func pressedDetailInfoAction(_ sender: Any) {
-        guard self.type != .Detail else { return }
-        self.infoButtonAction(.Detail)
+        guard self.type != .detail else { return }
+        self.infoButtonAction(.detail)
     }
     
     @IBAction func pressedInfoAction(_ sender: Any) {
-        guard self.type != .Default else { return }
-        self.infoButtonAction(.Default)
+        guard self.type != .default else { return }
+        self.infoButtonAction(.default)
     }
     
     private func infoButtonAction(_ type: DetailInfoType) {
         self.type = type
         switch type {
-        case .Detail:
+        case .detail:
             self.detailInfoButton.isSelected = true
             self.infoButton.isSelected = false
-        case .Default:
+        case .default:
             self.detailInfoButton.isSelected = false
             self.infoButton.isSelected = true
         }
         
         UIView.animate(withDuration: 0.2) { [weak self] in
             switch type {
-            case .Detail:
+            case .detail:
                 self?.detailInfoBottomView.alpha = 1
                 self?.infoBottomView.alpha = 0
                 
-            case .Default:
+            case .default:
                 self?.detailInfoBottomView.alpha = 0
                 self?.infoBottomView.alpha = 1
             }

@@ -10,9 +10,14 @@ import UIKit
 
 class DetailHeaderImageCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var headerImageVIew: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
+    public func configure(_ data: ItemImage) {
+        self.headerImageVIew.kf.setImage(with: URL(string: data.imageKey))
+    }
 }

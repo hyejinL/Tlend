@@ -12,6 +12,8 @@ class HomeMainViewController: UIViewController {
     
     @IBOutlet weak var homeMainTableView: UITableView!
     
+    @IBOutlet weak var underNaviView: UIView!
+    
     lazy var headerView: IdolHeaderView = IdolHeaderView.loadFromXib()
     
     public var starIdx: Int?
@@ -44,6 +46,7 @@ class HomeMainViewController: UIViewController {
     
     private func setupUI() {
         setWhiteNavigationBar()
+        setNavigationWhenDidScroll(self.homeMainTableView, underNavi: self.underNaviView, completion: nil)
         self.navigationController?.navigationBar.isTranslucent = true
     }
     
@@ -155,6 +158,7 @@ extension HomeMainViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset.y
         guard offset <= 0.0 else {
+            setNavigationWhenDidScroll(scrollView, underNavi: self.underNaviView, completion: nil)
             return
         }
         
