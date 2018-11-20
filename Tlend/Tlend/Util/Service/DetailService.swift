@@ -11,20 +11,11 @@ import Foundation
 enum DetailType: String {
     case reward
     case support
-    
-    var dataType: Codable.Type {
-        switch self {
-        case .support:
-            return SupportDetail.self
-        case .reward:
-            return RewardDetail.self
-        }
-    }
 }
 
-enum DetailInfoType: String {
-    case Default = "default"
-    case Detail = "detail"
+enum DetailInfoType {
+    case `default`
+    case detail
 }
 
 struct DetailService: APIService, DecodingService {
@@ -32,17 +23,16 @@ struct DetailService: APIService, DecodingService {
     
     public func getSupportDetail(_ starIdx: Int,
                                  detailIdx: Int,
-                                 info type: DetailInfoType,
-                                 completion: @escaping (Result<SupportDetail>) -> Void) {
+                                 completion: @escaping (Result<Detail<SupportCommon, SupportDefault>>) -> Void) {
         let URL = url("idol/\(starIdx)/support/\(detailIdx)")
-        let params = [
-            "option" : type.rawValue
-        ]
         
-        NetworkService.shared.request(URL, parameters: params) { (result) in
+        NetworkService.shared.request(URL) { (result) in
             switch result {
             case .success(let data):
-                completion(self.decodeJSONData(SupportDetail.self, dateDecodingStrategy: .iso8601, data: data))
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                completion(self.decodeJSONData(Detail<SupportCommon, SupportDefault>.self,
+                                               dateFormatter: formatter, data: data))
             case .error(let err):
                 completion(.error(err))
             }
@@ -52,17 +42,16 @@ struct DetailService: APIService, DecodingService {
     
     public func getRewardDetail(_ starIdx: Int,
                                  detailIdx: Int,
-                                 info type: DetailInfoType,
-                                 completion: @escaping (Result<RewardDetail>) -> Void) {
-        let URL = url("idol/\(starIdx)/support/\(detailIdx)")
-        let params = [
-            "option" : type.rawValue
-        ]
+                                 completion: @escaping (Result<Detail<RewardCommon, RewardDefault>>) -> Void) {
+        let URL = url("idol/\(starIdx)/reward/\(detailIdx)")
         
-        NetworkService.shared.request(URL, parameters: params) { (result) in
+        NetworkService.shared.request(URL) { (result) in
             switch result {
             case .success(let data):
-                completion(self.decodeJSONData(RewardDetail.self, dateDecodingStrategy: .iso8601, data: data))
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                completion(self.decodeJSONData(Detail<RewardCommon, RewardDefault>.self,
+                                               dateFormatter: formatter, data: data))
             case .error(let err):
                 completion(.error(err))
             }

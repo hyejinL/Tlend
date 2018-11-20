@@ -13,13 +13,14 @@ class DetailInfoViewController: UIViewController {
     @IBOutlet weak var detailTableView: UITableView!
     
     var detailType: DetailType?
-    var buttonType: DetailInfoType = .Detail
+    var buttonType: DetailInfoType = .detail
     lazy var infoHeaderView: InfoMenuHeaderView = .loadFromXib()
     
     var starIdx: Int?
     var detailIdx: Int?
-    var supportDetail: SupportDetail?
-    var rewardDetail: RewardDetail?
+    var common: CommonType?
+    var detailData: ItemImage?
+    var defaultData: ItemDefault?
     
     enum Section: Int, CaseIterable {
         case Header
@@ -33,6 +34,8 @@ class DetailInfoViewController: UIViewController {
 
         self.setupUI()
         self.tableViewInit()
+        
+        self.setupData()
     }
     
     @IBAction func dismissAction(_ sender: Any) {
@@ -52,27 +55,30 @@ class DetailInfoViewController: UIViewController {
         
         switch type {
         case .support:
-            service.getSupportDetail(self.starIdx ?? 0,
-                                     detailIdx: self.detailIdx ?? 0,
-                                     info: .Default) { (result) in
-                                        switch result {
-                                        case .success(let data):
-                                            self.supportDetail = data
-                                        case .error(let err):
-                                            print(err)
-                                        }
+            service.getSupportDetail(self.starIdx ?? 0, detailIdx: self.detailIdx ?? 0) { [weak self] (result) in
+                switch result {
+                case .success(let data):
+                    self?.common = data.common
+                    self?.detailData = data.itemDetail
+                    self?.defaultData = data.itemDefault
+                    self?.detailTableView.reloadData()
+                case .error(let err):
+                    print(err.localizedDescription)
+                }
             }
         case .reward:
-            service.getRewardDetail(self.starIdx ?? 0,
-                                    detailIdx: self.detailIdx ?? 0,
-                                    info: .Default) { (result) in
-                                        switch result {
-                                        case .success(let data):
-                                            self.rewardDetail = data
-                                        case .error(let err):
-                                            print(err)
-                                        }
+            service.getRewardDetail(self.starIdx ?? 0, detailIdx: self.detailIdx ?? 0) { [weak self] (result) in
+                switch result {
+                case .success(let data):
+                    self?.common = data.common
+                    self?.detailData = data.itemDetail
+                    self?.defaultData = data.itemDefault
+                    self?.detailTableView.reloadData()
+                case .error(let err):
+                    print(err.localizedDescription)
+                }
             }
+            
         }
     }
 }
@@ -99,6 +105,7 @@ extension DetailInfoViewController: UITableViewDelegate {
         self.detailTableView.register(FundingInfoTableViewCell.self)
         self.detailTableView.register(DetailInfoTableViewCell.self)
         self.detailTableView.register(DetailInfoImageTableViewCell.self)
+        self.detailTableView.register(DetailSupportInfoTableViewCell.self)
     }
 }
 
@@ -137,6 +144,7 @@ extension DetailInfoViewController: UITableViewDataSource {
         switch section {
         case .Header:
             let cell = tableView.dequeue(DetailHeaderTableViewCell.self, for: indexPath)
+            cell.configure(self.common?.itemImages ?? [])
             return cell
         case .ShareAndSaveButton:
             let cell = tableView.dequeue(ShareAndSaveButtonTableViewCell.self, for: indexPath)
@@ -146,12 +154,24 @@ extension DetailInfoViewController: UITableViewDataSource {
             return cell
         case .Info:
             switch buttonType {
-            case .Detail:
+            case .detail:
                 let cell = tableView.dequeue(DetailInfoImageTableViewCell.self, for: indexPath)
+                cell.configure(self.detailData?.imageKey ?? "")
                 return cell
-            case .Default:
-                let cell = tableView.dequeue(DetailInfoTableViewCell.self, for: indexPath)
-                return cell
+            case .default:
+                guard let detailType = self.detailType else { return UITableViewCell() }
+                switch detailType {
+                case .support:
+                    guard let data = self.defaultData as? SupportDefault else { return UITableViewCell() }
+                    let cell = tableView.dequeue(DetailSupportInfoTableViewCell.self, for: indexPath)
+                    cell.configure(data)
+                    return cell
+                case .reward:
+                    guard let data = self.defaultData as? RewardDefault else { return UITableViewCell() }
+                    let cell = tableView.dequeue(DetailInfoTableViewCell.self, for: indexPath)
+                    cell.configure(data)
+                    return cell
+                }
             }
         }
     }

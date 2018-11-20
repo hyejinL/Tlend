@@ -23,4 +23,8 @@ class DetailInfoImageTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configure(_ data: String) {
+        self.detailInfoImageView.kf.setImage(with: URL(string: data))
+    }
+    
 }

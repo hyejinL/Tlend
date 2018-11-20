@@ -35,6 +35,8 @@
 		491DBDD721A31A0900D12EC0 /* BillingInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDD521A31A0900D12EC0 /* BillingInfoTableViewCell.swift */; };
 		491DBDD821A31A0900D12EC0 /* BillingInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491DBDD621A31A0900D12EC0 /* BillingInfoTableViewCell.xib */; };
 		491DBDDA21A31D1900D12EC0 /* FinishFundingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDD921A31D1900D12EC0 /* FinishFundingViewController.swift */; };
+		491DBDDD21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDDB21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift */; };
+		491DBDDE21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491DBDDC21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib */; };
 		49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */; };
 		49202C5A219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */; };
 		49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */; };
@@ -174,6 +176,8 @@
 		491DBDD521A31A0900D12EC0 /* BillingInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingInfoTableViewCell.swift; sourceTree = "<group>"; };
 		491DBDD621A31A0900D12EC0 /* BillingInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillingInfoTableViewCell.xib; sourceTree = "<group>"; };
 		491DBDD921A31D1900D12EC0 /* FinishFundingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishFundingViewController.swift; sourceTree = "<group>"; };
+		491DBDDB21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSupportInfoTableViewCell.swift; sourceTree = "<group>"; };
+		491DBDDC21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSupportInfoTableViewCell.xib; sourceTree = "<group>"; };
 		49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStarImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStarImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMyStarViewController.swift; sourceTree = "<group>"; };
@@ -582,6 +586,8 @@
 				49A760CF219F28890007DB48 /* InfoMenuHeaderView.xib */,
 				4942C0BE219F2FCF00A431A6 /* DetailInfoTableViewCell.swift */,
 				4942C0BF219F2FCF00A431A6 /* DetailInfoTableViewCell.xib */,
+				491DBDDB21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift */,
+				491DBDDC21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib */,
 				4942C0C3219FF27C00A431A6 /* DetailInfoImageTableViewCell.swift */,
 				4942C0C4219FF27C00A431A6 /* DetailInfoImageTableViewCell.xib */,
 				491DBDCB21A313C500D12EC0 /* Funding End */,
@@ -780,6 +786,7 @@
 				491DBDCF21A313EA00D12EC0 /* ItemInfoTableViewCell.xib in Resources */,
 				49202C74219E9134005286E2 /* TrendRankingTableViewCell.xib in Resources */,
 				490D948021996F5200DAE837 /* HomeItemsTableViewCell.xib in Resources */,
+				491DBDDE21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib in Resources */,
 				490D9496219A583700DAE837 /* Search.storyboard in Resources */,
 				491DBDD321A3182000D12EC0 /* BuyerInfoTableViewCell.xib in Resources */,
 				4942C0C1219F2FCF00A431A6 /* DetailInfoTableViewCell.xib in Resources */,
@@ -927,6 +934,7 @@
 				BA3DF96A21982CA700B1D42C /* FundingKindViewController.swift in Sources */,
 				BAF439EE21A2753B00704002 /* FirstIdols.swift in Sources */,
 				491DBDC621A1D5D100D12EC0 /* Idol.swift in Sources */,
+				491DBDDD21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift in Sources */,
 				49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */,
 				BA608F01219DC3C700A3B5F0 /* IdolRewardViewController.swift in Sources */,
 				49202C69219E8DFE005286E2 /* MyStarListTableViewCell.swift in Sources */,

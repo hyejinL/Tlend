@@ -122,6 +122,10 @@ extension IdolSupportViewController: UITableViewDelegate {
         switch section {
         case .items:
             let navigationController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: Const.detailNavi)
+            guard let viewController = navigationController.children.first as? DetailInfoViewController else { return }
+            viewController.detailType = .support
+            viewController.starIdx = self.starIdx
+            viewController.detailIdx = self.supports[indexPath.row].supportIdx
             self.present(navigationController, animated: true, completion: nil)
             
         default:

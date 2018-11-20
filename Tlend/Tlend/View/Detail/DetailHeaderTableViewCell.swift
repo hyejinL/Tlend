@@ -13,7 +13,7 @@ class DetailHeaderTableViewCell: UITableViewCell {
     @IBOutlet weak var detailImageCollectionView: UICollectionView!
     @IBOutlet weak var imagePageControl: UIPageControl!
     
-    var detailData: Data?
+    var images: [ItemImage] = []
     
     struct Style {
         static let widthRatio: CGFloat = UIScreen.main.bounds.width/375
@@ -33,15 +33,10 @@ class DetailHeaderTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-//    public func configureSupport(data: Detail) {
-//        self.detailData = data
-//        self.detailImageCollectionView.reloadData()
-//    }
-    
-//    public func configureReward(data: RewardDetail) {
-//        self.rewardDetail = data
-//        self.detailImageCollectionView.reloadData()
-//    }
+    public func configure(_ data: [ItemImage]) {
+        self.images = data
+        self.detailImageCollectionView.reloadData()
+    }
 }
 
 extension DetailHeaderTableViewCell: UICollectionViewDelegate {
@@ -54,7 +49,7 @@ extension DetailHeaderTableViewCell: UICollectionViewDelegate {
 
 extension DetailHeaderTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return self.images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

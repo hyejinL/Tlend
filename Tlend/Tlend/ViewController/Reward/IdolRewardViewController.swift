@@ -13,6 +13,7 @@ class IdolRewardViewController: UIViewController {
     
     struct Const {
         static let defaultHeaderHeight: CGFloat = 320
+        static let detailNavi: String = "DetailViewNavigationController"
     }
     
     enum Section: Int, CaseIterable {
@@ -115,6 +116,22 @@ extension IdolRewardViewController: UITableViewDataSource {
 }
 
 extension IdolRewardViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let section = Section(rawValue: indexPath.section) else { return }
+        
+        switch section {
+        case .items:
+            let navigationController = UIStoryboard(name: "Detail", bundle: nil).instantiateViewController(withIdentifier: Const.detailNavi)
+            guard let viewController = navigationController.children.first as? DetailInfoViewController else { return }
+            viewController.detailType = .reward
+            viewController.starIdx = self.starIdx
+            viewController.detailIdx = self.rewards[indexPath.row].rewardIdx
+            self.present(navigationController, animated: true, completion: nil)
+            
+        default:
+            break
+        }
+    }
 }
 
 extension IdolRewardViewController {

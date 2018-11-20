@@ -32,6 +32,9 @@
                 <constraint firstItem="ftZ-Fj-H6i" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="mMI-Pg-fuG"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="headerImageVIew" destination="ftZ-Fj-H6i" id="WRJ-uw-Bl5"/>
+            </connections>
             <point key="canvasLocation" x="138.40000000000001" y="151.12443778110946"/>
         </collectionViewCell>
     </objects>
