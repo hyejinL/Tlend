@@ -33,7 +33,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Sa4-gb-8b7" kind="presentation" id="VMb-om-MMn"/>
+                                    <segue destination="Sa4-gb-8b7" kind="presentation" identifier="goChoiceOption" id="VMb-om-MMn"/>
                                 </connections>
                             </button>
                         </subviews>

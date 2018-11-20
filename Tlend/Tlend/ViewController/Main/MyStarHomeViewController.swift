@@ -48,6 +48,8 @@ class MyStarHomeViewController: UIViewController {
     private func setupUI() {
         setWhiteNavigationBar()
         setNavigationLogoTitle()
+        
+        loading(.start)
     }
     
     private func setupData() {
@@ -58,8 +60,10 @@ class MyStarHomeViewController: UIViewController {
                 self?.idolRanking = data.idolName
                 self?.media = data.media
                 self?.myStarTableView.reloadData()
+                self?.loading(.end)
             case .error(let err):
                 print(err.localizedDescription)
+                self?.loading(.end)
             }
             
         }

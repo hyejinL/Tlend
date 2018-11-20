@@ -53,6 +53,8 @@ class IdolSupportViewController: UIViewController {
         
         self.view.addSubview(self.underNaviView)
         setNavigationWhenDidScroll(self.tableView, underNavi: self.underNaviView, completion: nil)
+        
+        loading(.start)
     }
     
     private func getData() {
@@ -63,8 +65,10 @@ class IdolSupportViewController: UIViewController {
                 self?.supports = data.support
                 self?.updateHeader()
                 self?.tableView.reloadData()
+                self?.loading(.end)
             case .error(let error):
                 print(error.localizedDescription)
+                self?.loading(.end)
             }
         }
     }

@@ -23,6 +23,7 @@ class DetailInfoViewController: UIViewController {
     
     struct Const {
         static let screenWidth: CGFloat = UIScreen.main.bounds.width
+        static let naviIdentifier: String = "goChoiceOption"
     }
     
     var starIdx: Int?
@@ -47,6 +48,14 @@ class DetailInfoViewController: UIViewController {
         self.setupData()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Const.naviIdentifier {
+            guard let viewController = segue.destination as? ChoiceFundingViewController else { return }
+            guard let options = self.defaultData?.optionName else { return }
+            viewController.array = options.components(separatedBy: ",")
+        }
+    }
+    
     @IBAction func dismissAction(_ sender: Any) {
         if let navi = self.parent as? UINavigationController {
             navi.dismiss(animated: true, completion: nil)
@@ -59,6 +68,8 @@ class DetailInfoViewController: UIViewController {
         
         self.view.addSubview(self.underNaviView)
         setNavigationWhenDidScroll(self.detailTableView, underNavi: self.underNaviView, barButton: false, completion: nil)
+        
+        loading(.start)
     }
     
     private func setupData() {
@@ -74,8 +85,10 @@ class DetailInfoViewController: UIViewController {
                     self?.detailData = data.itemDetail
                     self?.defaultData = data.itemDefault
                     self?.detailTableView.reloadData()
+                    self?.loading(.end)
                 case .error(let err):
                     print(err.localizedDescription)
+                    self?.loading(.end)
                 }
             }
         case .reward:

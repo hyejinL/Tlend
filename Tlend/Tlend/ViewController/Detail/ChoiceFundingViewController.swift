@@ -18,7 +18,7 @@ class ChoiceFundingViewController: UIViewController {
     @IBOutlet weak var tableHiddenView: UIView!
     
     var selectType: SelectType = .none
-    var array: [String] = ["블랙", "화이트", "챠콜", "브라운"]
+    var array: [String] = []
     var choiceArray: [String] = []
     
     struct Const {

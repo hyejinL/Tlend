@@ -48,6 +48,8 @@ class HomeMainViewController: UIViewController {
         setWhiteNavigationBar()
         setNavigationWhenDidScroll(self.homeMainTableView, underNavi: self.underNaviView, completion: nil)
         self.navigationController?.navigationBar.isTranslucent = true
+        
+        loading(.start)
     }
     
     private func setupData() {
@@ -59,8 +61,10 @@ class HomeMainViewController: UIViewController {
                 self?.member = data.idolMember
                 self?.media = data.media
                 self?.homeMainTableView.reloadData()
+                self?.loading(.end)
             case .error(let err):
                 print(err.localizedDescription)
+                self?.loading(.end)
             }
         }
     }

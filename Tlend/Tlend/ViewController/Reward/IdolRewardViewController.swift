@@ -53,6 +53,8 @@ class IdolRewardViewController: UIViewController {
         
         self.view.addSubview(self.underNaviView)
         setNavigationWhenDidScroll(self.tableView, underNavi: self.underNaviView, completion: nil)
+        
+        loading(.start)
     }
     
     private func getData() {
@@ -63,8 +65,10 @@ class IdolRewardViewController: UIViewController {
                 self?.rewards = data.reward
                 self?.tableView.reloadData()
                 self?.updateHeader()
+                self?.loading(.end)
             case .error(let error):
                 print(error.localizedDescription)
+                self?.loading(.end)
             }
         }
     }
