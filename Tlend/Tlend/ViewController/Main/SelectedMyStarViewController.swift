@@ -14,6 +14,7 @@ class SelectedMyStarViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
     var idols: [Idol] = []
+    var collectionIdols: [Idol] = []
     private var myStarIndexArray: NSMutableArray = []
     
     struct Style {
@@ -47,6 +48,7 @@ class SelectedMyStarViewController: UIViewController {
             switch result {
             case .success(let data):
                 self?.idols = data.idol
+                self?.collectionIdols = self?.idols ?? []
                 self?.selectedMyStarCollectionView.reloadData()
             case .error(let error):
                 print(error.localizedDescription)
@@ -78,6 +80,21 @@ class SelectedMyStarViewController: UIViewController {
     }
 }
 
+extension SelectedMyStarViewController: SendDataViewControllerDelegate {
+    func sendData<T>(data type: T.Type, _ data: T) {
+        if let data = data as? String {
+            guard !data.isEmpty else {
+                self.collectionIdols = self.idols
+                self.selectedMyStarCollectionView.reloadSections(IndexSet(integer: 1))
+                return
+            }
+            let result = self.idols.filter { $0.idolName.range(of: data) != nil }
+            self.collectionIdols = result
+            self.selectedMyStarCollectionView.reloadSections(IndexSet(integer: 1))
+        }
+    }
+}
+
 extension SelectedMyStarViewController: UICollectionViewDelegate {
     private func collectionViewInit() {
         self.selectedMyStarCollectionView.delegate = self; self.selectedMyStarCollectionView.dataSource = self
@@ -89,6 +106,7 @@ extension SelectedMyStarViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(111)
         guard let section = Section(rawValue: indexPath.section) else { return }
         
         switch section {
@@ -96,7 +114,7 @@ extension SelectedMyStarViewController: UICollectionViewDelegate {
             guard let cell = collectionView.cellForItem(at: indexPath) as? MyStarImageCollectionViewCell else { return }
             
             if self.myStarIndexArray.count < 3 {
-                cell.selectedCell()
+                cell.selectedCell(true)
                 self.myStarIndexArray.add(indexPath)
             }
             
@@ -108,13 +126,13 @@ extension SelectedMyStarViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        print(22)
         guard let section = Section(rawValue: indexPath.section) else { return }
 
         switch section {
         case .MyStarList:
             guard let cell = collectionView.cellForItem(at: indexPath) as? MyStarImageCollectionViewCell else { return }
-            
-            cell.selectedCell()
+            cell.selectedCell(false)
             self.myStarIndexArray.remove(indexPath)
             
             self.setStartButtonEnable(selected: self.myStarIndexArray.count)
@@ -137,7 +155,7 @@ extension SelectedMyStarViewController: UICollectionViewDataSource {
         case .SearchHeader:
             return 1
         case .MyStarList:
-            return idols.count
+            return collectionIdols.count
         }
     }
     
@@ -147,12 +165,18 @@ extension SelectedMyStarViewController: UICollectionViewDataSource {
         switch section {
         case .SearchHeader:
             let cell = collectionView.dequeue(SearchStarCollectionViewCell.self, for: indexPath)
+            cell.delegate = self
             return cell
         case .MyStarList:
-            guard idols.count > indexPath.item else { return UICollectionViewCell() }
+            guard collectionIdols.count > indexPath.item else { return UICollectionViewCell() }
             let cell = collectionView.dequeue(MyStarImageCollectionViewCell.self, for: indexPath)
-            cell.configure(type: .idol, idol: idols[indexPath.item])
-            cell.selectedCell()
+            cell.configure(type: .idol, idol: collectionIdols[indexPath.item])
+            if self.myStarIndexArray.contains(indexPath) {
+//                cell.isSelected = true
+                cell.selectedCell(true)
+            } else {
+                cell.selectedCell(false)
+            }
             return cell
         }
     }

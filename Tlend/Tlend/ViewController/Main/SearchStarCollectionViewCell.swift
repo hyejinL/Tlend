@@ -10,7 +10,9 @@ import UIKit
 
 class SearchStarCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var myStarSearchBar: UISearchBar!
+    @IBOutlet weak var myStarSearchBar: UITextField!
+    
+    weak var delegate: SendDataViewControllerDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +20,11 @@ class SearchStarCollectionViewCell: UICollectionViewCell {
         self.setupUI()
     }
     
+    @IBAction func editTextFieldAction(_ sender: UITextField) {
+        delegate?.sendData(data: String.self, sender.text ?? "")
+    }
+    
     private func setupUI() {
+        
     }
 }

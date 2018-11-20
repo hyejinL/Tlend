@@ -51,12 +51,12 @@ class MyStarImageCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    public func selectedCell() {
+    public func selectedCell(_ selected: Bool) {
         
         UIView.animate(withDuration: 0.15) { [weak self] in
             guard let `self` = self else { return }
             
-            switch self.isSelected {
+            switch selected {
             case true:
                 self.starChoiceImageView.alpha = 1
             case false:
