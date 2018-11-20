@@ -15,7 +15,6 @@ protocol ContentImageProtocol: class {
 class ContentImageTableViewCell: UITableViewCell {
 
     @IBOutlet weak var contentImageView: UIImageView!
-    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     
     weak var delegate: ContentImageProtocol?
     
@@ -24,15 +23,8 @@ class ContentImageTableViewCell: UITableViewCell {
     }
     
     func configure(_ imageURL: String) {
-        contentImageView.kf.setImage(with: URL(string: imageURL)) { [weak self] (image, _, _, _) in
-            guard let image = image else { return }
-            let ratio = image.size.height / image.size.width
-            
-            DispatchQueue.main.async {
-                self?.imageHeightConstraint.constant = UIScreen.main.bounds.size.width * ratio
-                self?.layoutIfNeeded()
-                self?.delegate?.setImageHeight()
-            }
+        contentImageView.kf.setImage(with: URL(string: imageURL)) { [weak self] (_, _, _, _) in
+            self?.delegate?.setImageHeight()
         }
     }
 
