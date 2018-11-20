@@ -25,15 +25,12 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ContentImageTableViewCell" rowHeight="187" id="446-Y9-92g" customClass="ContentImageTableViewCell" customModule="Tlend" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="187"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="446-Y9-92g" id="AAi-sQ-Btj">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="446-Y9-92g" id="AAi-sQ-Btj">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tWB-IA-WF6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" id="xhD-io-3JP"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="187"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -45,7 +42,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentImageView" destination="tWB-IA-WF6" id="5Bc-Kf-t3O"/>
-                                            <outlet property="imageHeightConstraint" destination="xhD-io-3JP" id="QU9-8f-iXe"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ContentVideoTableViewCell" rowHeight="263" id="kfP-H5-vuT" customClass="ContentVideoTableViewCell" customModule="Tlend" customModuleProvider="target">
