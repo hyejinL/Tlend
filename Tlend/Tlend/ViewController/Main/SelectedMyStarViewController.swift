@@ -7,16 +7,21 @@
 //
 
 import UIKit
+import RxSwift
+import RxKeyboard
 
 class SelectedMyStarViewController: UIViewController {
 
     @IBOutlet weak var selectedMyStarCollectionView: UICollectionView!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var buttonBottomConstraint: NSLayoutConstraint!
     
     var idols: [Idol] = []
     var collectionIdols: [Idol] = []
     private var myStarIndexArray: Set<IndexPath> = []
     private var myStarNames: Set<String> = []
+    
+    let disposeBag = DisposeBag()
     
     struct Style {
         static let widthRatio: CGFloat = UIScreen.main.bounds.width/375
@@ -61,6 +66,21 @@ class SelectedMyStarViewController: UIViewController {
         setWhiteNavigationBar()
         
         self.setStartButtonEnable(selected: self.myStarIndexArray.count)
+        
+        RxKeyboard.instance.visibleHeight.drive(onNext: { [weak self] height in
+            guard let `self` = self else { return }
+            
+            self.buttonBottomConstraint.constant = height < 34 ? 34 : height
+            self.view.layoutIfNeeded()
+        }).disposed(by: disposeBag)
+        
+        self.selectedMyStarCollectionView.backgroundView = UIView()
+        let gesture = UITapGestureRecognizer()
+        self.selectedMyStarCollectionView.backgroundView?.addGestureRecognizer(gesture)
+        
+        gesture.rx.event.asDriver().drive(onNext: { [weak self] _ in
+            self?.view.endEditing(true)
+        }).disposed(by: disposeBag)
     }
     
     private func setStartButtonEnable(selected count: Int) {
@@ -112,10 +132,11 @@ extension SelectedMyStarViewController: UICollectionViewDelegate {
         
         self.selectedMyStarCollectionView.allowsSelection = true
         self.selectedMyStarCollectionView.allowsMultipleSelection = true
+        self.selectedMyStarCollectionView.keyboardDismissMode = .onDrag
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(111)
+        self.view.endEditing(true)
         guard let section = Section(rawValue: indexPath.section) else { return }
         
         switch section {
