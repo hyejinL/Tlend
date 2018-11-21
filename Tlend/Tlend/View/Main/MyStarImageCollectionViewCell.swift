@@ -28,12 +28,15 @@ class MyStarImageCollectionViewCell: UICollectionViewCell {
         self.setupUI()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+    }
+    
     private func setupUI() {
         self.starImageView.layoutIfNeeded()
         
         self.starChoiceImageView.alpha = 0
-        
-        self.starNameLabel.text = "블랙핑크"
     }
     
     public func configure(type: DataType,

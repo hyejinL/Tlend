@@ -15,7 +15,8 @@ class SelectedMyStarViewController: UIViewController {
     
     var idols: [Idol] = []
     var collectionIdols: [Idol] = []
-    private var myStarIndexArray: NSMutableArray = []
+    private var myStarIndexArray: Set<IndexPath> = []
+    private var myStarNames: Set<String> = []
     
     struct Style {
         static let widthRatio: CGFloat = UIScreen.main.bounds.width/375
@@ -83,14 +84,22 @@ class SelectedMyStarViewController: UIViewController {
 extension SelectedMyStarViewController: SendDataViewControllerDelegate {
     func sendData<T>(data type: T.Type, _ data: T) {
         if let data = data as? String {
-            guard !data.isEmpty else {
+            if data.isEmpty {
                 self.collectionIdols = self.idols
-                self.selectedMyStarCollectionView.reloadSections(IndexSet(integer: 1))
-                return
+            } else {
+                let result = self.idols.filter { $0.idolName.range(of: data) != nil }
+                self.collectionIdols = result
             }
-            let result = self.idols.filter { $0.idolName.range(of: data) != nil }
-            self.collectionIdols = result
             self.selectedMyStarCollectionView.reloadSections(IndexSet(integer: 1))
+            
+            guard self.selectedMyStarCollectionView.numberOfItems(inSection: 1) > 0 else { return }
+            for (index, item) in self.collectionIdols.enumerated() {
+                if self.myStarNames.contains(item.idolName) {
+                    self.selectedMyStarCollectionView.selectItem(at: IndexPath(item: index, section: 1),
+                                                                 animated: true,
+                                                                 scrollPosition: .centeredVertically)
+                }
+            }
         }
     }
 }
@@ -115,7 +124,8 @@ extension SelectedMyStarViewController: UICollectionViewDelegate {
             
             if self.myStarIndexArray.count < 3 {
                 cell.selectedCell(true)
-                self.myStarIndexArray.add(indexPath)
+                self.myStarIndexArray.insert(indexPath)
+                self.myStarNames.insert(self.collectionIdols[indexPath.row].idolName)
             }
             
             self.setStartButtonEnable(selected: self.myStarIndexArray.count)
@@ -134,6 +144,7 @@ extension SelectedMyStarViewController: UICollectionViewDelegate {
             guard let cell = collectionView.cellForItem(at: indexPath) as? MyStarImageCollectionViewCell else { return }
             cell.selectedCell(false)
             self.myStarIndexArray.remove(indexPath)
+            self.myStarNames.remove(self.collectionIdols[indexPath.row].idolName)
             
             self.setStartButtonEnable(selected: self.myStarIndexArray.count)
 
@@ -171,8 +182,13 @@ extension SelectedMyStarViewController: UICollectionViewDataSource {
             guard collectionIdols.count > indexPath.item else { return UICollectionViewCell() }
             let cell = collectionView.dequeue(MyStarImageCollectionViewCell.self, for: indexPath)
             cell.configure(type: .idol, idol: collectionIdols[indexPath.item])
-            if self.myStarIndexArray.contains(indexPath) {
-//                cell.isSelected = true
+//            if self.myStarIndexArray.contains(indexPath) {
+////                cell.isSelected = true
+//                cell.selectedCell(true)
+//            } else {
+//                cell.selectedCell(false)
+//            }
+            if self.myStarNames.filter({ $0 == self.collectionIdols[indexPath.item].idolName }).count > 0 {
                 cell.selectedCell(true)
             } else {
                 cell.selectedCell(false)
