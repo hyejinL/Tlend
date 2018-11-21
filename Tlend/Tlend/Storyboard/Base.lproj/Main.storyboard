@@ -103,6 +103,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="VhE-Ju-KWY"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="buttonBottomConstraint" destination="c8F-xV-1iP" id="bBK-z7-iRS"/>
                         <outlet property="selectedMyStarCollectionView" destination="EFV-Ke-9tm" id="178-5p-ib4"/>
                         <outlet property="startButton" destination="Y3J-bK-6wl" id="qPu-Yi-muW"/>
                     </connections>

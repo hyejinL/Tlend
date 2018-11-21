@@ -13,9 +13,20 @@ class ContentItemTableViewCell: UITableViewCell {
     @IBOutlet weak var itemTitleLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
     
+    struct Style {
+        static let imageShadowOpacity: Float = 0.16
+        static let imageShadowSize: CGSize = CGSize(width: 0, height: 3)
+        static let imageShadowBlur: CGFloat = 6
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.itemImageView.makeShadow(UIColor.black,
+                                      opacity: Style.imageShadowOpacity,
+                                      size: Style.imageShadowSize,
+                                      blur: Style.imageShadowBlur)
     }
     
     func configure(_ item: TlendItem) {

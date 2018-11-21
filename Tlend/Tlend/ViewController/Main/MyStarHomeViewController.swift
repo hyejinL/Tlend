@@ -150,7 +150,7 @@ extension MyStarHomeViewController: UITableViewDataSource {
         }
         
         guard !((section == .MyStarList && indexPath.row == 2) ||
-            (section == .TrendRaking && indexPath.row == 4)) else {
+            (section == .TrendRaking && indexPath.row == (self.idolRanking.count + section.headerFooterCount - 1))) else {
             let cell = tableView.dequeue(MyStarHomeFooterTableViewCell.self, for: indexPath)
             return cell
         }
@@ -167,7 +167,7 @@ extension MyStarHomeViewController: UITableViewDataSource {
             cell.trendRankingLabel.text = "\(indexPath.row)"
             cell.configure(self.idolRanking[indexPath.row - 1], index: indexPath.row - 1)
             
-            if indexPath.row == 3 {
+            if indexPath.row == (self.idolRanking.count + section.headerFooterCount - 2) {
                 cell.bottomView.isHidden = true
             }
             

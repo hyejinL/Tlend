@@ -37,10 +37,10 @@
                         <color key="backgroundColor" red="0.95686274509803915" green="0.92941176470588238" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyY-Zc-T93">
-                        <rect key="frame" x="24" y="54" width="327" height="20"/>
+                        <rect key="frame" x="24" y="54" width="0.0" height="20"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXy-aW-q1j">
-                                <rect key="frame" x="313" y="1" width="4" height="18"/>
+                                <rect key="frame" x="-14" y="1" width="4" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tXy-aW-q1j" secondAttribute="trailing" constant="10" id="Muq-RH-XEY"/>
                             <constraint firstAttribute="height" constant="20" id="O56-Af-IPA"/>
-                            <constraint firstAttribute="width" constant="327" id="VRf-Xk-zqp"/>
+                            <constraint firstAttribute="width" id="VRf-Xk-zqp"/>
                             <constraint firstItem="tXy-aW-q1j" firstAttribute="centerY" secondItem="eyY-Zc-T93" secondAttribute="centerY" id="o7Q-y4-sHj"/>
                         </constraints>
                     </view>

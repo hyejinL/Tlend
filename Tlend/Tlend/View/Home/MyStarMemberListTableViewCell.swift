@@ -17,7 +17,7 @@ class MyStarMemberListTableViewCell: UITableViewCell {
     struct Style {
         static let widthRatio: CGFloat = UIScreen.main.bounds.width/375
         
-        static let cellSize: CGSize = CGSize(width: 70*Style.widthRatio, height: 90*Style.widthRatio)
+        static let cellSize: CGSize = CGSize(width: 70*Style.widthRatio, height: 95*Style.widthRatio)
         static let cellEdgeInset: UIEdgeInsets = UIEdgeInsets(top: 0, left: 24*Style.widthRatio, bottom: 0, right: 24*Style.widthRatio)
     }
     

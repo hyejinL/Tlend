@@ -121,6 +121,15 @@ extension DetailInfoViewController: SendDataViewControllerDelegate {
             self.detailTableView.reloadRows(at: [.init(row: 0, section: Section.Info.rawValue)], with: .none)
             self.detailTableView.endUpdates()
             self.detailTableView.layer.removeAllAnimations()
+        } else if let data = data as? String {
+            if data == "share" {
+                guard let imgURL: URL = URL(string: self.common?.itemImages[0].imageKey ?? ""),
+                    let imgData: Data = try? Data(contentsOf: imgURL)  else { return }
+                guard let image = UIImage(data: imgData), let text = self.common?.title else { return }
+                let activity = UIActivityViewController(activityItems: [image, text], applicationActivities: nil)
+                activity.popoverPresentationController?.sourceView = self.view
+                self.present(activity, animated: true, completion: nil)
+            }
         }
     }
 }
@@ -188,6 +197,7 @@ extension DetailInfoViewController: UITableViewDataSource {
             return cell
         case .ShareAndSaveButton:
             let cell = tableView.dequeue(ShareAndSaveButtonTableViewCell.self, for: indexPath)
+            cell.delegate = self
             return cell
         case .FundingProgress:
             let cell = tableView.dequeue(FundingInfoTableViewCell.self, for: indexPath)
