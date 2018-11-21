@@ -27,8 +27,15 @@ class DetailInfoImageTableViewCell: UITableViewCell {
     }
     
     func configure(_ data: String) {
-        self.detailInfoImageView.kf.setImage(with: URL(string: data)) { [weak self] (_, _, _, _) in
-            self?.delegate?.setImageHeight()
+        self.detailInfoImageView.kf.setImage(with: URL(string: data)) { [weak self] (image, _, _, _) in
+            guard let image = image else { return }
+            let ratio = image.size.height / image.size.width
+            
+            DispatchQueue.main.async {
+                self?.imageViewHeight.constant = UIScreen.main.bounds.size.width * ratio
+                self?.layoutIfNeeded()
+                self?.delegate?.setImageHeight()
+            }
         }
     }
     
