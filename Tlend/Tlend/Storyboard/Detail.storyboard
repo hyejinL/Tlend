@@ -223,6 +223,9 @@
                                                     <rect key="frame" x="322" y="10" width="39" height="42"/>
                                                     <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                                                     <state key="normal" image="icX"/>
+                                                    <connections>
+                                                        <action selector="removeAction:" destination="sLx-wf-TOM" eventType="touchUpInside" id="3xM-1e-8xl"/>
+                                                    </connections>
                                                 </button>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7q-wV-xOe">
                                                     <rect key="frame" x="210" y="16" width="110" height="30"/>
@@ -230,6 +233,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiA-h1-Yka">
                                                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                             <state key="normal" image="payNumMinusNor"/>
+                                                            <connections>
+                                                                <action selector="pressedMinusAction:" destination="sLx-wf-TOM" eventType="touchUpInside" id="pae-ka-Ia3"/>
+                                                            </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kk-KG-lZg">
                                                             <rect key="frame" x="30" y="0.0" width="50" height="30"/>
@@ -243,6 +249,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItF-aL-paI">
                                                             <rect key="frame" x="80" y="0.0" width="30" height="30"/>
                                                             <state key="normal" image="payNumPlusNor"/>
+                                                            <connections>
+                                                                <action selector="pressedPlusAction:" destination="sLx-wf-TOM" eventType="touchUpInside" id="3hj-Uc-lQh"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -259,7 +268,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="optionCountLabel" destination="4kk-KG-lZg" id="iL0-So-qee"/>
                                             <outlet property="optionLabel" destination="7Sl-ZO-0De" id="1ub-rX-pVa"/>
+                                            <outlet property="removeButton" destination="QaU-fY-UQc" id="8WL-yl-qkZ"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TotalAmountTableViewCell" rowHeight="60" id="bUs-TO-Koe" customClass="TotalAmountTableViewCell" customModule="Tlend" customModuleProvider="target">

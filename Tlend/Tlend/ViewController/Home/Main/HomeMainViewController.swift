@@ -38,6 +38,8 @@ class HomeMainViewController: UIViewController {
         self.tableViewInit()
         
         self.setupData()
+        
+        loading(.start)
     }
     
     @IBAction func goSearchViewAction(_ sender: Any) {
@@ -48,8 +50,6 @@ class HomeMainViewController: UIViewController {
         setWhiteNavigationBar()
         setNavigationWhenDidScroll(self.homeMainTableView, underNavi: self.underNaviView, completion: nil)
         self.navigationController?.navigationBar.isTranslucent = true
-        
-        loading(.start)
     }
     
     private func setupData() {

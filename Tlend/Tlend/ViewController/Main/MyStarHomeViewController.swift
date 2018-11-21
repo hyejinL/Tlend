@@ -43,13 +43,13 @@ class MyStarHomeViewController: UIViewController {
         self.tableViewInit()
         
         self.setupData()
+        
+        loading(.start)
     }
 
     private func setupUI() {
         setWhiteNavigationBar()
         setNavigationLogoTitle()
-        
-        loading(.start)
     }
     
     private func setupData() {

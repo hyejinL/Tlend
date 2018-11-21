@@ -49,8 +49,8 @@
                         <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riC-wy-JRT">
-                        <rect key="frame" x="308.5" y="98" width="42.5" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="riC-wy-JRT">
+                        <rect key="frame" x="328" y="98" width="23" height="18"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                         <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
@@ -117,6 +117,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="deliveryPriceLabel" destination="riC-wy-JRT" id="OvJ-5k-zJH"/>
+                <outlet property="priceLabel" destination="tgi-Y4-Xnk" id="q8G-6j-8jy"/>
+                <outlet property="totalAmountLabel" destination="ZOP-e8-BTR" id="GxG-cz-cGN"/>
+            </connections>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </tableViewCell>
     </objects>

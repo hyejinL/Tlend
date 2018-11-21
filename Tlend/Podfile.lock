@@ -15,6 +15,7 @@ PODS:
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
   - SnapKit (4.2.0)
+  - SwiftyJSON (4.2.0)
   - XLPagerTabStrip (8.1.0)
 
 DEPENDENCIES:
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - RxKeyboard
   - RxSwift
   - SnapKit
+  - SwiftyJSON
   - XLPagerTabStrip (~> 8.1.0)
 
 SPEC REPOS:
@@ -41,6 +43,7 @@ SPEC REPOS:
     - RxKeyboard
     - RxSwift
     - SnapKit
+    - SwiftyJSON
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
@@ -54,8 +57,9 @@ SPEC CHECKSUMS:
   RxKeyboard: 4f782303f499f41577b41c96c6a9a5d7acd51a47
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   XLPagerTabStrip: 22d4c58200d7c105e0e407ab6bfd01a5d85014be
 
-PODFILE CHECKSUM: 39f997c1aa29709c7cc3b454dd8624b39f2a0c28
+PODFILE CHECKSUM: 066323461890167ab9393ca8bfb70b9e09847435
 
 COCOAPODS: 1.5.3

@@ -39,6 +39,8 @@ class IdolRewardViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         getData()
+        
+        loading(.start)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,8 +55,6 @@ class IdolRewardViewController: UIViewController {
         
         self.view.addSubview(self.underNaviView)
         setNavigationWhenDidScroll(self.tableView, underNavi: self.underNaviView, completion: nil)
-        
-        loading(.start)
     }
     
     private func getData() {

@@ -46,13 +46,19 @@ class DetailInfoViewController: UIViewController {
         self.tableViewInit()
         
         self.setupData()
+        
+//        loading(.start)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Const.naviIdentifier {
             guard let viewController = segue.destination as? ChoiceFundingViewController else { return }
             guard let options = self.defaultData?.optionName else { return }
+            viewController.detailType = self.detailType
+            viewController.starIdx = self.starIdx
             viewController.array = options.components(separatedBy: ",")
+            viewController.price = self.common?.lowPrice ?? 0
+            viewController.itemTitle = self.common?.title
         }
     }
     
@@ -68,8 +74,6 @@ class DetailInfoViewController: UIViewController {
         
         self.view.addSubview(self.underNaviView)
         setNavigationWhenDidScroll(self.detailTableView, underNavi: self.underNaviView, barButton: false, completion: nil)
-        
-        loading(.start)
     }
     
     private func setupData() {

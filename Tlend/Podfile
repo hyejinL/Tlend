@@ -13,6 +13,7 @@ target 'Tlend' do
   
   pod 'KeychainAccess'
   pod 'Alamofire'
+  pod 'SwiftyJSON'
   
   pod 'RxSwift'
   pod 'RxCocoa'
