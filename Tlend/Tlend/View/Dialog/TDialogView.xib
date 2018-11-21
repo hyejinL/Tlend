@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -98,12 +98,17 @@
                                 <constraint firstAttribute="width" constant="68" id="5jP-8l-QGP"/>
                             </constraints>
                         </view>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="path5" translatesAutoresizingMaskIntoConstraints="NO" id="1DO-TO-yFi">
+                            <rect key="frame" x="19.5" y="24.5" width="37" height="27"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="7sy-jF-h04" firstAttribute="centerX" secondItem="h7m-dn-yZO" secondAttribute="centerX" id="LId-BM-oxI"/>
                         <constraint firstItem="7sy-jF-h04" firstAttribute="centerY" secondItem="h7m-dn-yZO" secondAttribute="centerY" id="TLV-XZ-C4x"/>
+                        <constraint firstItem="1DO-TO-yFi" firstAttribute="centerY" secondItem="7sy-jF-h04" secondAttribute="centerY" id="YuQ-A2-h4O"/>
                         <constraint firstAttribute="height" constant="76" id="kUL-Xz-1nc"/>
+                        <constraint firstItem="1DO-TO-yFi" firstAttribute="centerX" secondItem="7sy-jF-h04" secondAttribute="centerX" id="okK-u9-qzA"/>
                         <constraint firstAttribute="width" constant="76" id="y8f-fZ-4Ur"/>
                     </constraints>
                 </view>
@@ -125,8 +130,12 @@
                 <outlet property="confirmButton" destination="DO7-IA-uQh" id="Vbb-JH-wMl"/>
                 <outlet property="contentLabel" destination="gob-RJ-Som" id="TdR-aQ-12T"/>
                 <outlet property="titleLabel" destination="RTI-O0-DLl" id="fHb-ch-2QW"/>
+                <outlet property="typeImageView" destination="1DO-TO-yFi" id="b99-VQ-Hxm"/>
             </connections>
             <point key="canvasLocation" x="53.600000000000001" y="73.313343328335833"/>
         </view>
     </objects>
+    <resources>
+        <image name="path5" width="37" height="27"/>
+    </resources>
 </document>

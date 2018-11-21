@@ -37,9 +37,9 @@ class IdolItemTableViewCell: UITableViewCell {
             itemKeywordLabel.text = "서포트"
             
             guard let support = support else { return }
-            idx = support.supportIdx
+            idx = support.index
             itemImageView.kf.setImage(with: URL(string: support.imageKey))
-            titleLabel.text = support.supportTitle
+            titleLabel.text = support.title
             usernameLabel.text = support.userNickname
             percentLabel.text = "\(support.percent)%"
             dayLabel.text = "\(support.dDay)일 남음"
@@ -49,9 +49,9 @@ class IdolItemTableViewCell: UITableViewCell {
             itemKeywordLabel.text = "리워드"
             
             guard let reward = reward else { return }
-            idx = reward.rewardIdx
+            idx = reward.index
             itemImageView.kf.setImage(with: URL(string: reward.imageKey))
-            titleLabel.text = reward.rewardTitle
+            titleLabel.text = reward.title
             usernameLabel.text = reward.userNickname
             percentLabel.text = "\(reward.percent)%"
             dayLabel.text = "\(reward.dDay)일 남음"

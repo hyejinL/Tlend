@@ -13,17 +13,17 @@ struct IdolSupport: Codable {
     let support: [Support]
 }
 
-struct Support: Codable {
-    let supportIdx: Int
-    let supportTitle: String
-    let userNickname: String
-    let imageKey: String
-    let dDay: Int
-    let percent: Int
+struct Support: Codable, Item {
+    var index: Int
+    var title: String
+    var userNickname: String
+    var imageKey: String
+    var dDay: Int
+    var percent: Int
     
     enum CodingKeys: String, CodingKey {
-        case supportIdx = "support_idx"
-        case supportTitle = "support_title"
+        case index = "support_idx"
+        case title = "support_title"
         case userNickname = "user_nickname"
         case imageKey = "image_key"
         case dDay = "D_day"
