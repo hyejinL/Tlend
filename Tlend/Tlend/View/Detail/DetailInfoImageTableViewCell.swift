@@ -30,11 +30,13 @@ class DetailInfoImageTableViewCell: UITableViewCell {
         self.detailInfoImageView.kf.setImage(with: URL(string: data)) { [weak self] (image, _, _, _) in
             guard let image = image else { return }
             let ratio = image.size.height / image.size.width
-            
-            DispatchQueue.main.async {
-                self?.imageViewHeight.constant = UIScreen.main.bounds.size.width * ratio
-                self?.layoutIfNeeded()
-                self?.delegate?.setImageHeight()
+            let height = UIScreen.main.bounds.size.width * ratio
+            if self?.imageViewHeight.constant ?? 0 != height {
+                DispatchQueue.main.async {
+                    self?.imageViewHeight.constant = height
+                    self?.layoutIfNeeded()
+                    self?.delegate?.setImageHeight()
+                }
             }
         }
     }
