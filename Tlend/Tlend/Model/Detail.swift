@@ -24,7 +24,7 @@ protocol CommonType {
     var itemImages: [ItemImage] { set get }
     var title: String { set get }
     var lowPrice: Int { set get }
-    var currentMoney: Int { set get }
+    var currentMoney: Int? { set get }
     var dDay: Int { set get }
     var percent: Int { set get }
     var schedule: Date { set get }
@@ -34,7 +34,7 @@ struct SupportCommon: Codable, CommonType {
     var itemImages: [ItemImage]
     var title: String
     var lowPrice: Int
-    var currentMoney: Int
+    var currentMoney: Int?
     var dDay: Int
     var percent: Int
     var schedule: Date
@@ -53,7 +53,7 @@ struct RewardCommon: Codable, CommonType {
     var itemImages: [ItemImage]
     var title: String
     var lowPrice: Int
-    var currentMoney: Int
+    var currentMoney: Int?
     var dDay: Int
     var percent: Int
     var schedule: Date
@@ -79,7 +79,7 @@ struct ItemImage: Codable {
 protocol ItemDefault {
     var title: String { get set }
 //    var description: String? { get set }
-    var currentMoney: Int { get set }
+    var currentMoney: Int? { get set }
     var goalMoney: Int? { get set }
     var finishDate: Date? { get set }
     var startDate: Date? { get set }
@@ -101,7 +101,7 @@ protocol RewardDefaultType: ItemDefault {
 struct SupportDefault: Codable, SupportDefaultType {
     
     var title: String
-    var currentMoney: Int
+    var currentMoney: Int?
     var goalMoney: Int?
     var finishDate: Date?
     var startDate: Date?
@@ -123,7 +123,7 @@ struct RewardDefault: Codable, RewardDefaultType {
     
     var title: String
     var description: String?
-    var currentMoney: Int
+    var currentMoney: Int?
     var goalMoney: Int?
     var finishDate: Date?
     var startDate: Date?

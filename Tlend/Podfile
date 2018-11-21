@@ -13,10 +13,13 @@ target 'Tlend' do
   
   pod 'KeychainAccess'
   pod 'Alamofire'
+  pod 'SwiftyJSON'
   
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxKeyboard'
   
   pod 'MMPlayerView', '~> 4.1.3'
+  
+  pod 'NVActivityIndicatorView'
 end

@@ -38,6 +38,8 @@ class HomeMainViewController: UIViewController {
         self.tableViewInit()
         
         self.setupData()
+        
+        loading(.start)
     }
     
     @IBAction func goSearchViewAction(_ sender: Any) {
@@ -59,8 +61,10 @@ class HomeMainViewController: UIViewController {
                 self?.member = data.idolMember
                 self?.media = data.media
                 self?.homeMainTableView.reloadData()
+                self?.loading(.end)
             case .error(let err):
                 print(err.localizedDescription)
+                self?.loading(.end)
             }
         }
     }

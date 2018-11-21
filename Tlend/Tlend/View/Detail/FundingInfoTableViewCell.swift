@@ -36,7 +36,7 @@ class FundingInfoTableViewCell: UITableViewCell {
     public func configure(type: DetailType?, _ data: CommonType?) {
         guard let type = type, let data = data else { return }
         
-        self.currentBillingLabel.text = (data.currentMoney.getDecimalNumber() ?? "") + " 원 모집"
+        self.currentBillingLabel.text = (data.currentMoney?.getDecimalNumber() ?? "0") + " 원 모집"
         self.percentLabel.text = "\(data.percent)%"
         UIView.animate(withDuration: 0.6) { [weak self] in
             self?.percentViewWidth.constant = Const.percentViewFirstWidth * CGFloat(data.percent)/100

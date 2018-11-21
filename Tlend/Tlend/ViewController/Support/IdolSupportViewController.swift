@@ -39,6 +39,8 @@ class IdolSupportViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         getData()
+        
+        loading(.start)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,8 +65,10 @@ class IdolSupportViewController: UIViewController {
                 self?.supports = data.support
                 self?.updateHeader()
                 self?.tableView.reloadData()
+                self?.loading(.end)
             case .error(let error):
                 print(error.localizedDescription)
+                self?.loading(.end)
             }
         }
     }

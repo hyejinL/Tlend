@@ -22,4 +22,7 @@ class FormCheckTableViewCell: UITableViewCell {
         checkImageView.isHidden = !selected
     }
     
+    public func configure(_ data: String) {
+        self.titleLabel.text = data
+    }
 }

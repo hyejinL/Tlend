@@ -28,12 +28,15 @@ class MyStarImageCollectionViewCell: UICollectionViewCell {
         self.setupUI()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+    }
+    
     private func setupUI() {
         self.starImageView.layoutIfNeeded()
         
         self.starChoiceImageView.alpha = 0
-        
-        self.starNameLabel.text = "블랙핑크"
     }
     
     public func configure(type: DataType,
@@ -51,12 +54,12 @@ class MyStarImageCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    public func selectedCell() {
+    public func selectedCell(_ selected: Bool) {
         
         UIView.animate(withDuration: 0.15) { [weak self] in
             guard let `self` = self else { return }
             
-            switch self.isSelected {
+            switch selected {
             case true:
                 self.starChoiceImageView.alpha = 1
             case false:

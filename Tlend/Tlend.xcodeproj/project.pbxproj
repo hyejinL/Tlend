@@ -38,6 +38,8 @@
 		491DBDDD21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDDB21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift */; };
 		491DBDDE21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491DBDDC21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib */; };
 		491DBDE021A46F2900D12EC0 /* Int+Tlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDDF21A46F2900D12EC0 /* Int+Tlend.swift */; };
+		491DBDE221A47D5200D12EC0 /* CustomLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDE121A47D5200D12EC0 /* CustomLoadingView.swift */; };
+		491DBDE421A47F3100D12EC0 /* UIViewController+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DBDE321A47F3100D12EC0 /* UIViewController+LoadingView.swift */; };
 		49202C59219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */; };
 		49202C5A219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */; };
 		49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */; };
@@ -180,6 +182,8 @@
 		491DBDDB21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSupportInfoTableViewCell.swift; sourceTree = "<group>"; };
 		491DBDDC21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailSupportInfoTableViewCell.xib; sourceTree = "<group>"; };
 		491DBDDF21A46F2900D12EC0 /* Int+Tlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Tlend.swift"; sourceTree = "<group>"; };
+		491DBDE121A47D5200D12EC0 /* CustomLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoadingView.swift; sourceTree = "<group>"; };
+		491DBDE321A47F3100D12EC0 /* UIViewController+LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+LoadingView.swift"; sourceTree = "<group>"; };
 		49202C57219DBEA4005286E2 /* MyStarImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStarImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		49202C58219DBEA4005286E2 /* MyStarImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStarImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		49202C5C219DC4D4005286E2 /* SelectedMyStarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedMyStarViewController.swift; sourceTree = "<group>"; };
@@ -553,6 +557,7 @@
 				BA608EF6219DB1D000A3B5F0 /* UIColor+Tlend.swift */,
 				BA608EFC219DBC6000A3B5F0 /* UIView+Xib.swift */,
 				491DBDDF21A46F2900D12EC0 /* Int+Tlend.swift */,
+				491DBDE321A47F3100D12EC0 /* UIViewController+LoadingView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -611,6 +616,7 @@
 			isa = PBXGroup;
 			children = (
 				49A760BD219EC2950007DB48 /* CircleView.swift */,
+				491DBDE121A47D5200D12EC0 /* CustomLoadingView.swift */,
 				49202C56219DBE7E005286E2 /* Main */,
 				BA608EED219DAE5300A3B5F0 /* Idol */,
 				490D947821996CD000DAE837 /* Home */,
@@ -834,11 +840,13 @@
 				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MMPlayerView/MMPlayerView.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxKeyboard/RxKeyboard.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -849,11 +857,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMPlayerView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxKeyboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -898,6 +908,7 @@
 				BAF439F221A27E9200704002 /* Banner.swift in Sources */,
 				BA3DF9702198320F00B1D42C /* UIStoryboard+Tlend.swift in Sources */,
 				49A760CC219F24E70007DB48 /* FundingInfoTableViewCell.swift in Sources */,
+				491DBDE221A47D5200D12EC0 /* CustomLoadingView.swift in Sources */,
 				BA87B9DA21A16B05001E7D16 /* SplashCollectionViewCell.swift in Sources */,
 				49FFB9F721A18ECC00F40ABC /* Home.swift in Sources */,
 				49FFB9E921A0756B00F40ABC /* SelectedOptionTableViewCell.swift in Sources */,
@@ -975,6 +986,7 @@
 				491DBDC421A1D5A600D12EC0 /* IdolHome.swift in Sources */,
 				490D9491219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift in Sources */,
 				49FFB9E321A0749400F40ABC /* ChoiceFundingViewController.swift in Sources */,
+				491DBDE421A47F3100D12EC0 /* UIViewController+LoadingView.swift in Sources */,
 				BA87B9C2219FF73F001E7D16 /* SignUpViewController.swift in Sources */,
 				491DBDCE21A313EA00D12EC0 /* ItemInfoTableViewCell.swift in Sources */,
 				BA608F03219DC62200A3B5F0 /* IdolMoreViewController.swift in Sources */,

@@ -17,9 +17,15 @@ class ChoiceFundingViewController: UIViewController {
     
     @IBOutlet weak var tableHiddenView: UIView!
     
+    var detailType: DetailType?
+    var starIdx: Int?
     var selectType: SelectType = .none
-    var array: [String] = ["블랙", "화이트", "챠콜", "브라운"]
+    var array: [String] = []
+    var price: Int = 0
+    var itemTitle: String?
+    
     var choiceArray: [String] = []
+    var optionCount: Int = 0
     
     struct Const {
         static let header: String = "CloseHeaderCell"
@@ -83,11 +89,30 @@ class ChoiceFundingViewController: UIViewController {
             """
             guard let presentingViewController = self.presentingViewController else { return }
             let dialogViewController = DialogViewController(title: "잠깐", content: text, confirmAction: { (dialog) in
+                self.loading(.start)
                 dialog.dismiss(animated: false, completion: {
                     self.dismiss(animated: false, completion: {
-                        let navigationController = UIStoryboard(name: "Detail", bundle: nil)
-                            .instantiateViewController(withIdentifier: Const.navigation)
-                        presentingViewController.present(navigationController, animated: true, completion: nil)
+                        guard let type = self.detailType else { return }
+                        DetailService.shared.fundingStart(type,
+                                                          starIdx: self.starIdx ?? 0,
+                                                          price: self.price) { (result) in
+                                                            switch result {
+                                                            case .success(_):
+                                                                print(111)
+                                                                let navigationController = UIStoryboard(name: "Detail", bundle: nil)
+                                                                    .instantiateViewController(withIdentifier: Const.navigation)
+                                                                guard let viewController = navigationController.children.first as? FinishFundingViewController else { return }
+                                                                viewController.itemTitle = self.itemTitle
+                                                                viewController.choiceOption = self.choiceArray
+                                                                viewController.price = self.price
+                                                                viewController.totalAmount = self.optionCount * self.price
+                                                                presentingViewController.present(navigationController, animated: true, completion: nil)
+                                                                self.loading(.end)
+                                                            case .error(let err):
+                                                                print(err.localizedDescription)
+                                                                self.loading(.end)
+                                                            }
+                        }
                     })
                 })
             }) { [weak self] (_) in
@@ -158,6 +183,19 @@ class ChoiceFundingViewController: UIViewController {
     }
 }
 
+extension ChoiceFundingViewController: SendDataViewControllerDelegate {
+    func sendData<T>(data type: T.Type, _ data: T) {
+        if let data = data as? Int {
+            self.optionCount += data
+            self.optionChoiceTableView.reloadSections(IndexSet(integer: Section.total.rawValue), with: .automatic)
+        } else if let data = data as? String {
+            if data == "remove" {
+                
+            }
+        }
+    }
+}
+
 extension ChoiceFundingViewController: UITableViewDelegate {
     private func tableViewInit() {
         self.optionChoiceTableView.delegate = self; self.optionChoiceTableView.dataSource = self
@@ -185,7 +223,10 @@ extension ChoiceFundingViewController: UITableViewDelegate {
                 }
             } else {
                 self.selectType = .none
-                self.choiceArray.append(self.array[indexPath.row-1])
+                if !self.choiceArray.contains(self.array[indexPath.row-1]) {
+                    self.choiceArray.append(self.array[indexPath.row-1])
+                    self.optionCount += 1
+                }
             }
             self.optionChoiceTableView.reloadData()
             self.tableViewReloadAnimation(tableView, indexPath: indexPath)
@@ -241,10 +282,12 @@ extension ChoiceFundingViewController: UITableViewDataSource {
             return cell
         case .choiceOption:
             let cell = tableView.dequeue(SelectedOptionTableViewCell.self, for: indexPath)
+            cell.delegate = self
             cell.optionLabel.text = self.choiceArray[indexPath.row]
             return cell
         case .total:
             let cell = tableView.dequeue(TotalAmountTableViewCell.self, for: indexPath)
+            cell.configure(self.optionCount*self.price)
             return cell
         }
     }

@@ -23,6 +23,7 @@ class DetailInfoViewController: UIViewController {
     
     struct Const {
         static let screenWidth: CGFloat = UIScreen.main.bounds.width
+        static let naviIdentifier: String = "goChoiceOption"
     }
     
     var starIdx: Int?
@@ -45,6 +46,20 @@ class DetailInfoViewController: UIViewController {
         self.tableViewInit()
         
         self.setupData()
+        
+//        loading(.start)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Const.naviIdentifier {
+            guard let viewController = segue.destination as? ChoiceFundingViewController else { return }
+            guard let options = self.defaultData?.optionName else { return }
+            viewController.detailType = self.detailType
+            viewController.starIdx = self.starIdx
+            viewController.array = options.components(separatedBy: ",")
+            viewController.price = self.common?.lowPrice ?? 0
+            viewController.itemTitle = self.common?.title
+        }
     }
     
     @IBAction func dismissAction(_ sender: Any) {
@@ -74,8 +89,10 @@ class DetailInfoViewController: UIViewController {
                     self?.detailData = data.itemDetail
                     self?.defaultData = data.itemDefault
                     self?.detailTableView.reloadData()
+                    self?.loading(.end)
                 case .error(let err):
                     print(err.localizedDescription)
+                    self?.loading(.end)
                 }
             }
         case .reward:
@@ -104,6 +121,15 @@ extension DetailInfoViewController: SendDataViewControllerDelegate {
             self.detailTableView.reloadRows(at: [.init(row: 0, section: Section.Info.rawValue)], with: .none)
             self.detailTableView.endUpdates()
             self.detailTableView.layer.removeAllAnimations()
+        } else if let data = data as? String {
+            if data == "share" {
+                guard let imgURL: URL = URL(string: self.common?.itemImages[0].imageKey ?? ""),
+                    let imgData: Data = try? Data(contentsOf: imgURL)  else { return }
+                guard let image = UIImage(data: imgData), let text = self.common?.title else { return }
+                let activity = UIActivityViewController(activityItems: [image, text], applicationActivities: nil)
+                activity.popoverPresentationController?.sourceView = self.view
+                self.present(activity, animated: true, completion: nil)
+            }
         }
     }
 }
@@ -171,6 +197,7 @@ extension DetailInfoViewController: UITableViewDataSource {
             return cell
         case .ShareAndSaveButton:
             let cell = tableView.dequeue(ShareAndSaveButtonTableViewCell.self, for: indexPath)
+            cell.delegate = self
             return cell
         case .FundingProgress:
             let cell = tableView.dequeue(FundingInfoTableViewCell.self, for: indexPath)

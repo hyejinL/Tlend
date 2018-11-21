@@ -12,6 +12,11 @@ class FinishFundingViewController: UIViewController {
 
     @IBOutlet weak var finishFundingTableView: UITableView!
     
+    var itemTitle: String?
+    var choiceOption: [String] = []
+    var price: Int = 0
+    var totalAmount: Int = 0
+    
     enum Section: Int, CaseIterable {
         case item
         case buyer
@@ -61,12 +66,14 @@ extension FinishFundingViewController: UITableViewDataSource {
         switch section {
         case .item:
             let cell = tableView.dequeue(ItemInfoTableViewCell.self, for: indexPath)
+            cell.configure(title: self.itemTitle, options: self.choiceOption)
             return cell
         case .buyer:
             let cell = tableView.dequeue(BuyerInfoTableViewCell.self, for: indexPath)
             return cell
         case .billing:
             let cell = tableView.dequeue(BillingInfoTableViewCell.self, for: indexPath)
+            cell.configure(price: self.price, total: self.totalAmount)
             return cell
         }
     }

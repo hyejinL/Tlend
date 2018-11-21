@@ -9,6 +9,8 @@
 import UIKit
 
 class ShareAndSaveButtonTableViewCell: UITableViewCell {
+    
+    weak var delegate: SendDataViewControllerDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,4 +23,7 @@ class ShareAndSaveButtonTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func pressedShareAction(_ sender: Any) {
+        delegate?.sendData(data: String.self, "share")
+    }
 }

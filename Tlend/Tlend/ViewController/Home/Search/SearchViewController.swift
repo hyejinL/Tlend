@@ -14,6 +14,8 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var suggestionTableView: UITableView!
     @IBOutlet var suggestionTableHeaderView: UIView!
     
+    var searchArray: [String] = ["비투비", "응원봉", "피규어", "빅뱅", "레드벨벳"]
+    
     struct Style {
         static let widthRatio: CGFloat = UIScreen.main.bounds.width/375
         static let searchBarFrame: CGRect = CGRect(x: 0, y: 0, width: 294*Style.widthRatio, height: 21)
@@ -74,11 +76,12 @@ extension SearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.searchArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(FormCheckTableViewCell.self, for: indexPath)
+        cell.configure(self.searchArray[indexPath.row])
         return cell
     }
 }

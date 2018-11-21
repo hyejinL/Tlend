@@ -11,6 +11,10 @@ import UIKit
 class SelectedOptionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var optionLabel: UILabel!
+    @IBOutlet weak var optionCountLabel: UILabel!
+    @IBOutlet weak var removeButton: UIButton!
+    
+    weak var delegate: SendDataViewControllerDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,4 +27,22 @@ class SelectedOptionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func pressedPlusAction(_ sender: Any) {
+        let count = Int(self.optionCountLabel.text ?? "1") ?? 1
+        self.optionCountLabel.text = "\(count+1)"
+        
+        delegate?.sendData(data: Int.self, 1)
+    }
+    
+    @IBAction func pressedMinusAction(_ sender: Any) {
+        let count = Int(self.optionCountLabel.text ?? "1") ?? 1
+        if count > 1 {
+            self.optionCountLabel.text = "\(count-1)"
+            delegate?.sendData(data: Int.self, -1)
+        }
+    }
+    
+    @IBAction func removeAction(_ sender: Any) {
+        delegate?.sendData(data: String.self, "remove")
+    }
 }
