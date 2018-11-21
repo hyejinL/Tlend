@@ -62,8 +62,9 @@ class SignUpViewController: UIViewController {
                                   pw: pwField.text ?? "",
                                   nickname: nicknameField.text ?? "",
                                   completion: { [weak self] _ in
-                                    let dialog = DialogViewController(title: "가입이 완료되었습니다",
-                                                                      content: "트렌드를 이용하기 위해 내새끼를 선택해주세요!",
+                                    let dialog = DialogViewController(.check,
+                                                                      title: "가입이 완료되었습니다",
+                                                                      content: "트렌드를 이용하기 위해\n내새끼를 선택해주세요!",
                                                                       confirmAction: { [weak self] dialog in
                                                                         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectStarNavigation")
                                                                         dialog.dismiss(animated: true, completion: { [weak self] in

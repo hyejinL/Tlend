@@ -88,7 +88,7 @@ class ChoiceFundingViewController: UIViewController {
             달성 시 상품 마감일에 일괄 결제 됩니다.
             """
             guard let presentingViewController = self.presentingViewController else { return }
-            let dialogViewController = DialogViewController(title: "잠깐", content: text, confirmAction: { (dialog) in
+            let dialogViewController = DialogViewController(.warning, title: "잠깐", content: text, confirmAction: { (dialog) in
                 self.loading(.start)
                 dialog.dismiss(animated: false, completion: {
                     self.dismiss(animated: false, completion: {

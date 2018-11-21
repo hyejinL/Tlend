@@ -33,7 +33,8 @@ class DialogViewController: UIViewController {
         }
     }
     
-    init(title: String,
+    init(_ type: TDialogView.DialogType,
+         title: String,
          content: String,
          confirmAction: ((DialogViewController) -> Void)? = nil,
          cancelAction: ((DialogViewController) -> Void)? = nil) {
@@ -45,15 +46,15 @@ class DialogViewController: UIViewController {
         self.modalTransitionStyle = .crossDissolve
         self.view.backgroundColor = Const.backgroundColor
         
-        self.setupDialog(title: title, content: content)
+        self.setupDialog(type, title: title, content: content)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupDialog(title: String, content: String) {
-        dialog.configure(title: title, content: content)
+    private func setupDialog(_ type: TDialogView.DialogType = .check, title: String, content: String) {
+        dialog.configure(type, title: title, content: content)
         dialog.confirmButton.addTarget(self, action: #selector(didTapConfirm), for: .touchUpInside)
         dialog.cancelButton.addTarget(self, action: #selector(didTapCancel), for: .touchUpInside)
     }
