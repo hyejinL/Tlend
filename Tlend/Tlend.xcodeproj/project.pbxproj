@@ -84,6 +84,9 @@
 		49A760CD219F24E70007DB48 /* FundingInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A760CB219F24E70007DB48 /* FundingInfoTableViewCell.xib */; };
 		49A760D0219F28890007DB48 /* InfoMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A760CE219F28890007DB48 /* InfoMenuHeaderView.swift */; };
 		49A760D1219F28890007DB48 /* InfoMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A760CF219F28890007DB48 /* InfoMenuHeaderView.xib */; };
+		49F2374821A56C1200FE865F /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2374721A56C1200FE865F /* SearchResultTableViewController.swift */; };
+		49F2374A21A56E6F00FE865F /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2374921A56E6F00FE865F /* SearchService.swift */; };
+		49F2374C21A5710A00FE865F /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2374B21A5710A00FE865F /* Search.swift */; };
 		49FFB9E321A0749400F40ABC /* ChoiceFundingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9E221A0749400F40ABC /* ChoiceFundingViewController.swift */; };
 		49FFB9E521A0755000F40ABC /* ChoiceOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9E421A0755000F40ABC /* ChoiceOptionTableViewCell.swift */; };
 		49FFB9E721A0755A00F40ABC /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9E621A0755A00F40ABC /* OptionTableViewCell.swift */; };
@@ -230,6 +233,9 @@
 		49A760CB219F24E70007DB48 /* FundingInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FundingInfoTableViewCell.xib; sourceTree = "<group>"; };
 		49A760CE219F28890007DB48 /* InfoMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMenuHeaderView.swift; sourceTree = "<group>"; };
 		49A760CF219F28890007DB48 /* InfoMenuHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoMenuHeaderView.xib; sourceTree = "<group>"; };
+		49F2374721A56C1200FE865F /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
+		49F2374921A56E6F00FE865F /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
+		49F2374B21A5710A00FE865F /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		49FFB9E221A0749400F40ABC /* ChoiceFundingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceFundingViewController.swift; sourceTree = "<group>"; };
 		49FFB9E421A0755000F40ABC /* ChoiceOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceOptionTableViewCell.swift; sourceTree = "<group>"; };
 		49FFB9E621A0755A00F40ABC /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -347,6 +353,7 @@
 			children = (
 				490D949A219A696100DAE837 /* SearchViewController.swift */,
 				490D949D219A796200DAE837 /* SearchResultViewController.swift */,
+				49F2374721A56C1200FE865F /* SearchResultTableViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -462,6 +469,7 @@
 				BAF439F521A2839700704002 /* IdolReward.swift */,
 				BAAF215821A28F60004983A6 /* MediaDetailContent.swift */,
 				491DBDC921A2866800D12EC0 /* Detail.swift */,
+				49F2374B21A5710A00FE865F /* Search.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -575,6 +583,7 @@
 				BAF439EF21A27E2700704002 /* IdolService.swift */,
 				BAAF215621A28ED4004983A6 /* ContentService.swift */,
 				491DBDC721A2840800D12EC0 /* DetailService.swift */,
+				49F2374921A56E6F00FE865F /* SearchService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -900,6 +909,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F2374C21A5710A00FE865F /* Search.swift in Sources */,
 				BA87B9DE21A19572001E7D16 /* SignService.swift in Sources */,
 				BA608EFF219DC1B400A3B5F0 /* UIView+Tlend.swift in Sources */,
 				49FFB9EF21A1284900F40ABC /* APIService.swift in Sources */,
@@ -953,6 +963,7 @@
 				BA608F01219DC3C700A3B5F0 /* IdolRewardViewController.swift in Sources */,
 				49202C69219E8DFE005286E2 /* MyStarListTableViewCell.swift in Sources */,
 				490D946D219842BB00DAE837 /* HomeMainViewController.swift in Sources */,
+				49F2374A21A56E6F00FE865F /* SearchService.swift in Sources */,
 				49202C65219E8D67005286E2 /* MyStarHomeTitleTableViewCell.swift in Sources */,
 				BAF439F021A27E2700704002 /* IdolService.swift in Sources */,
 				49FFB9EB21A0761100F40ABC /* TotalAmountTableViewCell.swift in Sources */,
@@ -982,6 +993,7 @@
 				49A760D0219F28890007DB48 /* InfoMenuHeaderView.swift in Sources */,
 				49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */,
 				491DBDC821A2840800D12EC0 /* DetailService.swift in Sources */,
+				49F2374821A56C1200FE865F /* SearchResultTableViewController.swift in Sources */,
 				490D949E219A796200DAE837 /* SearchResultViewController.swift in Sources */,
 				491DBDC421A1D5A600D12EC0 /* IdolHome.swift in Sources */,
 				490D9491219A4CCA00DAE837 /* HotKeywordListTableViewCell.swift in Sources */,

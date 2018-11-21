@@ -139,7 +139,7 @@ extension IdolSupportViewController: UITableViewDelegate {
             guard let viewController = navigationController.children.first as? DetailInfoViewController else { return }
             viewController.detailType = .support
             viewController.starIdx = self.starIdx
-            viewController.detailIdx = self.supports[indexPath.row].supportIdx
+            viewController.detailIdx = self.supports[indexPath.row].index
             self.present(navigationController, animated: true, completion: nil)
             
         default:

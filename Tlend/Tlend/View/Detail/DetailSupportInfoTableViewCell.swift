@@ -31,7 +31,7 @@ class DetailSupportInfoTableViewCell: UITableViewCell {
     
     public func configure(_ data: SupportDefault) {
         self.nameLabel.text = data.title
-        self.optionLabel.text = data.optionName
+        self.optionLabel.text = data.optionName + " 중 택 1"
         self.targetBillingLabel.text = (data.goalMoney?.getDecimalNumber() ?? "") + " 원"
         self.currentBillingLabel.text = (data.currentMoney?.getDecimalNumber() ?? "0") + " 원"
         

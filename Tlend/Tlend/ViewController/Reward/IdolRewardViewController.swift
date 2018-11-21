@@ -139,7 +139,7 @@ extension IdolRewardViewController: UITableViewDelegate {
             guard let viewController = navigationController.children.first as? DetailInfoViewController else { return }
             viewController.detailType = .reward
             viewController.starIdx = self.starIdx
-            viewController.detailIdx = self.rewards[indexPath.row].rewardIdx
+            viewController.detailIdx = self.rewards[indexPath.row].index
             self.present(navigationController, animated: true, completion: nil)
             
         default:

@@ -34,7 +34,7 @@ class SearchViewController: UIViewController {
     }
     
     private func setupUI() {
-        self.setWhiteNavigationBar()
+        setWhiteNavigationBar()
         
         self.naviSearchBar.frame = Style.searchBarFrame
         self.naviSearchBar.setImage(#imageLiteral(resourceName: "icSearch"), for: .search, state: .normal)
@@ -49,7 +49,9 @@ extension SearchViewController: UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        let viewController = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(ofType: SearchResultViewController.self)
+        viewController.text = self.naviSearchBar.text
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

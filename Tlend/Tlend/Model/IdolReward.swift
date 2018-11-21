@@ -23,15 +23,15 @@ struct RewardBanner: Codable {
     }
 }
 
-struct Reward: Codable {
-    let rewardIdx: Int
-    let rewardTitle, userNickname: String
-    let imageKey: String
-    let dDay, percent: Int
+struct Reward: Codable, Item {
+    var index: Int
+    var title, userNickname: String
+    var imageKey: String
+    var dDay, percent: Int
     
     enum CodingKeys: String, CodingKey {
-        case rewardIdx = "reward_idx"
-        case rewardTitle = "reward_title"
+        case index = "reward_idx"
+        case title = "reward_title"
         case userNickname = "user_nickname"
         case imageKey = "image_key"
         case dDay = "D_day"
