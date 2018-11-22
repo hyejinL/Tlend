@@ -99,14 +99,14 @@
                             </constraints>
                         </view>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="path5" translatesAutoresizingMaskIntoConstraints="NO" id="1DO-TO-yFi">
-                            <rect key="frame" x="19.5" y="24.5" width="37" height="27"/>
+                            <rect key="frame" x="19.5" y="27.5" width="37" height="27"/>
                         </imageView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="7sy-jF-h04" firstAttribute="centerX" secondItem="h7m-dn-yZO" secondAttribute="centerX" id="LId-BM-oxI"/>
                         <constraint firstItem="7sy-jF-h04" firstAttribute="centerY" secondItem="h7m-dn-yZO" secondAttribute="centerY" id="TLV-XZ-C4x"/>
-                        <constraint firstItem="1DO-TO-yFi" firstAttribute="centerY" secondItem="7sy-jF-h04" secondAttribute="centerY" id="YuQ-A2-h4O"/>
+                        <constraint firstItem="1DO-TO-yFi" firstAttribute="centerY" secondItem="7sy-jF-h04" secondAttribute="centerY" constant="3" id="YuQ-A2-h4O"/>
                         <constraint firstAttribute="height" constant="76" id="kUL-Xz-1nc"/>
                         <constraint firstItem="1DO-TO-yFi" firstAttribute="centerX" secondItem="7sy-jF-h04" secondAttribute="centerX" id="okK-u9-qzA"/>
                         <constraint firstAttribute="width" constant="76" id="y8f-fZ-4Ur"/>

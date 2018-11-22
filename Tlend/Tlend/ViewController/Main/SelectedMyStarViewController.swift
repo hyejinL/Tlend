@@ -117,7 +117,7 @@ extension SelectedMyStarViewController: SendDataViewControllerDelegate {
                 if self.myStarNames.contains(item.idolName) {
                     self.selectedMyStarCollectionView.selectItem(at: IndexPath(item: index, section: 1),
                                                                  animated: true,
-                                                                 scrollPosition: .centeredVertically)
+                                                                 scrollPosition: .top)
                 }
             }
         }
