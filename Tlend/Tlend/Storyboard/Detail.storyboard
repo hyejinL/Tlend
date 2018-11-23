@@ -32,6 +32,7 @@
                                 <state key="normal" title="펀딩하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <state key="selected" title="펀딩하기"/>
                                 <connections>
                                     <segue destination="Sa4-gb-8b7" kind="presentation" identifier="goChoiceOption" id="VMb-om-MMn"/>
                                 </connections>
@@ -60,6 +61,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="detailTableView" destination="yWv-ii-kxn" id="Drr-TX-UF3"/>
+                        <outlet property="startFundingButton" destination="fiX-E5-Tf5" id="tnv-e1-vnL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XqR-2t-h7k" userLabel="First Responder" sceneMemberID="firstResponder"/>
