@@ -58,6 +58,20 @@ struct SignService: APIService, DecodingService {
         }
     }
     
+    func confirmID(email: String, completion: @escaping (Result<String>) -> Void) {
+        let params = [
+            "id" : email
+        ]
+        NetworkService.shared.request(url("user/comfirmId"), method: .post, parameters: params) { (result) in
+            switch result {
+            case .success(let data):
+                completion(.success(JSON(data)["message"].string ?? ""))
+            case .error(let err):
+                completion(.error(err))
+            }
+        }
+    }
+    
     func getIdols(completion: @escaping (Result<FirstIdols>) -> Void) {
         NetworkService.shared.request(url("idol"), method: .get) { result in
             switch result {

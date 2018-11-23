@@ -278,6 +278,8 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                                                         <connections>
+                                                            <action selector="editingEmailField:" destination="Isj-pT-7M8" eventType="editingChanged" id="4rq-hd-hcC"/>
+                                                            <action selector="endEditingEmailField:" destination="Isj-pT-7M8" eventType="editingDidEnd" id="fdD-2F-OdF"/>
                                                             <outlet property="delegate" destination="Isj-pT-7M8" id="thz-bm-Mra"/>
                                                         </connections>
                                                     </textField>
@@ -419,6 +421,12 @@
                                                 <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xep-Hx-Ucz">
+                                                <rect key="frame" x="24" y="106" width="4" height="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" red="0.75294117650000003" green="0.58039215690000001" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -446,8 +454,10 @@
                                             <constraint firstItem="ghD-q9-GP7" firstAttribute="leading" secondItem="phh-RA-UKy" secondAttribute="leading" constant="24" id="pXI-6I-xDs"/>
                                             <constraint firstItem="oG4-6V-P05" firstAttribute="leading" secondItem="ghD-q9-GP7" secondAttribute="leading" id="qVJ-A9-cVz"/>
                                             <constraint firstItem="vhm-5N-gtm" firstAttribute="leading" secondItem="VSW-O2-TAe" secondAttribute="leading" id="sh9-Oe-6l4"/>
+                                            <constraint firstItem="Xep-Hx-Ucz" firstAttribute="leading" secondItem="gTm-h8-V2b" secondAttribute="leading" id="t03-1O-yTH"/>
                                             <constraint firstAttribute="trailing" secondItem="gTm-h8-V2b" secondAttribute="trailing" constant="24" id="tQr-kC-beF"/>
                                             <constraint firstItem="VSW-O2-TAe" firstAttribute="trailing" secondItem="gTm-h8-V2b" secondAttribute="trailing" id="w22-gv-HmD"/>
+                                            <constraint firstItem="Xep-Hx-Ucz" firstAttribute="top" secondItem="gTm-h8-V2b" secondAttribute="bottom" constant="5" id="z2e-hY-GzY"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -489,6 +499,7 @@
                         <outlet property="addressBox" destination="Wsk-cu-fnf" id="c12-Cc-wbQ"/>
                         <outlet property="addressField" destination="M8e-V2-L2t" id="zek-yD-gqw"/>
                         <outlet property="emailBox" destination="gTm-h8-V2b" id="Lwl-hJ-idi"/>
+                        <outlet property="emailErrorMessage" destination="Xep-Hx-Ucz" id="Y1M-o3-xT0"/>
                         <outlet property="emailField" destination="H2h-DP-gfI" id="VPu-5H-mDl"/>
                         <outlet property="nicknameBox" destination="WG1-3t-e0q" id="0z2-pB-GVX"/>
                         <outlet property="nicknameField" destination="bBf-xq-fi2" id="p0w-T7-R2d"/>
