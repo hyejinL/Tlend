@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 public typealias DateFormat = JSONDecoder.DateDecodingStrategy
 
@@ -28,6 +29,9 @@ extension DecodingService {
             let decodeData = try decoder.decode(DataModel<T>.self, from: data)
             return .success(decodeData.data)
         } catch let err {
+            if let message = JSON(data)["message"].string {
+                return .error(ErrorMessage.errorMessage(message))
+            }
             return .error(err)
         }
     }

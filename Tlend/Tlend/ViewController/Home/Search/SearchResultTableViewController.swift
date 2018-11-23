@@ -44,6 +44,12 @@ class SearchResultTableViewController: UIViewController {
                 self?.supports = data.itemList
                 self?.searchResultTableView.reloadData()
             case .error(let err):
+                switch err {
+                case ErrorMessage.errorMessage(let message):
+                    print(message)
+                default:
+                    break
+                }
                 print(err.localizedDescription)
             }
         }
@@ -56,6 +62,12 @@ class SearchResultTableViewController: UIViewController {
                 self?.rewards = data.itemList
                 self?.searchResultTableView.reloadData()
             case .error(let err):
+                switch err {
+                case ErrorMessage.errorMessage(let message):
+                    print(message)
+                default:
+                    break
+                }
                 print(err.localizedDescription)
             }
         }

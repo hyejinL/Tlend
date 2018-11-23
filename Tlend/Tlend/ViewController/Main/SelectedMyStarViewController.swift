@@ -143,13 +143,14 @@ extension SelectedMyStarViewController: UICollectionViewDelegate {
         case .MyStarList:
             guard let cell = collectionView.cellForItem(at: indexPath) as? MyStarImageCollectionViewCell else { return }
             
-            if self.myStarIndexArray.count < 3 {
+            if self.myStarNames.count < 3 {
+                print(self.myStarNames)
                 cell.selectedCell(true)
                 self.myStarIndexArray.insert(indexPath)
                 self.myStarNames.insert(self.collectionIdols[indexPath.row].idolName)
             }
             
-            self.setStartButtonEnable(selected: self.myStarIndexArray.count)
+            self.setStartButtonEnable(selected: self.myStarNames.count)
             
         default:
             break
@@ -157,7 +158,6 @@ extension SelectedMyStarViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        print(22)
         guard let section = Section(rawValue: indexPath.section) else { return }
 
         switch section {
@@ -167,7 +167,8 @@ extension SelectedMyStarViewController: UICollectionViewDelegate {
             self.myStarIndexArray.remove(indexPath)
             self.myStarNames.remove(self.collectionIdols[indexPath.row].idolName)
             
-            self.setStartButtonEnable(selected: self.myStarIndexArray.count)
+            self.setStartButtonEnable(selected: self.myStarNames
+                .count)
 
         default:
             break

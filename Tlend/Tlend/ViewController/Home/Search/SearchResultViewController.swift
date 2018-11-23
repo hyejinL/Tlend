@@ -24,7 +24,7 @@ class SearchResultViewController: ButtonBarPagerTabStripViewController {
         
         static let backgroundColor: UIColor = .white
         static let bottomViewColor: UIColor = #colorLiteral(red: 0.1176470588, green: 0.1176470588, blue: 0.1176470588, alpha: 1)
-        static let bottomViewHeight: CGFloat = 1.0
+        static let bottomViewHeight: CGFloat = 1.3
         static let titleFontSize: CGFloat = 15.0
         
         static let spacingSize: CGFloat = 0
@@ -32,9 +32,15 @@ class SearchResultViewController: ButtonBarPagerTabStripViewController {
     }
 
     override func viewDidLoad() {
+        self.barPagerInit() // *****
         super.viewDidLoad()
-
-        self.barPagerInit()
+        
+        self.setupUI()
+        self.searchBarInit()
+    }
+    
+    @IBAction func popAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func setupUI() {
@@ -44,6 +50,8 @@ class SearchResultViewController: ButtonBarPagerTabStripViewController {
         self.naviSearchBar.setImage(#imageLiteral(resourceName: "icSearch"), for: .search, state: .normal)
         self.naviSearchBar.setImage(UIImage(), for: .clear, state: .normal)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: self.naviSearchBar)
+        
+        self.naviSearchBar.text = self.text
     }
     
     private func barPagerInit() {
@@ -78,5 +86,15 @@ class SearchResultViewController: ButtonBarPagerTabStripViewController {
         rewardViewController.searchText = self.text
         
         return [supportViewController, rewardViewController]
+    }
+}
+
+extension SearchResultViewController: UISearchBarDelegate {
+    private func searchBarInit() {
+        self.naviSearchBar.delegate = self
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.navigationController?.popViewController(animated: false)
     }
 }

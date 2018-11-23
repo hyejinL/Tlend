@@ -19,6 +19,7 @@ class ChoiceFundingViewController: UIViewController {
     
     var detailType: DetailType?
     var starIdx: Int?
+    var detailIdx: Int?
     var selectType: SelectType = .none
     var array: [String] = []
     var price: Int = 0
@@ -95,8 +96,8 @@ class ChoiceFundingViewController: UIViewController {
                     self.dismiss(animated: false, completion: {
                         guard let type = self.detailType else { return }
                         DetailService.shared.fundingStart(type,
-                                                          starIdx: self.starIdx ?? 0,
-                                                          price: self.price) { (result) in
+                                                          itemIdx:  self.detailIdx ?? 0,
+                                                          price: self.optionCount * self.price) { (result) in
                                                             switch result {
                                                             case .success(_):
                                                                 print(111)

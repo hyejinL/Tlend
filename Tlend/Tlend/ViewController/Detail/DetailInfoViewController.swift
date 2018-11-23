@@ -56,6 +56,7 @@ class DetailInfoViewController: UIViewController {
             guard let options = self.defaultData?.optionName else { return }
             viewController.detailType = self.detailType
             viewController.starIdx = self.starIdx
+            viewController.detailIdx = self.detailIdx
             viewController.array = options.components(separatedBy: ",")
             viewController.price = self.common?.lowPrice ?? 0
             viewController.itemTitle = self.common?.title
