@@ -25,7 +25,7 @@ class TDialogView: UIView {
             case .warning:
                 return #imageLiteral(resourceName: "11.png")
             case .check:
-                return #imageLiteral(resourceName: "11.png")
+                return #imageLiteral(resourceName: "path5.png")
             }
         }
     }

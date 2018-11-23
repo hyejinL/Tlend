@@ -87,6 +87,7 @@
 		49F2374821A56C1200FE865F /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2374721A56C1200FE865F /* SearchResultTableViewController.swift */; };
 		49F2374A21A56E6F00FE865F /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2374921A56E6F00FE865F /* SearchService.swift */; };
 		49F2374C21A5710A00FE865F /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2374B21A5710A00FE865F /* Search.swift */; };
+		49F2374E21A7EBB400FE865F /* String+Tlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2374D21A7EBB400FE865F /* String+Tlend.swift */; };
 		49FFB9E321A0749400F40ABC /* ChoiceFundingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9E221A0749400F40ABC /* ChoiceFundingViewController.swift */; };
 		49FFB9E521A0755000F40ABC /* ChoiceOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9E421A0755000F40ABC /* ChoiceOptionTableViewCell.swift */; };
 		49FFB9E721A0755A00F40ABC /* OptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FFB9E621A0755A00F40ABC /* OptionTableViewCell.swift */; };
@@ -236,6 +237,7 @@
 		49F2374721A56C1200FE865F /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
 		49F2374921A56E6F00FE865F /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		49F2374B21A5710A00FE865F /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		49F2374D21A7EBB400FE865F /* String+Tlend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Tlend.swift"; sourceTree = "<group>"; };
 		49FFB9E221A0749400F40ABC /* ChoiceFundingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceFundingViewController.swift; sourceTree = "<group>"; };
 		49FFB9E421A0755000F40ABC /* ChoiceOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceOptionTableViewCell.swift; sourceTree = "<group>"; };
 		49FFB9E621A0755A00F40ABC /* OptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionTableViewCell.swift; sourceTree = "<group>"; };
@@ -566,6 +568,7 @@
 				BA608EFC219DBC6000A3B5F0 /* UIView+Xib.swift */,
 				491DBDDF21A46F2900D12EC0 /* Int+Tlend.swift */,
 				491DBDE321A47F3100D12EC0 /* UIViewController+LoadingView.swift */,
+				49F2374D21A7EBB400FE865F /* String+Tlend.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1007,6 +1010,7 @@
 				BAAF215121A28BD9004983A6 /* ContentImageTableViewCell.swift in Sources */,
 				BAAF215321A28BE0004983A6 /* ContentVideoTableViewCell.swift in Sources */,
 				BA87B9D421A1645B001E7D16 /* AuthAdapter.swift in Sources */,
+				49F2374E21A7EBB400FE865F /* String+Tlend.swift in Sources */,
 				49FFB9F921A190A400F40ABC /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

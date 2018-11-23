@@ -11,6 +11,7 @@ import UIKit
 class DetailInfoViewController: UIViewController {
 
     @IBOutlet weak var detailTableView: UITableView!
+    @IBOutlet weak var startFundingButton: UIButton!
     
     var detailType: DetailType?
     var buttonType: DetailInfoType = .detail
@@ -56,6 +57,7 @@ class DetailInfoViewController: UIViewController {
             guard let options = self.defaultData?.optionName else { return }
             viewController.detailType = self.detailType
             viewController.starIdx = self.starIdx
+            viewController.detailIdx = self.detailIdx
             viewController.array = options.components(separatedBy: ",")
             viewController.price = self.common?.lowPrice ?? 0
             viewController.itemTitle = self.common?.title
@@ -86,6 +88,7 @@ class DetailInfoViewController: UIViewController {
                 switch result {
                 case .success(let data):
                     self?.common = data.common
+                    self?.startFundingButtonInit(data.common.percent)
                     self?.detailData = data.itemDetail
                     self?.defaultData = data.itemDefault
                     self?.detailTableView.reloadData()
@@ -100,6 +103,7 @@ class DetailInfoViewController: UIViewController {
                 switch result {
                 case .success(let data):
                     self?.common = data.common
+                    self?.startFundingButtonInit(data.common.percent)
                     self?.detailData = data.itemDetail
                     self?.defaultData = data.itemDefault
                     self?.detailTableView.reloadData()
@@ -109,6 +113,11 @@ class DetailInfoViewController: UIViewController {
             }
             
         }
+    }
+    
+    private func startFundingButtonInit(_ percent: Int) {
+        self.startFundingButton.isEnabled = percent >= 100 ? false : true
+        self.startFundingButton.backgroundColor = percent >= 100 ? #colorLiteral(red: 0.8823529412, green: 0.8823529412, blue: 0.8823529412, alpha: 1) : #colorLiteral(red: 0.7529411765, green: 0.5803921569, blue: 0.9960784314, alpha: 1)
     }
 }
 
@@ -125,8 +134,10 @@ extension DetailInfoViewController: SendDataViewControllerDelegate {
             if data == "share" {
                 guard let imgURL: URL = URL(string: self.common?.itemImages[0].imageKey ?? ""),
                     let imgData: Data = try? Data(contentsOf: imgURL)  else { return }
-                guard let image = UIImage(data: imgData), let text = self.common?.title else { return }
-                let activity = UIActivityViewController(activityItems: [image, text], applicationActivities: nil)
+                guard let image = UIImage(data: imgData),
+                    let text = self.common?.title else { return }
+                let price = "\(self.common?.lowPrice ?? 0)원"
+                let activity = UIActivityViewController(activityItems: [image, text, price], applicationActivities: nil)
                 activity.popoverPresentationController?.sourceView = self.view
                 self.present(activity, animated: true, completion: nil)
             }

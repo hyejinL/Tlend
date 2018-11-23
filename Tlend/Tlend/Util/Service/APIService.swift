@@ -14,10 +14,16 @@ enum Result<T> {
     case error(Error)
 }
 
-enum ErrorMessage: String, Error {
-    case connetionError = "connection is failed"
-    case parameterEncodeError = "parameter encode failed"
-    
+//enum ErrorMessage: String, Error {
+//    case connetionError = "connection is failed"
+//    case parameterEncodeError = "parameter encode failed"
+//    case noResultError = "there is no result"
+//}
+
+enum ErrorMessage: Error {
+    case connetionError
+    case parameterEncodeError
+    case errorMessage(String)
 }
 
 // MAKR: - APIService : protocol for api

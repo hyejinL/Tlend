@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var suggestionTableView: UITableView!
     @IBOutlet var suggestionTableHeaderView: UIView!
     
-    var searchArray: [String] = ["비투비", "응원봉", "피규어", "빅뱅", "레드벨벳"]
+    var searchArray: [String] = ["비투비", "피규어", "육성재", "승리"]
     
     struct Style {
         static let widthRatio: CGFloat = UIScreen.main.bounds.width/375
@@ -40,6 +40,8 @@ class SearchViewController: UIViewController {
         self.naviSearchBar.setImage(#imageLiteral(resourceName: "icSearch"), for: .search, state: .normal)
         self.naviSearchBar.setImage(UIImage(), for: .clear, state: .normal)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: self.naviSearchBar)
+        
+        self.naviSearchBar.becomeFirstResponder()
     }
 }
 
@@ -69,6 +71,8 @@ extension SearchViewController: UITableViewDelegate {
         
         cell.setSelected(false, animated: false)
         cell.setNeedsDisplay()
+        
+        self.naviSearchBar.text = cell.titleLabel.text
     }
 }
 

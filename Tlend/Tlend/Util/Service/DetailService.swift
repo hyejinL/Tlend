@@ -70,17 +70,18 @@ struct DetailService: APIService, DecodingService {
     }
     
     public func fundingStart(_ type: DetailType,
-                             starIdx: Int,
+                             itemIdx: Int,
                              price: Int,
                              completion: @escaping (Result<String>) -> Void) {
         let params = [
             "itemPrice" : price
         ]
         
-        NetworkService.shared.request(url("\(type.rawValue)/\(starIdx)/fund"),
+        NetworkService.shared.request(url("\(type.rawValue)/\(itemIdx)/fund"),
                                       method: .post, parameters: params) { (result) in
                                         switch result {
                                         case .success(let data):
+                                            
                                             completion(.success(JSON(data)["message"].string ?? ""))
                                         case .error(let err):
                                             completion(.error(err))

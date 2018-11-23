@@ -56,13 +56,16 @@ class SignInViewController: UIViewController {
     @IBAction func touchUpSignIn(_ sender: Any) {
         guard !(idField.text?.isEmpty ?? true),
             !(pwField.text?.isEmpty ?? true) else { return }
+        loading(.start)
         SignService.shared.signIn(id: idField.text ?? "",
-                                  pw: pwField.text ?? "") { result in
+                                  pw: pwField.text ?? "") { [weak self] result in
                                     switch result {
                                     case .success(let data):
+                                        self?.loading(.end)
+                                        print(data.userIDX)
                                         try? AuthService.shared.saveToken("\(data.userIDX)")
                                         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyStarNavigation")
-                                        self.present(vc, animated: true, completion: nil)
+                                        self?.present(vc, animated: true, completion: nil)
                                     case .error(let error):
                                         print(error.localizedDescription)
                                     }

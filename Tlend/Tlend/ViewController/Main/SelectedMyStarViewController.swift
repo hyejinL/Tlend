@@ -96,8 +96,18 @@ class SelectedMyStarViewController: UIViewController {
         self.startButton.setTitle("시작하기 (\(count)/3)", for: .normal)
     }
     @IBAction func touchUpStart(_ sender: Any) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyStarNavigation")
-        self.present(vc, animated: true, completion: nil)
+        loading(.start)
+        SignService.shared.sendMyStar(idolNames: self.myStarNames) { [weak self] (result) in
+            switch result {
+            case .success(_):
+                self?.loading(.end)
+                print(self?.myStarNames)
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyStarNavigation")
+                self?.present(vc, animated: true, completion: nil)
+            case .error(let err):
+                print(err.localizedDescription)
+            }
+        }
     }
 }
 
@@ -117,7 +127,7 @@ extension SelectedMyStarViewController: SendDataViewControllerDelegate {
                 if self.myStarNames.contains(item.idolName) {
                     self.selectedMyStarCollectionView.selectItem(at: IndexPath(item: index, section: 1),
                                                                  animated: true,
-                                                                 scrollPosition: .centeredVertically)
+                                                                 scrollPosition: .top)
                 }
             }
         }
@@ -143,13 +153,14 @@ extension SelectedMyStarViewController: UICollectionViewDelegate {
         case .MyStarList:
             guard let cell = collectionView.cellForItem(at: indexPath) as? MyStarImageCollectionViewCell else { return }
             
-            if self.myStarIndexArray.count < 3 {
+            if self.myStarNames.count < 3 {
+                print(self.myStarNames)
                 cell.selectedCell(true)
                 self.myStarIndexArray.insert(indexPath)
                 self.myStarNames.insert(self.collectionIdols[indexPath.row].idolName)
             }
             
-            self.setStartButtonEnable(selected: self.myStarIndexArray.count)
+            self.setStartButtonEnable(selected: self.myStarNames.count)
             
         default:
             break
@@ -157,7 +168,6 @@ extension SelectedMyStarViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        print(22)
         guard let section = Section(rawValue: indexPath.section) else { return }
 
         switch section {
@@ -167,7 +177,8 @@ extension SelectedMyStarViewController: UICollectionViewDelegate {
             self.myStarIndexArray.remove(indexPath)
             self.myStarNames.remove(self.collectionIdols[indexPath.row].idolName)
             
-            self.setStartButtonEnable(selected: self.myStarIndexArray.count)
+            self.setStartButtonEnable(selected: self.myStarNames
+                .count)
 
         default:
             break

@@ -19,6 +19,7 @@ class ChoiceFundingViewController: UIViewController {
     
     var detailType: DetailType?
     var starIdx: Int?
+    var detailIdx: Int?
     var selectType: SelectType = .none
     var array: [String] = []
     var price: Int = 0
@@ -85,7 +86,8 @@ class ChoiceFundingViewController: UIViewController {
             let text = """
             펀딩 시 결제가 예약되며
             목표금액 미달성 시 결제가 취소되고
-            달성 시 상품 마감일에 일괄 결제 됩니다.
+            달성 시 상품 마감일에
+            일괄 결제 됩니다.
             """
             guard let presentingViewController = self.presentingViewController else { return }
             let dialogViewController = DialogViewController(.warning, title: "잠깐", content: text, confirmAction: { (dialog) in
@@ -94,8 +96,8 @@ class ChoiceFundingViewController: UIViewController {
                     self.dismiss(animated: false, completion: {
                         guard let type = self.detailType else { return }
                         DetailService.shared.fundingStart(type,
-                                                          starIdx: self.starIdx ?? 0,
-                                                          price: self.price) { (result) in
+                                                          itemIdx:  self.detailIdx ?? 0,
+                                                          price: self.optionCount * self.price) { (result) in
                                                             switch result {
                                                             case .success(_):
                                                                 print(111)
