@@ -96,8 +96,18 @@ class SelectedMyStarViewController: UIViewController {
         self.startButton.setTitle("시작하기 (\(count)/3)", for: .normal)
     }
     @IBAction func touchUpStart(_ sender: Any) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyStarNavigation")
-        self.present(vc, animated: true, completion: nil)
+        loading(.start)
+        SignService.shared.sendMyStar(idolNames: self.myStarNames) { [weak self] (result) in
+            switch result {
+            case .success(_):
+                self?.loading(.end)
+                print(self?.myStarNames)
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyStarNavigation")
+                self?.present(vc, animated: true, completion: nil)
+            case .error(let err):
+                print(err.localizedDescription)
+            }
+        }
     }
 }
 

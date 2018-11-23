@@ -61,19 +61,25 @@ class SignUpViewController: UIViewController {
         SignService.shared.signUp(id: emailField.text ?? "",
                                   pw: pwField.text ?? "",
                                   nickname: nicknameField.text ?? "",
-                                  completion: { [weak self] _ in
-                                    let dialog = DialogViewController(.check,
-                                                                      title: "가입이 완료되었습니다",
-                                                                      content: "트렌드를 이용하기 위해\n내새끼를 선택해주세요!",
-                                                                      confirmAction: { [weak self] dialog in
-                                                                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectStarNavigation")
-                                                                        dialog.dismiss(animated: true, completion: { [weak self] in
-                                                                            self?.present(vc, animated: true, completion: nil)
-                                                                        })
-                                    })
-                                    dialog.dialog.cancelButton.removeFromSuperview()
-                                    self?.present(dialog, animated: true, completion: nil)
-                                    })
+                                  completion: { [weak self] result in
+                                    switch result {
+                                    case .success(let data):
+                                        try? AuthService.shared.saveToken("\(data.userIDX)")
+                                        let dialog = DialogViewController(.check,
+                                                                          title: "가입이 완료되었습니다",
+                                                                          content: "트렌드를 이용하기 위해\n내새끼를 선택해주세요!",
+                                                                          confirmAction: { [weak self] dialog in
+                                                                            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SelectStarNavigation")
+                                                                            dialog.dismiss(animated: true, completion: { [weak self] in
+                                                                                self?.present(vc, animated: true, completion: nil)
+                                                                            })
+                                        })
+                                        dialog.dialog.cancelButton.removeFromSuperview()
+                                        self?.present(dialog, animated: true, completion: nil)
+                                    case .error(let err):
+                                        print(err.localizedDescription)
+                                    }
+        })
     }
 }
 

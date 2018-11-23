@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 struct SignService: APIService, DecodingService {
     static let shared = SignService()
@@ -26,19 +27,31 @@ struct SignService: APIService, DecodingService {
         }
     }
     
-    func signUp(id: String, pw: String, nickname: String, completion: @escaping (Result<Void>) -> Void) {
+    func signUp(id: String, pw: String, nickname: String, completion: @escaping (Result<UserIdx>) -> Void) {
         let params = [
             "id": id,
             "pw": pw,
-            "nickname": nickname,
-            "idolName1": "방탄소년단",
-            "idolName2": "비투비",
-            "idolName3": "슈퍼주니어"
+            "nickname": nickname
         ]
         NetworkService.shared.request(url("user/signup"), method: .post, parameters: params) { result in
             switch result {
-            case .success:
-                completion(.success(()))
+            case .success(let data):
+                completion(self.decodeJSONData(UserIdx.self, data: data))
+            case .error(let err):
+                completion(.error(err))
+            }
+        }
+    }
+    
+    func sendMyStar(idolNames: Set<String>, completion: @escaping (Result<String>) -> Void) {
+        let myStars = idolNames.map { ["idol_name" : $0] }
+        let params = [
+            "idol" : myStars
+        ]
+        NetworkService.shared.request(url("user/idol"), method: .post, parameters: params) { (result) in
+            switch result {
+            case .success(let data):
+                completion(.success(JSON(data)["message"].string ?? ""))
             case .error(let err):
                 completion(.error(err))
             }
