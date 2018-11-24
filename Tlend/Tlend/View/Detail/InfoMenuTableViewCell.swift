@@ -12,7 +12,7 @@ protocol SendDataViewControllerDelegate: class {
     func sendData<T>(data type: T.Type, _ data: T)
 }
 
-class InfoMenuHeaderView: UIView {
+class InfoMenuTableViewCell: UITableViewCell {
 
     @IBOutlet weak var detailInfoButton: UIButton!
     @IBOutlet weak var detailInfoBottomView: UIView!

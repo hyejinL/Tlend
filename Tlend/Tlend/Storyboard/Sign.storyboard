@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bla-d9-6sZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bla-d9-6sZ">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -670,22 +670,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBg812" translatesAutoresizingMaskIntoConstraints="NO" id="UVw-Iu-7p3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hom-TR-ykP">
-                                <rect key="frame" x="24" y="616" width="327" height="65"/>
-                                <color key="backgroundColor" red="0.75294117650000003" green="0.58039215690000001" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="gh5-N8-h4h"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="비회원으로 둘러보기">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="33"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjx-15-lsH">
                                 <rect key="frame" x="24" y="689" width="327" height="65"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -710,13 +694,10 @@
                         <constraints>
                             <constraint firstItem="Xjx-15-lsH" firstAttribute="leading" secondItem="ATy-zr-Lgt" secondAttribute="leading" constant="24" id="Bqd-l9-ZyL"/>
                             <constraint firstItem="ATy-zr-Lgt" firstAttribute="trailing" secondItem="Xjx-15-lsH" secondAttribute="trailing" constant="24" id="XKF-sg-pVe"/>
-                            <constraint firstItem="hom-TR-ykP" firstAttribute="leading" secondItem="ATy-zr-Lgt" secondAttribute="leading" constant="24" id="XLu-bm-rfi"/>
                             <constraint firstItem="ATy-zr-Lgt" firstAttribute="bottom" secondItem="Xjx-15-lsH" secondAttribute="bottom" constant="24" id="YJZ-fv-jsp"/>
-                            <constraint firstItem="ATy-zr-Lgt" firstAttribute="trailing" secondItem="hom-TR-ykP" secondAttribute="trailing" constant="24" id="bL6-RN-E40"/>
                             <constraint firstAttribute="bottom" secondItem="UVw-Iu-7p3" secondAttribute="bottom" id="bZ4-xV-cT7"/>
                             <constraint firstItem="UVw-Iu-7p3" firstAttribute="leading" secondItem="ATy-zr-Lgt" secondAttribute="leading" id="cum-vy-Vez"/>
                             <constraint firstItem="UVw-Iu-7p3" firstAttribute="top" secondItem="8o3-HP-XUV" secondAttribute="top" id="kpu-Sm-sdW"/>
-                            <constraint firstItem="Xjx-15-lsH" firstAttribute="top" secondItem="hom-TR-ykP" secondAttribute="bottom" constant="8" id="quj-aM-6XZ"/>
                             <constraint firstItem="ATy-zr-Lgt" firstAttribute="trailing" secondItem="UVw-Iu-7p3" secondAttribute="trailing" id="zev-8t-hrX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ATy-zr-Lgt"/>

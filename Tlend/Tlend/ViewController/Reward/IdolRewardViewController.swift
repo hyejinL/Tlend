@@ -12,7 +12,7 @@ import SnapKit
 class IdolRewardViewController: UIViewController {
     
     lazy var underNaviView: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: Const.screenWidth, height: 88))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: Const.screenWidth, height: 44 + UIApplication.shared.statusBarFrame.height))
         view.backgroundColor = .white
         return view
     }()
