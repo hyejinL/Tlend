@@ -95,6 +95,7 @@ extension SearchResultTableViewController: UITableViewDelegate {
         self.searchResultTableView.delegate = self; self.searchResultTableView.dataSource = self
         
         self.searchResultTableView.register(IdolItemTableViewCell.self)
+        self.searchResultTableView.register(SearchEmptyViewTableViewCell.self)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -127,9 +128,9 @@ extension SearchResultTableViewController: UITableViewDataSource {
         guard let type = self.detailType else { return 0 }
         switch type {
         case .support:
-            return self.supports.count
+            return self.supports.count > 0 ? self.supports.count : 1
         case .reward:
-            return self.rewards.count
+            return self.rewards.count > 0 ? self.rewards.count : 1
         }
     }
     
@@ -137,10 +138,20 @@ extension SearchResultTableViewController: UITableViewDataSource {
         guard let type = self.detailType else { return UITableViewCell() }
         switch type {
         case .support:
+            print(supports)
+            guard self.supports.count > 0 else {
+                let cell = tableView.dequeue(SearchEmptyViewTableViewCell.self, for: indexPath)
+                return cell
+            }
             let cell = tableView.dequeue(IdolItemTableViewCell.self, for: indexPath)
             cell.configure(type: type, support: supports[indexPath.row])
             return cell
         case .reward:
+            print(rewards)
+            guard self.rewards.count > 0 else {
+                let cell = tableView.dequeue(SearchEmptyViewTableViewCell.self, for: indexPath)
+                return cell
+            }
             let cell = tableView.dequeue(IdolItemTableViewCell.self, for: indexPath)
             cell.configure(type: type, reward: rewards[indexPath.row])
             return cell

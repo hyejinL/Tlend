@@ -16,6 +16,8 @@ class SelectedMyStarViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var buttonBottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var emptyView: UIView!
+    
     var idols: [Idol] = []
     var collectionIdols: [Idol] = []
     private var myStarIndexArray: Set<IndexPath> = []
@@ -64,6 +66,7 @@ class SelectedMyStarViewController: UIViewController {
     
     private func setupUI() {
         setWhiteNavigationBar()
+        self.emptyView.isHidden = true
         
         self.setStartButtonEnable(selected: self.myStarIndexArray.count)
         
@@ -78,6 +81,7 @@ class SelectedMyStarViewController: UIViewController {
         self.selectedMyStarCollectionView.backgroundView = UIView()
         let gesture = UITapGestureRecognizer()
         self.selectedMyStarCollectionView.backgroundView?.addGestureRecognizer(gesture)
+        self.emptyView.addGestureRecognizer(gesture)
         
         gesture.rx.event.asDriver().drive(onNext: { [weak self] _ in
             self?.view.endEditing(true)
@@ -102,10 +106,10 @@ class SelectedMyStarViewController: UIViewController {
             switch result {
             case .success(_):
                 self?.loading(.end)
-                print(self?.myStarNames)
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyStarNavigation")
                 self?.present(vc, animated: true, completion: nil)
             case .error(let err):
+                self?.loading(.end)
                 print(err.localizedDescription)
             }
         }
@@ -122,6 +126,11 @@ extension SelectedMyStarViewController: SendDataViewControllerDelegate {
                 self.collectionIdols = result
             }
             self.selectedMyStarCollectionView.reloadSections(IndexSet(integer: 1))
+            if self.collectionIdols.isEmpty {
+                self.emptyView.isHidden = false
+            } else {
+                self.emptyView.isHidden = true
+            }
             
             guard self.selectedMyStarCollectionView.numberOfItems(inSection: 1) > 0 else { return }
             for (index, item) in self.collectionIdols.enumerated() {

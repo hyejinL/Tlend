@@ -29,6 +29,12 @@ class SearchViewController: UIViewController {
         self.tableViewInit()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.naviSearchBar.becomeFirstResponder()
+    }
+    
     @IBAction func dismissAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

@@ -121,7 +121,7 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KBb-ZX-ezR">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBb-ZX-ezR">
                                 <rect key="frame" x="0.0" y="156" width="375" height="622"/>
                             </scrollView>
                         </subviews>
@@ -164,7 +164,7 @@
                     </scopeButtonTitles>
                 </searchBar>
             </objects>
-            <point key="canvasLocation" x="1972" y="23"/>
+            <point key="canvasLocation" x="1972" y="22.906403940886701"/>
         </scene>
         <!--Search Result Table View Controller-->
         <scene sceneID="qsO-YS-5Zm">
