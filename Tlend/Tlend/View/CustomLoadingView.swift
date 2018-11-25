@@ -33,7 +33,7 @@ class CustomLoadingView {
         
         containerView.frame = view.frame
         containerView.center = view.center
-        containerView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.62)
+        containerView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.4)
         
         progressView.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
         progressView.center = view.center

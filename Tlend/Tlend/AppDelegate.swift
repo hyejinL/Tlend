@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        NVActivityIndicatorView.DEFAULT_TYPE = .ballSpinFadeLoader
+        NVActivityIndicatorView.DEFAULT_TYPE = .lineSpinFadeLoader
         NVActivityIndicatorView.DEFAULT_COLOR = #colorLiteral(red: 0.7851700783, green: 0.5716921091, blue: 1, alpha: 1)
         NVActivityIndicatorView.DEFAULT_PADDING = CGFloat(3.0)
         

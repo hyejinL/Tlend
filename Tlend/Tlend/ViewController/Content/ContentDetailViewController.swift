@@ -41,6 +41,7 @@ class ContentDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loading(.start)
         getData()
     }
     
@@ -134,27 +135,27 @@ extension ContentDetailViewController: UITableViewDataSource {
 
 extension ContentDetailViewController: ContentImageProtocol {
     func setImageHeight() {
-        self.tableView.beginUpdates()
-        self.tableView.endUpdates()
+        self.loading(.end)
+        UIView.performWithoutAnimation { [weak self] in
+            self?.tableView.beginUpdates()
+            self?.tableView.endUpdates()
+        }
     }
 }
 
 extension ContentDetailViewController: MMPlayerFromProtocol {
-    // when second controller pop or dismiss, this help to put player back to where you want
-    // original was player last view ex. it will be nil because of this view on reuse view
     func backReplaceSuperView(original: UIView?) -> UIView? {
         return original
     }
     
-    // add layer to temp view and pass to another controller
     var passPlayer: MMPlayerLayer {
         return self.mmPlayerLayer
     }
-    // current playview is cell.image hide prevent ui error
+
     func transitionWillStart() {
         self.mmPlayerLayer.playView?.isHidden = true
     }
-    // show cell.image
+
     func transitionCompleted() {
         self.mmPlayerLayer.playView?.isHidden = false
     }

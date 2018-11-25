@@ -140,9 +140,10 @@ extension DetailInfoViewController: SendDataViewControllerDelegate {
 
 extension DetailInfoViewController: ContentImageProtocol {
     func setImageHeight() {
-        self.detailTableView.beginUpdates()
-        self.detailTableView.endUpdates()
-        self.detailTableView.layer.removeAllAnimations()
+        UIView.performWithoutAnimation { [weak self] in
+            self?.detailTableView.beginUpdates()
+            self?.detailTableView.endUpdates()
+        }
     }
 }
 

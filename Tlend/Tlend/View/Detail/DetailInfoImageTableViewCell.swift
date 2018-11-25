@@ -32,11 +32,8 @@ class DetailInfoImageTableViewCell: UITableViewCell {
             let ratio = image.size.height / image.size.width
             let height = UIScreen.main.bounds.size.width * ratio
             if self?.imageViewHeight.constant ?? 0 != height {
-                DispatchQueue.main.async {
-                    self?.imageViewHeight.constant = height
-                    self?.layoutIfNeeded()
-                    self?.delegate?.setImageHeight()
-                }
+                self?.imageViewHeight.constant = height
+                self?.delegate?.setImageHeight()
             }
         }
     }
