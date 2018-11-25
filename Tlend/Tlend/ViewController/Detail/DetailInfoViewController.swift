@@ -119,9 +119,7 @@ extension DetailInfoViewController: SendDataViewControllerDelegate {
         if let data = data as? DetailInfoType {
             self.buttonType = data
             
-//            self.detailTableView.beginUpdates()
             self.detailTableView.reloadRows(at: [.init(row: 0, section: Section.Info.rawValue)], with: .none)
-//            self.detailTableView.endUpdates()
             self.detailTableView.layer.removeAllAnimations()
         } else if let data = data as? String {
             if data == "share" {
@@ -192,6 +190,8 @@ extension DetailInfoViewController: UITableViewDataSource {
             return cell
         case .InfoMenu:
             let cell = tableView.dequeue(InfoMenuTableViewCell.self, for: indexPath)
+            cell.type = buttonType
+            cell.configure()
             cell.delegate = self
             return cell
         case .Info:
