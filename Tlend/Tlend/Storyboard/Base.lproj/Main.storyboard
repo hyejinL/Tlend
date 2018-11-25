@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UJW-kD-r0S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="j1U-pL-YUM">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -90,11 +90,10 @@
                         <constraints>
                             <constraint firstItem="Y3J-bK-6wl" firstAttribute="top" secondItem="EFV-Ke-9tm" secondAttribute="bottom" id="6VH-6G-ii3"/>
                             <constraint firstItem="Y3J-bK-6wl" firstAttribute="leading" secondItem="JUz-jh-XO2" secondAttribute="leading" id="OPS-hv-HK4"/>
+                            <constraint firstItem="JUz-jh-XO2" firstAttribute="bottom" secondItem="Y3J-bK-6wl" secondAttribute="bottom" id="Prb-gM-hY1"/>
                             <constraint firstItem="JUz-jh-XO2" firstAttribute="trailing" secondItem="EFV-Ke-9tm" secondAttribute="trailing" id="W2b-wv-Mas"/>
-                            <constraint firstItem="Y3J-bK-6wl" firstAttribute="bottom" secondItem="JUz-jh-XO2" secondAttribute="bottom" id="X5w-R3-fvr"/>
                             <constraint firstItem="EFV-Ke-9tm" firstAttribute="top" secondItem="JUz-jh-XO2" secondAttribute="top" id="XsV-Es-qfH"/>
                             <constraint firstItem="EFV-Ke-9tm" firstAttribute="leading" secondItem="JUz-jh-XO2" secondAttribute="leading" id="au5-UJ-OXS"/>
-                            <constraint firstAttribute="bottom" secondItem="Y3J-bK-6wl" secondAttribute="bottom" constant="34" id="c8F-xV-1iP"/>
                             <constraint firstItem="Y3J-bK-6wl" firstAttribute="trailing" secondItem="JUz-jh-XO2" secondAttribute="trailing" id="raV-V4-Rbf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JUz-jh-XO2"/>
@@ -103,14 +102,14 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="VhE-Ju-KWY"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="buttonBottomConstraint" destination="c8F-xV-1iP" id="bBK-z7-iRS"/>
+                        <outlet property="buttonBottomConstraint" destination="Prb-gM-hY1" id="vJh-xl-1C3"/>
                         <outlet property="selectedMyStarCollectionView" destination="EFV-Ke-9tm" id="178-5p-ib4"/>
                         <outlet property="startButton" destination="Y3J-bK-6wl" id="qPu-Yi-muW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZh-z2-6eF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-292" y="-237"/>
+            <point key="canvasLocation" x="-292" y="-237.192118226601"/>
         </scene>
         <!--My Star Home View Controller-->
         <scene sceneID="pVl-4W-IBX">

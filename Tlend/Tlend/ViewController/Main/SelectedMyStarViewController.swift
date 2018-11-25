@@ -70,7 +70,8 @@ class SelectedMyStarViewController: UIViewController {
         RxKeyboard.instance.visibleHeight.drive(onNext: { [weak self] height in
             guard let `self` = self else { return }
             
-            self.buttonBottomConstraint.constant = height < 34 ? 34 : height
+            let const = height - self.view.safeAreaInsets.bottom
+            self.buttonBottomConstraint.constant = const > 0 ? const : 0
             self.view.layoutIfNeeded()
         }).disposed(by: disposeBag)
         

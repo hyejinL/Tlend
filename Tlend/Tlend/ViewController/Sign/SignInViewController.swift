@@ -31,8 +31,8 @@ class SignInViewController: UIViewController {
         RxKeyboard.instance.visibleHeight.drive(onNext: { [weak self] height in
             guard let `self` = self else { return }
             
-            let const = -(height - self.view.safeAreaInsets.bottom)
-            self.loginBottomConstraint.constant = const < 0 ? const : 0
+            let const = height - self.view.safeAreaInsets.bottom
+            self.loginBottomConstraint.constant = const > 0 ? const : 0
             self.view.layoutIfNeeded()
         }).disposed(by: disposeBag)
         
