@@ -186,21 +186,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjg-Re-KQl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="3Ry-IX-Tu3"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Qjg-Re-KQl" firstAttribute="top" secondItem="7Hr-9q-3pf" secondAttribute="top" id="065-gU-RLY"/>
-                            <constraint firstAttribute="trailing" secondItem="Qjg-Re-KQl" secondAttribute="trailing" id="EDC-Z0-vwf"/>
                             <constraint firstItem="ALO-s1-g8E" firstAttribute="trailing" secondItem="kWY-wl-sMf" secondAttribute="trailing" id="Hns-ze-Ybi"/>
                             <constraint firstItem="ALO-s1-g8E" firstAttribute="leading" secondItem="kWY-wl-sMf" secondAttribute="leading" id="IUx-uB-CqW"/>
-                            <constraint firstItem="Qjg-Re-KQl" firstAttribute="leading" secondItem="7Hr-9q-3pf" secondAttribute="leading" id="Yj9-EQ-Piv"/>
                             <constraint firstItem="kWY-wl-sMf" firstAttribute="bottom" secondItem="ALO-s1-g8E" secondAttribute="bottom" id="n3r-77-6bO"/>
                             <constraint firstItem="ALO-s1-g8E" firstAttribute="top" secondItem="7Hr-9q-3pf" secondAttribute="top" id="wby-7s-IDb"/>
                         </constraints>
@@ -217,7 +207,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="homeMainTableView" destination="ALO-s1-g8E" id="ekD-aL-w6G"/>
-                        <outlet property="underNaviView" destination="Qjg-Re-KQl" id="9RV-QW-nV6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0z-de-gAL" userLabel="First Responder" sceneMemberID="firstResponder"/>

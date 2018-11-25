@@ -12,7 +12,14 @@ class HomeMainViewController: UIViewController {
     
     @IBOutlet weak var homeMainTableView: UITableView!
     
-    @IBOutlet weak var underNaviView: UIView!
+    lazy var underNaviView: UIView = {
+        let view = UIView(frame: CGRect(x: 0,
+                                        y: 0,
+                                        width: Style.screenWidth,
+                                        height: 44 + UIApplication.shared.statusBarFrame.height))
+        view.backgroundColor = .white
+        return view
+    }()
     
     lazy var headerView: IdolHeaderView = IdolHeaderView.loadFromXib()
     
@@ -22,6 +29,7 @@ class HomeMainViewController: UIViewController {
     private var media: [Media] = []
     
     struct Style {
+        static let screenWidth: CGFloat = UIScreen.main.bounds.width
         static let defaultHeaderHeight: CGFloat = 350
     }
     
@@ -42,7 +50,13 @@ class HomeMainViewController: UIViewController {
         loading(.start)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+    
     private func setupUI() {
+        self.view.addSubview(underNaviView)
         setWhiteNavigationBar()
         setNavigationWhenDidScroll(self.homeMainTableView, underNavi: self.underNaviView, completion: nil)
         self.navigationController?.navigationBar.isTranslucent = true

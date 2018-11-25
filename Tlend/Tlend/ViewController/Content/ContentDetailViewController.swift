@@ -45,6 +45,11 @@ class ContentDetailViewController: UIViewController {
         getData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .default
+    }
+    
     private func getData() {
         ContentService.shared.getMedia(mediaID: mediaID ?? 0) { [weak self] result in
             switch result {

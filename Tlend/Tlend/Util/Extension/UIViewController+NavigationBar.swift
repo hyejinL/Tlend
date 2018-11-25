@@ -36,36 +36,69 @@ extension UIViewController {
             return
         }
         let ratio: CGFloat = (300-offset.y)/300
-        view.isHidden = false
-        view.alpha = 1.0-ratio
+//        view.isHidden = false
+//        view.alpha = 1.0-ratio
         
         if offset.y > 300 {
             UIApplication.shared.statusBarStyle = .default
+            view.isHidden = false
+            UIView.animate(withDuration: 0.2) { [weak self, weak view] in
+                view?.alpha = 1
+                if action {
+                    if let buttons = self?.navigationItem.leftBarButtonItems {
+                        for button in buttons {
+                            button.tintColor = .black
+                        }
+                    }
+                    if let buttons = self?.navigationItem.rightBarButtonItems {
+                        for button in buttons {
+                            button.tintColor = .black
+                        }
+                    }
+                }
+            }
         } else {
             UIApplication.shared.statusBarStyle = .lightContent
+            UIView.animate(withDuration: 0.2, animations: { [weak self, weak view] in
+                view?.alpha = 0
+                if action {
+                    if let buttons = self?.navigationItem.leftBarButtonItems {
+                        for button in buttons {
+                            button.tintColor = .white
+                        }
+                    }
+                    if let buttons = self?.navigationItem.rightBarButtonItems {
+                        for button in buttons {
+                            button.tintColor = .white
+                        }
+                    }
+                }
+            }) { [weak view] (_) in
+                view?.isHidden = true
+            }
         }
         setNeedsStatusBarAppearanceUpdate()
         
-        if action {
-            let color: CGFloat = ratio*255
-//            guard color >= 0 else {
-//                color = 0
-//                return
+//        if action {
+//            let color: CGFloat = ratio*255
+////            guard color >= 0 else {
+////                color = 0
+////                return
+////            }
+//            let buttonColor = UIColor(red: color, green: color, blue: color, alpha: 1.0)
+//
+//            if let buttons = self.navigationItem.leftBarButtonItems {
+//                for button in buttons {
+//                    button.tintColor = buttonColor
+//                }
 //            }
-            let buttonColor = UIColor(red: color, green: color, blue: color, alpha: 1.0)
-            
-            if let buttons = self.navigationItem.leftBarButtonItems {
-                for button in buttons {
-                    button.tintColor = buttonColor
-                }
-            }
-            if let buttons = self.navigationItem.rightBarButtonItems {
-                for button in buttons {
-                    button.tintColor = buttonColor
-                }
-            }
-            
-        }
+//            if let buttons = self.navigationItem.rightBarButtonItems {
+//                for button in buttons {
+//                    button.tintColor = buttonColor
+//                }
+//            }
+//
+//        }
         completion?(offset)
     }
 }

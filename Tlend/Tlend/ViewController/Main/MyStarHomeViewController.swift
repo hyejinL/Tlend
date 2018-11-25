@@ -46,6 +46,11 @@ class MyStarHomeViewController: UIViewController {
         
         loading(.start)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .default
+    }
 
     @IBAction func goSearchViewAction(_ sender: Any) {
         goSearchView()
