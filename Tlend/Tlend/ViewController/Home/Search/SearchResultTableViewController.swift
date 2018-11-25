@@ -11,6 +11,10 @@ import XLPagerTabStrip
 
 class SearchResultTableViewController: UIViewController {
     
+    struct Const {
+        static let detailNavi: String = "DetailViewNavigationController"
+    }
+    
     @IBOutlet weak var searchResultTableView: UITableView!
     
     var detailType: DetailType?
@@ -18,10 +22,6 @@ class SearchResultTableViewController: UIViewController {
     
     var supports: [Support] = []
     var rewards: [Reward] = []
-    
-    struct Const {
-        static let detailNavi: String = "DetailViewNavigationController"
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,7 +98,27 @@ extension SearchResultTableViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? IdolItemTableViewCell else { return }
+        guard let type = self.detailType else { return }
+        
+        let navigationController = UIStoryboard(name: "Detail", bundle: nil)
+            .instantiateViewController(withIdentifier: Const.detailNavi)
+        guard let viewController = navigationController.children
+            .first as? DetailInfoViewController else { return }
+        viewController.detailType = type
+        
+        switch type {
+        case .support:
+            guard supports.count > indexPath.row else { return }
+            let support = supports[indexPath.row]
+            viewController.starIdx = support.idolID
+            viewController.detailIdx = support.index
+        case .reward:
+            guard rewards.count > indexPath.row else { return }
+            let reward = rewards[indexPath.row]
+            viewController.starIdx = reward.idolID
+            viewController.detailIdx = reward.index
+        }
+        self.present(navigationController, animated: true, completion: nil)
     }
 }
 

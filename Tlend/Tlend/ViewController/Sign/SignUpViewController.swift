@@ -91,6 +91,7 @@ class SignUpViewController: UIViewController {
             self?.view.endEditing(true)
         }).disposed(by: disposeBag)
     }
+    
     private func confirmID(completion: ((ConfirmEmailMessage) -> Void)? = nil) {
         SignService.shared.confirmID(email: self.emailField.text ?? "") { (result) in
             switch result {
@@ -106,10 +107,16 @@ class SignUpViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func didTapClose(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func didTapSignUp(_ sender: Any) {
+        self.signUp()
+    }
+    
+    private func signUp() {
         guard !(self.emailField.text?.isEmpty ?? true),
             !(self.pwField.text?.isEmpty ?? true),
             !(self.pwcField.text?.isEmpty ?? true),
@@ -163,6 +170,19 @@ extension SignUpViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         resetBoxBorder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.tag == 0 {
+            pwField.becomeFirstResponder()
+        } else if textField.tag == 1 {
+            pwcField.becomeFirstResponder()
+        } else if textField.tag == 2 {
+            nicknameField.becomeFirstResponder()
+        } else if textField.tag == 3 {
+            self.signUp()
+        }
+        return true
     }
     
     func resetBoxBorder() {

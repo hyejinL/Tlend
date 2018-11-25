@@ -14,20 +14,28 @@ struct MediaDetailContent: Codable {
 }
 
 struct TlendItem: Codable {
+    let idolID: Int
     let supportIdx: Int?
     let supportTitle: String?
     let userNickname: String
     let imageKey: String
     let rewardIdx: Int?
     let rewardTitle: String?
+    let type: String
+    
+    var detailType: DetailType? {
+        return DetailType(rawValue: type)
+    }
     
     enum CodingKeys: String, CodingKey {
+        case idolID = "idol_idx"
         case supportIdx = "support_idx"
         case supportTitle = "support_title"
         case userNickname = "user_nickname"
         case imageKey = "image_key"
         case rewardIdx = "reward_idx"
         case rewardTitle = "reward_title"
+        case type = "type"
     }
 }
 

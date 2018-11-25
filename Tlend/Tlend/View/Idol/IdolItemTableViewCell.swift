@@ -41,7 +41,7 @@ class IdolItemTableViewCell: UITableViewCell {
             itemImageView.kf.setImage(with: URL(string: support.imageKey))
             titleLabel.text = support.title
             usernameLabel.text = support.userNickname
-            percentLabel.text = "\(support.percent > 100 ? 100 : support.percent)%"
+            percentLabel.text = "\(support.percent)%"
             dayLabel.text = "\(support.dDay)일 남음"
         case .reward:
             itemKeywordView.backgroundColor = .reward
@@ -53,7 +53,7 @@ class IdolItemTableViewCell: UITableViewCell {
             itemImageView.kf.setImage(with: URL(string: reward.imageKey))
             titleLabel.text = reward.title
             usernameLabel.text = reward.userNickname
-            percentLabel.text = "\(reward.percent > 100 ? 100 : reward.percent)%"
+            percentLabel.text = "\(reward.percent)%"
             dayLabel.text = "\(reward.dDay)일 남음"
         }
     }

@@ -28,7 +28,6 @@ class SignInViewController: UIViewController {
     
     private func setupUI() {
         setWhiteNavigationBar()
-        
         RxKeyboard.instance.visibleHeight.drive(onNext: { [weak self] height in
             guard let `self` = self else { return }
             
@@ -48,12 +47,18 @@ class SignInViewController: UIViewController {
     @IBAction func didTapClose(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func touchUpSignUp(_ sender: Any) {
         let vc = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(ofType: SignUpViewController.self)
         let navi = UINavigationController(rootViewController: vc)
         self.present(navi, animated: true, completion: nil)
     }
+    
     @IBAction func touchUpSignIn(_ sender: Any) {
+        self.signIn()
+    }
+    
+    private func signIn() {
         guard !(idField.text?.isEmpty ?? true),
             !(pwField.text?.isEmpty ?? true) else { return }
         loading(.start)
@@ -87,5 +92,14 @@ extension SignInViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         pwBoxView.borderColor = .gray225
         idBoxView.borderColor = .gray225
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.tag == 0 {
+            pwField.becomeFirstResponder()
+        } else if textField.tag == 1 {
+            self.signIn()
+        }
+        return true
     }
 }

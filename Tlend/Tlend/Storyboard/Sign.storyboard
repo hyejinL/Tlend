@@ -22,7 +22,7 @@
                                 <rect key="frame" x="24" y="139" width="327" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="아이디를 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aRv-M8-kBE">
-                                        <rect key="frame" x="11" y="16" width="305" height="22"/>
+                                        <rect key="frame" x="11" y="0.0" width="305" height="50"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
@@ -34,10 +34,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5QY-ZR-pif"/>
-                                    <constraint firstItem="aRv-M8-kBE" firstAttribute="leading" secondItem="YGd-e4-EkN" secondAttribute="leading" constant="11" id="DfF-R3-6cT"/>
-                                    <constraint firstAttribute="bottom" secondItem="aRv-M8-kBE" secondAttribute="bottom" constant="12" id="K3P-9V-tJ8"/>
-                                    <constraint firstItem="aRv-M8-kBE" firstAttribute="top" secondItem="YGd-e4-EkN" secondAttribute="top" constant="16" id="fr3-d7-Z6u"/>
-                                    <constraint firstAttribute="trailing" secondItem="aRv-M8-kBE" secondAttribute="trailing" constant="11" id="mtS-dI-vYZ"/>
+                                    <constraint firstItem="aRv-M8-kBE" firstAttribute="top" secondItem="YGd-e4-EkN" secondAttribute="top" id="Bnk-PM-iwY"/>
+                                    <constraint firstItem="aRv-M8-kBE" firstAttribute="leading" secondItem="YGd-e4-EkN" secondAttribute="leading" constant="11" id="HI1-GB-3UT"/>
+                                    <constraint firstAttribute="bottom" secondItem="aRv-M8-kBE" secondAttribute="bottom" id="bPl-Jr-ZbQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="aRv-M8-kBE" secondAttribute="trailing" constant="11" id="wKq-LK-duh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -61,7 +61,7 @@
                                 <rect key="frame" x="24" y="256" width="327" height="50"/>
                                 <subviews>
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호를 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Non-Ea-V9c">
-                                        <rect key="frame" x="11" y="16" width="305" height="22"/>
+                                        <rect key="frame" x="11" y="0.0" width="305" height="50"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
@@ -72,11 +72,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Non-Ea-V9c" secondAttribute="bottom" constant="12" id="CGj-oc-HKf"/>
-                                    <constraint firstItem="Non-Ea-V9c" firstAttribute="top" secondItem="vSF-LX-sng" secondAttribute="top" constant="16" id="Efx-uu-yi6"/>
-                                    <constraint firstItem="Non-Ea-V9c" firstAttribute="leading" secondItem="vSF-LX-sng" secondAttribute="leading" constant="11" id="FH7-Jn-GZ2"/>
+                                    <constraint firstAttribute="bottom" secondItem="Non-Ea-V9c" secondAttribute="bottom" id="8at-1B-Ooq"/>
+                                    <constraint firstAttribute="trailing" secondItem="Non-Ea-V9c" secondAttribute="trailing" constant="11" id="Mld-jA-vm3"/>
                                     <constraint firstAttribute="height" constant="50" id="PLr-Vl-0VD"/>
-                                    <constraint firstAttribute="trailing" secondItem="Non-Ea-V9c" secondAttribute="trailing" constant="11" id="Q6p-fZ-8Ks"/>
+                                    <constraint firstItem="Non-Ea-V9c" firstAttribute="top" secondItem="vSF-LX-sng" secondAttribute="top" id="mSZ-Ne-Wah"/>
+                                    <constraint firstItem="Non-Ea-V9c" firstAttribute="leading" secondItem="vSF-LX-sng" secondAttribute="leading" constant="11" id="szd-vN-bWh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -228,7 +228,7 @@
                                                 <rect key="frame" x="24" y="168" width="327" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="8~20자 이내 영문자, 숫자의 조합" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="540-TO-GNb">
-                                                        <rect key="frame" x="11" y="16" width="305" height="22"/>
+                                                        <rect key="frame" x="11" y="0.0" width="305" height="50"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
@@ -239,11 +239,11 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="540-TO-GNb" firstAttribute="top" secondItem="VSW-O2-TAe" secondAttribute="top" constant="16" id="A19-F4-jYa"/>
+                                                    <constraint firstItem="540-TO-GNb" firstAttribute="top" secondItem="VSW-O2-TAe" secondAttribute="top" id="A19-F4-jYa"/>
                                                     <constraint firstAttribute="height" constant="50" id="NZk-mC-7LX"/>
                                                     <constraint firstAttribute="trailing" secondItem="540-TO-GNb" secondAttribute="trailing" constant="11" id="Nfy-nN-k9t"/>
                                                     <constraint firstItem="540-TO-GNb" firstAttribute="leading" secondItem="VSW-O2-TAe" secondAttribute="leading" constant="11" id="ThJ-gS-kTV"/>
-                                                    <constraint firstAttribute="bottom" secondItem="540-TO-GNb" secondAttribute="bottom" constant="12" id="aM0-b0-hqq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="540-TO-GNb" secondAttribute="bottom" id="aM0-b0-hqq"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
@@ -273,7 +273,7 @@
                                                 <rect key="frame" x="24" y="51" width="327" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일을 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H2h-DP-gfI">
-                                                        <rect key="frame" x="11" y="16" width="305" height="22"/>
+                                                        <rect key="frame" x="11" y="0.0" width="305" height="50"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
@@ -287,9 +287,9 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="H2h-DP-gfI" secondAttribute="trailing" constant="11" id="jDs-Th-eIp"/>
-                                                    <constraint firstAttribute="bottom" secondItem="H2h-DP-gfI" secondAttribute="bottom" constant="12" id="nLP-fQ-a2P"/>
+                                                    <constraint firstAttribute="bottom" secondItem="H2h-DP-gfI" secondAttribute="bottom" id="nLP-fQ-a2P"/>
                                                     <constraint firstItem="H2h-DP-gfI" firstAttribute="leading" secondItem="gTm-h8-V2b" secondAttribute="leading" constant="11" id="xpH-7G-Hmz"/>
-                                                    <constraint firstItem="H2h-DP-gfI" firstAttribute="top" secondItem="gTm-h8-V2b" secondAttribute="top" constant="16" id="xrX-9i-9YS"/>
+                                                    <constraint firstItem="H2h-DP-gfI" firstAttribute="top" secondItem="gTm-h8-V2b" secondAttribute="top" id="xrX-9i-9YS"/>
                                                     <constraint firstAttribute="height" constant="50" id="yAO-9H-DSm"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -308,7 +308,7 @@
                                                 <rect key="frame" x="24" y="285" width="327" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="8~20자 이내 영문자, 숫자의 조합" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iuv-jT-aEm">
-                                                        <rect key="frame" x="11" y="16" width="305" height="22"/>
+                                                        <rect key="frame" x="11" y="0.0" width="305" height="50"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" smartDashesType="no"/>
@@ -320,8 +320,8 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="Iuv-jT-aEm" firstAttribute="leading" secondItem="0xD-Yl-aZp" secondAttribute="leading" constant="11" id="1uD-8W-ybf"/>
-                                                    <constraint firstItem="Iuv-jT-aEm" firstAttribute="top" secondItem="0xD-Yl-aZp" secondAttribute="top" constant="16" id="9sC-aI-aDF"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Iuv-jT-aEm" secondAttribute="bottom" constant="12" id="I5m-tN-Ovg"/>
+                                                    <constraint firstItem="Iuv-jT-aEm" firstAttribute="top" secondItem="0xD-Yl-aZp" secondAttribute="top" id="9sC-aI-aDF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Iuv-jT-aEm" secondAttribute="bottom" id="I5m-tN-Ovg"/>
                                                     <constraint firstAttribute="trailing" secondItem="Iuv-jT-aEm" secondAttribute="trailing" constant="11" id="efL-xd-ZJT"/>
                                                     <constraint firstAttribute="height" constant="50" id="ssS-zR-fJc"/>
                                                 </constraints>
@@ -353,7 +353,7 @@
                                                 <rect key="frame" x="24" y="402" width="327" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임을 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-xq-fi2">
-                                                        <rect key="frame" x="11" y="16" width="305" height="22"/>
+                                                        <rect key="frame" x="11" y="0.0" width="305" height="50"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
@@ -364,8 +364,8 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstItem="bBf-xq-fi2" firstAttribute="top" secondItem="WG1-3t-e0q" secondAttribute="top" constant="16" id="2CH-6E-aw7"/>
-                                                    <constraint firstAttribute="bottom" secondItem="bBf-xq-fi2" secondAttribute="bottom" constant="12" id="K2n-h1-DiT"/>
+                                                    <constraint firstItem="bBf-xq-fi2" firstAttribute="top" secondItem="WG1-3t-e0q" secondAttribute="top" id="2CH-6E-aw7"/>
+                                                    <constraint firstAttribute="bottom" secondItem="bBf-xq-fi2" secondAttribute="bottom" id="K2n-h1-DiT"/>
                                                     <constraint firstAttribute="height" constant="50" id="Sbi-Qe-5AZ"/>
                                                     <constraint firstItem="bBf-xq-fi2" firstAttribute="leading" secondItem="WG1-3t-e0q" secondAttribute="leading" constant="11" id="gyM-1y-8cv"/>
                                                     <constraint firstAttribute="trailing" secondItem="bBf-xq-fi2" secondAttribute="trailing" constant="11" id="hgr-rs-Dry"/>
@@ -386,7 +386,7 @@
                                                 <rect key="frame" x="24" y="519" width="327" height="50"/>
                                                 <subviews>
                                                     <textField opaque="NO" tag="4" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="주소를 입력해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M8e-V2-L2t">
-                                                        <rect key="frame" x="11" y="16" width="305" height="22"/>
+                                                        <rect key="frame" x="11" y="0.0" width="305" height="50"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
@@ -400,8 +400,8 @@
                                                     <constraint firstAttribute="trailing" secondItem="M8e-V2-L2t" secondAttribute="trailing" constant="11" id="0ex-cD-snW"/>
                                                     <constraint firstAttribute="height" constant="50" id="Apl-8K-QgH"/>
                                                     <constraint firstItem="M8e-V2-L2t" firstAttribute="leading" secondItem="Wsk-cu-fnf" secondAttribute="leading" constant="11" id="EYK-bk-Wth"/>
-                                                    <constraint firstAttribute="bottom" secondItem="M8e-V2-L2t" secondAttribute="bottom" constant="12" id="Thn-uu-8Bb"/>
-                                                    <constraint firstItem="M8e-V2-L2t" firstAttribute="top" secondItem="Wsk-cu-fnf" secondAttribute="top" constant="16" id="U6D-JJ-ihI"/>
+                                                    <constraint firstAttribute="bottom" secondItem="M8e-V2-L2t" secondAttribute="bottom" id="Thn-uu-8Bb"/>
+                                                    <constraint firstItem="M8e-V2-L2t" firstAttribute="top" secondItem="Wsk-cu-fnf" secondAttribute="top" id="U6D-JJ-ihI"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">

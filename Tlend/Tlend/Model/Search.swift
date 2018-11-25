@@ -10,6 +10,7 @@ import Foundation
 
 
 protocol Item {
+    var idolID: Int { set get }
     var index: Int { set get }
     var title: String { set get }
     var userNickname: String { set get }

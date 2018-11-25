@@ -42,10 +42,6 @@ class HomeMainViewController: UIViewController {
         loading(.start)
     }
     
-    @IBAction func goSearchViewAction(_ sender: Any) {
-        goSearchView()
-    }
-    
     private func setupUI() {
         setWhiteNavigationBar()
         setNavigationWhenDidScroll(self.homeMainTableView, underNavi: self.underNaviView, completion: nil)

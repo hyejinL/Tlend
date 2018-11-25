@@ -47,6 +47,10 @@ class MyStarHomeViewController: UIViewController {
         loading(.start)
     }
 
+    @IBAction func goSearchViewAction(_ sender: Any) {
+        goSearchView()
+    }
+    
     private func setupUI() {
         setWhiteNavigationBar()
         setNavigationLogoTitle()

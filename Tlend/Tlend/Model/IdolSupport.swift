@@ -14,6 +14,7 @@ struct IdolSupport: Codable {
 }
 
 struct Support: Codable, Item {
+    var idolID: Int
     var index: Int
     var title: String
     var userNickname: String
@@ -22,6 +23,7 @@ struct Support: Codable, Item {
     var percent: Int
     
     enum CodingKeys: String, CodingKey {
+        case idolID = "idol_idx"
         case index = "support_idx"
         case title = "support_title"
         case userNickname = "user_nickname"

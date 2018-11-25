@@ -88,7 +88,6 @@ class DetailInfoViewController: UIViewController {
                 switch result {
                 case .success(let data):
                     self?.common = data.common
-                    self?.startFundingButtonInit(data.common.percent)
                     self?.detailData = data.itemDetail
                     self?.defaultData = data.itemDefault
                     self?.detailTableView.reloadData()
@@ -103,7 +102,6 @@ class DetailInfoViewController: UIViewController {
                 switch result {
                 case .success(let data):
                     self?.common = data.common
-                    self?.startFundingButtonInit(data.common.percent)
                     self?.detailData = data.itemDetail
                     self?.defaultData = data.itemDefault
                     self?.detailTableView.reloadData()
@@ -113,11 +111,6 @@ class DetailInfoViewController: UIViewController {
             }
             
         }
-    }
-    
-    private func startFundingButtonInit(_ percent: Int) {
-        self.startFundingButton.isEnabled = percent >= 100 ? false : true
-        self.startFundingButton.backgroundColor = percent >= 100 ? #colorLiteral(red: 0.8823529412, green: 0.8823529412, blue: 0.8823529412, alpha: 1) : #colorLiteral(red: 0.7529411765, green: 0.5803921569, blue: 0.9960784314, alpha: 1)
     }
 }
 

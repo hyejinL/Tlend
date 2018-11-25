@@ -12,6 +12,10 @@ import AVFoundation
 
 class ContentDetailViewController: UIViewController {
     
+    struct Const {
+        static let detailNavi: String = "DetailViewNavigationController"
+    }
+    
     enum Section: Int, CaseIterable {
         case image
         case video
@@ -54,7 +58,33 @@ class ContentDetailViewController: UIViewController {
     }
 }
 
-extension ContentDetailViewController: UITableViewDataSource, UITableViewDelegate {
+extension ContentDetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let section = Section(rawValue: indexPath.section),
+            itemList.count > indexPath.row else { return }
+        if section == .items {
+            let item = itemList[indexPath.row]
+            
+            let navigationController = UIStoryboard(name: "Detail", bundle: nil)
+                .instantiateViewController(withIdentifier: Const.detailNavi)
+            guard let viewController = navigationController.children
+                .first as? DetailInfoViewController,
+                let type = item.detailType else { return }
+            viewController.detailType = type
+            
+            switch type {
+            case .support:
+                viewController.starIdx = item.idolID
+                viewController.detailIdx = item.supportIdx
+            case .reward:
+                viewController.starIdx = item.idolID
+                viewController.detailIdx = item.rewardIdx
+            }
+        }
+    }
+}
+
+extension ContentDetailViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return Section.allCases.count
     }

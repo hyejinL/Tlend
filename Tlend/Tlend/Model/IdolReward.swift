@@ -24,12 +24,14 @@ struct RewardBanner: Codable {
 }
 
 struct Reward: Codable, Item {
+    var idolID: Int
     var index: Int
     var title, userNickname: String
     var imageKey: String
     var dDay, percent: Int
     
     enum CodingKeys: String, CodingKey {
+        case idolID = "idol_idx"
         case index = "reward_idx"
         case title = "reward_title"
         case userNickname = "user_nickname"
