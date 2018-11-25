@@ -86,6 +86,8 @@ extension ContentDetailViewController: UITableViewDelegate {
                 viewController.starIdx = item.idolID
                 viewController.detailIdx = item.rewardIdx
             }
+            
+            self.present(navigationController, animated: true, completion: nil)
         }
     }
 }

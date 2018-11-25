@@ -38,7 +38,8 @@ class IdolItemTableViewCell: UITableViewCell {
             
             guard let support = support else { return }
             idx = support.index
-            itemImageView.kf.setImage(with: URL(string: support.imageKey))
+            itemImageView.kf.setImage(with: URL(string: support.imageKey),
+                                      options: [.transition(.fade(0.3))])
             titleLabel.text = support.title
             usernameLabel.text = support.userNickname
             percentLabel.text = "\(support.percent)%"
@@ -50,7 +51,8 @@ class IdolItemTableViewCell: UITableViewCell {
             
             guard let reward = reward else { return }
             idx = reward.index
-            itemImageView.kf.setImage(with: URL(string: reward.imageKey))
+            itemImageView.kf.setImage(with: URL(string: reward.imageKey),
+                                      options: [.transition(.fade(0.3))])
             titleLabel.text = reward.title
             usernameLabel.text = reward.userNickname
             percentLabel.text = "\(reward.percent)%"

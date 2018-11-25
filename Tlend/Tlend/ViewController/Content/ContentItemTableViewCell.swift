@@ -26,7 +26,8 @@ class ContentItemTableViewCell: UITableViewCell {
     }
     
     func configure(_ item: TlendItem) {
-        itemImageView.kf.setImage(with: URL(string: item.imageKey))
+        itemImageView.kf.setImage(with: URL(string: item.imageKey),
+                                  options: [.transition(.fade(0.3))])
         if let _ = item.rewardTitle {
             itemTitleLabel.text = item.rewardTitle
         } else if let _ = item.supportTitle {

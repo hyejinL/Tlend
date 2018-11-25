@@ -29,7 +29,8 @@ class MyStarFeedTableViewCell: UITableViewCell {
     
     public func configure(_ data: Media) {
         self.mediaIdx = data.mediaIdx
-        self.feedImageView.kf.setImage(with: URL(string: data.imageKey))
+        self.feedImageView.kf.setImage(with: URL(string: data.imageKey),
+                                       options: [.transition(.fade(0.3))])
         self.feedTitleLabel.text = data.mediaTitle
     }
     

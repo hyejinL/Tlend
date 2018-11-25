@@ -46,11 +46,13 @@ class MyStarImageCollectionViewCell: UICollectionViewCell {
         case .idol:
             self.starIdx = idol?.idolIdx
             self.starNameLabel.text = idol?.idolName
-            self.starImageView.kf.setImage(with: URL(string: idol?.imageKey ?? ""))
+            self.starImageView.kf.setImage(with: URL(string: idol?.imageKey ?? ""),
+                                           options: [.transition(.fade(0.3))])
         case .member:
             self.starIdx = member?.memberIdx
             self.starNameLabel.text = member?.memberName
-            self.starImageView.kf.setImage(with: URL(string: member?.memberImgKey ?? ""))
+            self.starImageView.kf.setImage(with: URL(string: member?.memberImgKey ?? ""),
+                                           options: [.transition(.fade(0.3))])
         }
     }
     

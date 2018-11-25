@@ -29,7 +29,8 @@ class PopularContentsTableViewCell: UITableViewCell {
     
     public func configure(_ data: Media) {
         self.mediaIdx = data.mediaIdx
-        self.popularContentsImageView.kf.setImage(with: URL(string: data.imageKey))
+        self.popularContentsImageView.kf.setImage(with: URL(string: data.imageKey),
+                                                  options: [.transition(.fade(0.3))])
         self.popularContentsTitleLabel.text = data.mediaTitle
     }
     

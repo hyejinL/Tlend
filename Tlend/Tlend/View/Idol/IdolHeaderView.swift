@@ -18,7 +18,8 @@ class IdolHeaderView: UIView {
     }
     
     public func configure(_ imageURL: String) {
-        self.idolImageView.kf.setImage(with: URL(string: imageURL))
+        self.idolImageView.kf.setImage(with: URL(string: imageURL),
+                                       options: [.transition(.fade(0.3))])
     }
     
 }

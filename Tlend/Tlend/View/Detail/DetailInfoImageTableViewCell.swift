@@ -27,14 +27,15 @@ class DetailInfoImageTableViewCell: UITableViewCell {
     }
     
     func configure(_ data: String) {
-        self.detailInfoImageView.kf.setImage(with: URL(string: data)) { [weak self] (image, _, _, _) in
-            guard let image = image else { return }
-            let ratio = image.size.height / image.size.width
-            let height = UIScreen.main.bounds.size.width * ratio
-            if self?.imageViewHeight.constant ?? 0 != height {
-                self?.imageViewHeight.constant = height
-                self?.delegate?.setImageHeight()
-            }
+        self.detailInfoImageView.kf.setImage(with: URL(string: data),
+                                             options: [.transition(.fade(0.3))]) { [weak self] (image, _, _, _) in
+                                                guard let image = image else { return }
+                                                let ratio = image.size.height / image.size.width
+                                                let height = UIScreen.main.bounds.size.width * ratio
+                                                if self?.imageViewHeight.constant ?? 0 != height {
+                                                    self?.imageViewHeight.constant = height
+                                                    self?.delegate?.setImageHeight()
+                                                }
         }
     }
     

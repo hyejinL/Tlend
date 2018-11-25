@@ -24,15 +24,18 @@ class ContentImageTableViewCell: UITableViewCell {
     }
     
     func configure(_ imageURL: String) {
-        contentImageView.kf.setImage(with: URL(string: imageURL)) { [weak self] (image, _, _, _) in
-            guard let image = image else { return }
-            let ratio = image.size.height / image.size.width
-            let height = UIScreen.main.bounds.size.width * ratio
-            if self?.imageHeightConstraint.constant ?? 0 != height {
-                self?.imageHeightConstraint.constant = height
-                self?.delegate?.setImageHeight()
-            }
-        }
+        contentImageView.kf.setImage(with: URL(string: imageURL),
+                                     placeholder: nil,
+                                     options: [.transition(.fade(0.3))],
+                                     progressBlock: nil, completionHandler: { [weak self] (image, _, _, _) in
+                                        guard let image = image else { return }
+                                        let ratio = image.size.height / image.size.width
+                                        let height = UIScreen.main.bounds.size.width * ratio
+                                        if self?.imageHeightConstraint.constant ?? 0 != height {
+                                            self?.imageHeightConstraint.constant = height
+                                            self?.delegate?.setImageHeight()
+                                        }
+        })
     }
 
 }

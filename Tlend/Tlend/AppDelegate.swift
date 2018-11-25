@@ -8,6 +8,7 @@
 
 import UIKit
 import NVActivityIndicatorView
+import Kingfisher
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NVActivityIndicatorView.DEFAULT_TYPE = .lineSpinFadeLoader
         NVActivityIndicatorView.DEFAULT_COLOR = #colorLiteral(red: 0.7851700783, green: 0.5716921091, blue: 1, alpha: 1)
         NVActivityIndicatorView.DEFAULT_PADDING = CGFloat(3.0)
+        
+        // Kingfisher
+        let cache = KingfisherManager.shared.cache
+        cache.maxDiskCacheSize = UInt(50 * 1024 * 1024)
+        cache.maxCachePeriodInSecond = TimeInterval(60 * 60 * 24 * 3)
         
         return true
     }

@@ -18,6 +18,7 @@ class DetailHeaderImageCollectionViewCell: UICollectionViewCell {
     }
 
     public func configure(_ data: ItemImage) {
-        self.headerImageVIew.kf.setImage(with: URL(string: data.imageKey))
+        self.headerImageVIew.kf.setImage(with: URL(string: data.imageKey),
+                                         options: [.transition(.fade(0.3))])
     }
 }
