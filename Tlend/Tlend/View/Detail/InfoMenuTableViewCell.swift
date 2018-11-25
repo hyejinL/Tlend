@@ -29,6 +29,12 @@ class InfoMenuTableViewCell: UITableViewCell {
         self.infoButtonAction(.detail)
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.infoButtonAction(self.type)
+    }
+    
     @IBAction func pressedDetailInfoAction(_ sender: Any) {
         guard self.type != .detail else { return }
         self.infoButtonAction(.detail)

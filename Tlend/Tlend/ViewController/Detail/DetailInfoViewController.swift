@@ -119,9 +119,9 @@ extension DetailInfoViewController: SendDataViewControllerDelegate {
         if let data = data as? DetailInfoType {
             self.buttonType = data
             
-            self.detailTableView.beginUpdates()
+//            self.detailTableView.beginUpdates()
             self.detailTableView.reloadRows(at: [.init(row: 0, section: Section.Info.rawValue)], with: .none)
-            self.detailTableView.endUpdates()
+//            self.detailTableView.endUpdates()
             self.detailTableView.layer.removeAllAnimations()
         } else if let data = data as? String {
             if data == "share" {
