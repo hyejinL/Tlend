@@ -23,15 +23,7 @@ class InfoMenuTableViewCell: UITableViewCell {
     weak var delegate: SendDataViewControllerDelegate?
     var type: DetailInfoType = .detail
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        self.infoButtonAction(.detail)
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        
+    func configure() {
         self.infoButtonAction(self.type)
     }
     
