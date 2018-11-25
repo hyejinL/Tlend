@@ -18,6 +18,10 @@ class SearchResultTableViewController: UIViewController {
     
     var supports: [Support] = []
     var rewards: [Reward] = []
+    
+    struct Const {
+        static let detailNavi: String = "DetailViewNavigationController"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,6 +96,10 @@ extension SearchResultTableViewController: UITableViewDelegate {
         
         self.searchResultTableView.register(IdolItemTableViewCell.self)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? IdolItemTableViewCell else { return }
+    }
 }
 
 extension SearchResultTableViewController: UITableViewDataSource {
@@ -110,11 +118,11 @@ extension SearchResultTableViewController: UITableViewDataSource {
         switch type {
         case .support:
             let cell = tableView.dequeue(IdolItemTableViewCell.self, for: indexPath)
-            cell.configure(type: .support, support: supports[indexPath.row])
+            cell.configure(type: type, support: supports[indexPath.row])
             return cell
         case .reward:
             let cell = tableView.dequeue(IdolItemTableViewCell.self, for: indexPath)
-            cell.configure(type: .reward, reward: rewards[indexPath.row])
+            cell.configure(type: type, reward: rewards[indexPath.row])
             return cell
         }
     }

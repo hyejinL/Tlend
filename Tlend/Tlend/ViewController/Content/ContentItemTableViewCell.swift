@@ -23,10 +23,6 @@ class ContentItemTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        self.itemImageView.makeShadow(UIColor.black,
-                                      opacity: Style.imageShadowOpacity,
-                                      size: Style.imageShadowSize,
-                                      blur: Style.imageShadowBlur)
     }
     
     func configure(_ item: TlendItem) {

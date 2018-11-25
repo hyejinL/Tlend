@@ -10,10 +10,10 @@ import UIKit
 
 class IdolItemTableViewCell: UITableViewCell {
 
-    enum ItemType {
-        case support
-        case reward
-    }
+//    enum ItemType {
+//        case support
+//        case reward
+//    }
     
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var itemKeywordView: UIView!
@@ -29,7 +29,7 @@ class IdolItemTableViewCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configure(type: ItemType, support: Support? = nil, reward: Reward? = nil) {
+    func configure(type: DetailType, support: Support? = nil, reward: Reward? = nil) {
         switch type {
         case .support:
             itemKeywordView.backgroundColor = .support
