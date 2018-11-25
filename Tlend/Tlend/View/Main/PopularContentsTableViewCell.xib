@@ -20,26 +20,36 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="95D-aV-eTp">
-                        <rect key="frame" x="20" y="0.0" width="335" height="180"/>
+                        <rect key="frame" x="20" y="5" width="335" height="180"/>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.94509803920000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="95D-aV-eTp" secondAttribute="height" multiplier="67:36" id="67q-h4-hBU"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6X-6r-5JV">
-                        <rect key="frame" x="20" y="194" width="0.0" height="25.5"/>
+                        <rect key="frame" x="20" y="199" width="0.0" height="33.5"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hrz-7S-0cU">
+                        <rect key="frame" x="18" y="275.5" width="339" height="1"/>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="BSy-DW-1hd"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="hrz-7S-0cU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="4Ws-a0-qhx"/>
                     <constraint firstItem="95D-aV-eTp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="4g1-Ym-LKu"/>
+                    <constraint firstAttribute="trailing" secondItem="hrz-7S-0cU" secondAttribute="trailing" constant="18" id="BEx-wB-P9z"/>
                     <constraint firstItem="K6X-6r-5JV" firstAttribute="top" secondItem="95D-aV-eTp" secondAttribute="bottom" constant="14" id="JUt-Ln-CTN"/>
                     <constraint firstItem="K6X-6r-5JV" firstAttribute="leading" secondItem="95D-aV-eTp" secondAttribute="leading" id="M9X-Up-Gzx"/>
                     <constraint firstItem="K6X-6r-5JV" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="95D-aV-eTp" secondAttribute="trailing" id="WIk-Zg-4VV"/>
-                    <constraint firstAttribute="bottom" secondItem="K6X-6r-5JV" secondAttribute="bottom" constant="70" id="jGv-57-ceH"/>
-                    <constraint firstItem="95D-aV-eTp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ksF-u4-Cqd"/>
+                    <constraint firstAttribute="bottom" secondItem="K6X-6r-5JV" secondAttribute="bottom" constant="57" id="jGv-57-ceH"/>
+                    <constraint firstItem="95D-aV-eTp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="ksF-u4-Cqd"/>
+                    <constraint firstAttribute="bottom" secondItem="hrz-7S-0cU" secondAttribute="bottom" constant="13" id="mCe-EN-qbg"/>
                     <constraint firstAttribute="trailing" secondItem="95D-aV-eTp" secondAttribute="trailing" constant="20" id="s5a-2J-GUt"/>
                 </constraints>
             </tableViewCellContentView>

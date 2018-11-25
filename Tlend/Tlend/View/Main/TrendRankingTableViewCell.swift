@@ -40,6 +40,9 @@ class TrendRankingTableViewCell: UITableViewCell {
         self.starIdx = data.idolIdx
         self.trendStarLabel.text = data.idolName
         self.changeRankingViewLabel.text = popularType[index].rawValue
+        if popularType[index] == .up {
+            self.changeRankingViewLabel.textColor = #colorLiteral(red: 0.8980392157, green: 0.4431372549, blue: 0.4431372549, alpha: 1)
+        }
     }
     
 }

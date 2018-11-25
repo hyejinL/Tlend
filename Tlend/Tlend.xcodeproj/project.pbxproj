@@ -50,6 +50,7 @@
 		49202C6A219E8DFE005286E2 /* MyStarListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49202C68219E8DFE005286E2 /* MyStarListTableViewCell.xib */; };
 		49202C73219E9134005286E2 /* TrendRankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49202C71219E9134005286E2 /* TrendRankingTableViewCell.swift */; };
 		49202C74219E9134005286E2 /* TrendRankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49202C72219E9134005286E2 /* TrendRankingTableViewCell.xib */; };
+		49237BD621AAF6A900A75FDF /* UILabel+Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49237BD521AAF6A900A75FDF /* UILabel+Spacing.swift */; };
 		4942C0B9219F2C0C00A431A6 /* DetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942C0B8219F2C0C00A431A6 /* DetailInfoViewController.swift */; };
 		4942C0BC219F2CA800A431A6 /* DetailHeaderImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942C0BA219F2CA800A431A6 /* DetailHeaderImageCollectionViewCell.swift */; };
 		4942C0BD219F2CA800A431A6 /* DetailHeaderImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4942C0BB219F2CA800A431A6 /* DetailHeaderImageCollectionViewCell.xib */; };
@@ -198,6 +199,7 @@
 		49202C68219E8DFE005286E2 /* MyStarListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStarListTableViewCell.xib; sourceTree = "<group>"; };
 		49202C71219E9134005286E2 /* TrendRankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendRankingTableViewCell.swift; sourceTree = "<group>"; };
 		49202C72219E9134005286E2 /* TrendRankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendRankingTableViewCell.xib; sourceTree = "<group>"; };
+		49237BD521AAF6A900A75FDF /* UILabel+Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Spacing.swift"; sourceTree = "<group>"; };
 		4942C0B8219F2C0C00A431A6 /* DetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoViewController.swift; sourceTree = "<group>"; };
 		4942C0BA219F2CA800A431A6 /* DetailHeaderImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		4942C0BB219F2CA800A431A6 /* DetailHeaderImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHeaderImageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -569,6 +571,7 @@
 				491DBDDF21A46F2900D12EC0 /* Int+Tlend.swift */,
 				491DBDE321A47F3100D12EC0 /* UIViewController+LoadingView.swift */,
 				49F2374D21A7EBB400FE865F /* String+Tlend.swift */,
+				49237BD521AAF6A900A75FDF /* UILabel+Spacing.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -943,6 +946,7 @@
 				BA87B9DC21A1829B001E7D16 /* LandingViewController.swift in Sources */,
 				BAF439F421A27EA100704002 /* IdolSupport.swift in Sources */,
 				BA87B9D621A16878001E7D16 /* SplashViewController.swift in Sources */,
+				49237BD621AAF6A900A75FDF /* UILabel+Spacing.swift in Sources */,
 				BAAF214F21A28B13004983A6 /* ContentDetailViewController.swift in Sources */,
 				BA3DF96821982C3C00B1D42C /* StartFormViewController.swift in Sources */,
 				4942C0B9219F2C0C00A431A6 /* DetailInfoViewController.swift in Sources */,

@@ -72,6 +72,19 @@ class SignInViewController: UIViewController {
                                         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MyStarNavigation")
                                         self?.present(vc, animated: true, completion: nil)
                                     case .error(let error):
+                                        self?.loading(.end)
+                                        switch error {
+                                        case ErrorMessage.errorMessage(let message):
+                                            if message == "id, pw가 맞지않습니다" {
+                                                let dialog = DialogViewController(.warning,
+                                                                                  title: "로그인 오류",
+                                                                                  content: "아이디 혹은 비밀번호를\n확인해주세요 :(")
+                                                dialog.dialog.cancelButton.removeFromSuperview()
+                                                self?.present(dialog, animated: true, completion: nil)
+                                            }
+                                        default:
+                                            break
+                                        }
                                         print(error.localizedDescription)
                                     }
         }

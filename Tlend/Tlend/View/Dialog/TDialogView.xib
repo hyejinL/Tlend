@@ -26,7 +26,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gob-RJ-Som">
-                            <rect key="frame" x="46" y="114" width="235" height="18"/>
+                            <rect key="frame" x="43" y="114" width="241" height="18"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -76,7 +76,7 @@
                         <constraint firstAttribute="trailing" secondItem="IHH-AN-23f" secondAttribute="trailing" id="F3o-03-yjy"/>
                         <constraint firstItem="kEZ-tm-3Ge" firstAttribute="top" secondItem="RTI-O0-DLl" secondAttribute="bottom" constant="10" id="GoD-ie-wOv"/>
                         <constraint firstItem="eac-Ez-Pg7" firstAttribute="leading" secondItem="cAO-6x-j2s" secondAttribute="leading" id="Idq-8x-wXp"/>
-                        <constraint firstAttribute="trailing" secondItem="gob-RJ-Som" secondAttribute="trailing" constant="46" id="Kux-Yx-Uw0"/>
+                        <constraint firstAttribute="trailing" secondItem="gob-RJ-Som" secondAttribute="trailing" constant="43" id="Kux-Yx-Uw0"/>
                         <constraint firstAttribute="trailing" secondItem="eac-Ez-Pg7" secondAttribute="trailing" id="MG6-tx-T97"/>
                         <constraint firstAttribute="bottom" secondItem="eac-Ez-Pg7" secondAttribute="bottom" id="OXY-L9-cgf"/>
                         <constraint firstItem="IHH-AN-23f" firstAttribute="leading" secondItem="cAO-6x-j2s" secondAttribute="leading" id="TgP-nV-5ES"/>
@@ -84,7 +84,7 @@
                         <constraint firstItem="IHH-AN-23f" firstAttribute="top" relation="greaterThanOrEqual" secondItem="gob-RJ-Som" secondAttribute="bottom" constant="20" id="dj6-Bq-NpE"/>
                         <constraint firstAttribute="height" constant="273" id="e0L-Pj-Zds"/>
                         <constraint firstAttribute="trailing" secondItem="kEZ-tm-3Ge" secondAttribute="trailing" constant="72" id="f1f-ZJ-Gu4"/>
-                        <constraint firstItem="gob-RJ-Som" firstAttribute="leading" secondItem="cAO-6x-j2s" secondAttribute="leading" constant="46" id="qbs-Nu-Agl"/>
+                        <constraint firstItem="gob-RJ-Som" firstAttribute="leading" secondItem="cAO-6x-j2s" secondAttribute="leading" constant="43" id="qbs-Nu-Agl"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h7m-dn-yZO" customClass="CircleView" customModule="Tlend" customModuleProvider="target">

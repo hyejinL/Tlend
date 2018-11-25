@@ -37,7 +37,7 @@ class TDialogView: UIView {
     func configure(_ type: DialogType = .check, title: String, content: String) {
         self.typeImageView.image = type.image
         self.titleLabel.text = title
-        self.contentLabel.text = content
+        self.contentLabel.setLineHeightMultiple(to: 1.2, withAttributedText: content)
     }
 
 }
