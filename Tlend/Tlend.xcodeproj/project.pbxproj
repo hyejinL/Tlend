@@ -82,8 +82,8 @@
 		49A760C9219F231D0007DB48 /* ShareAndSaveButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A760C7219F231D0007DB48 /* ShareAndSaveButtonTableViewCell.xib */; };
 		49A760CC219F24E70007DB48 /* FundingInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A760CA219F24E70007DB48 /* FundingInfoTableViewCell.swift */; };
 		49A760CD219F24E70007DB48 /* FundingInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A760CB219F24E70007DB48 /* FundingInfoTableViewCell.xib */; };
-		49A760D0219F28890007DB48 /* InfoMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A760CE219F28890007DB48 /* InfoMenuHeaderView.swift */; };
-		49A760D1219F28890007DB48 /* InfoMenuHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A760CF219F28890007DB48 /* InfoMenuHeaderView.xib */; };
+		49A760D0219F28890007DB48 /* InfoMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A760CE219F28890007DB48 /* InfoMenuTableViewCell.swift */; };
+		49A760D1219F28890007DB48 /* InfoMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49A760CF219F28890007DB48 /* InfoMenuTableViewCell.xib */; };
 		49F2374821A56C1200FE865F /* SearchResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2374721A56C1200FE865F /* SearchResultTableViewController.swift */; };
 		49F2374A21A56E6F00FE865F /* SearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2374921A56E6F00FE865F /* SearchService.swift */; };
 		49F2374C21A5710A00FE865F /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2374B21A5710A00FE865F /* Search.swift */; };
@@ -232,8 +232,8 @@
 		49A760C7219F231D0007DB48 /* ShareAndSaveButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareAndSaveButtonTableViewCell.xib; sourceTree = "<group>"; };
 		49A760CA219F24E70007DB48 /* FundingInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundingInfoTableViewCell.swift; sourceTree = "<group>"; };
 		49A760CB219F24E70007DB48 /* FundingInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FundingInfoTableViewCell.xib; sourceTree = "<group>"; };
-		49A760CE219F28890007DB48 /* InfoMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMenuHeaderView.swift; sourceTree = "<group>"; };
-		49A760CF219F28890007DB48 /* InfoMenuHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoMenuHeaderView.xib; sourceTree = "<group>"; };
+		49A760CE219F28890007DB48 /* InfoMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMenuTableViewCell.swift; sourceTree = "<group>"; };
+		49A760CF219F28890007DB48 /* InfoMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoMenuTableViewCell.xib; sourceTree = "<group>"; };
 		49F2374721A56C1200FE865F /* SearchResultTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewController.swift; sourceTree = "<group>"; };
 		49F2374921A56E6F00FE865F /* SearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchService.swift; sourceTree = "<group>"; };
 		49F2374B21A5710A00FE865F /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
@@ -602,8 +602,8 @@
 				49A760C7219F231D0007DB48 /* ShareAndSaveButtonTableViewCell.xib */,
 				49A760CA219F24E70007DB48 /* FundingInfoTableViewCell.swift */,
 				49A760CB219F24E70007DB48 /* FundingInfoTableViewCell.xib */,
-				49A760CE219F28890007DB48 /* InfoMenuHeaderView.swift */,
-				49A760CF219F28890007DB48 /* InfoMenuHeaderView.xib */,
+				49A760CE219F28890007DB48 /* InfoMenuTableViewCell.swift */,
+				49A760CF219F28890007DB48 /* InfoMenuTableViewCell.xib */,
 				4942C0BE219F2FCF00A431A6 /* DetailInfoTableViewCell.swift */,
 				4942C0BF219F2FCF00A431A6 /* DetailInfoTableViewCell.xib */,
 				491DBDDB21A432CD00D12EC0 /* DetailSupportInfoTableViewCell.swift */,
@@ -791,7 +791,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A760D1219F28890007DB48 /* InfoMenuHeaderView.xib in Resources */,
+				49A760D1219F28890007DB48 /* InfoMenuTableViewCell.xib in Resources */,
 				BA87B9CC21A130EF001E7D16 /* TDialogView.xib in Resources */,
 				499EDC772197E85D0088D7A8 /* LaunchScreen.storyboard in Resources */,
 				49A760B1219E96E50007DB48 /* MyStarHomeFooterTableViewCell.xib in Resources */,
@@ -993,7 +993,7 @@
 				BA87B9D121A157DE001E7D16 /* IdolProductHeaderCellTableViewCell.swift in Sources */,
 				49A760B0219E96E50007DB48 /* MyStarHomeFooterTableViewCell.swift in Sources */,
 				491DBDCA21A2866800D12EC0 /* Detail.swift in Sources */,
-				49A760D0219F28890007DB48 /* InfoMenuHeaderView.swift in Sources */,
+				49A760D0219F28890007DB48 /* InfoMenuTableViewCell.swift in Sources */,
 				49202C5D219DC4D4005286E2 /* SelectedMyStarViewController.swift in Sources */,
 				491DBDC821A2840800D12EC0 /* DetailService.swift in Sources */,
 				49F2374821A56C1200FE865F /* SearchResultTableViewController.swift in Sources */,

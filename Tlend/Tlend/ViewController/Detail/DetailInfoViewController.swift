@@ -15,9 +15,8 @@ class DetailInfoViewController: UIViewController {
     
     var detailType: DetailType?
     var buttonType: DetailInfoType = .detail
-    lazy var infoHeaderView: InfoMenuHeaderView = .loadFromXib()
     lazy var underNaviView: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: Const.screenWidth, height: 88))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: Const.screenWidth, height: 44 + UIApplication.shared.statusBarFrame.height))
         view.backgroundColor = .white
         return view
     }()
@@ -37,6 +36,7 @@ class DetailInfoViewController: UIViewController {
         case Header
         case ShareAndSaveButton
         case FundingProgress
+        case InfoMenu
         case Info
     }
     
@@ -163,6 +163,7 @@ extension DetailInfoViewController: UITableViewDelegate {
         self.detailTableView.register(DetailInfoTableViewCell.self)
         self.detailTableView.register(DetailInfoImageTableViewCell.self)
         self.detailTableView.register(DetailSupportInfoTableViewCell.self)
+        self.detailTableView.register(InfoMenuTableViewCell.self)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -173,26 +174,6 @@ extension DetailInfoViewController: UITableViewDelegate {
 extension DetailInfoViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return Section.allCases.count
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let section = Section(rawValue: section) else { return UITableViewCell() }
-        
-        if section == .Info {
-            let view = infoHeaderView
-            view.delegate = self
-            return view
-        }
-        return nil
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        guard let section = Section(rawValue: section) else { return 0 }
-        
-        if section == .Info {
-            return 48.0
-        }
-        return 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -214,6 +195,10 @@ extension DetailInfoViewController: UITableViewDataSource {
         case .FundingProgress:
             let cell = tableView.dequeue(FundingInfoTableViewCell.self, for: indexPath)
             cell.configure(type: self.detailType, self.common)
+            return cell
+        case .InfoMenu:
+            let cell = tableView.dequeue(InfoMenuTableViewCell.self, for: indexPath)
+            cell.delegate = self
             return cell
         case .Info:
             switch buttonType {
