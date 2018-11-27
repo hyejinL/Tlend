@@ -42,7 +42,7 @@ extension UIViewController {
         if offset.y > 300 {
             UIApplication.shared.statusBarStyle = .default
             view.isHidden = false
-            UIView.animate(withDuration: 0.2) { [weak self, weak view] in
+            UIView.animate(withDuration: 0.3) { [weak self, weak view] in
                 view?.alpha = 1
                 if action {
                     if let buttons = self?.navigationItem.leftBarButtonItems {
@@ -59,7 +59,7 @@ extension UIViewController {
             }
         } else {
             UIApplication.shared.statusBarStyle = .lightContent
-            UIView.animate(withDuration: 0.2, animations: { [weak self, weak view] in
+            UIView.animate(withDuration: 0.2) { [weak self, weak view] in
                 view?.alpha = 0
                 if action {
                     if let buttons = self?.navigationItem.leftBarButtonItems {
@@ -73,8 +73,6 @@ extension UIViewController {
                         }
                     }
                 }
-            }) { [weak view] (_) in
-                view?.isHidden = true
             }
         }
         setNeedsStatusBarAppearanceUpdate()

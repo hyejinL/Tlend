@@ -38,7 +38,6 @@ class IdolRewardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        getData()
         
         loading(.start)
     }
@@ -48,6 +47,8 @@ class IdolRewardViewController: UIViewController {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
+        
+        getData()
     }
     
     private func setupUI() {

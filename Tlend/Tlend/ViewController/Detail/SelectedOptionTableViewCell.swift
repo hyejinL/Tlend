@@ -14,6 +14,7 @@ class SelectedOptionTableViewCell: UITableViewCell {
     @IBOutlet weak var optionCountLabel: UILabel!
     @IBOutlet weak var removeButton: UIButton!
     
+    public var indexPath: IndexPath = IndexPath()
     weak var delegate: SendDataViewControllerDelegate?
     
     override func awakeFromNib() {
@@ -43,6 +44,6 @@ class SelectedOptionTableViewCell: UITableViewCell {
     }
     
     @IBAction func removeAction(_ sender: Any) {
-        delegate?.sendData(data: String.self, "remove")
+        delegate?.sendData(data: IndexPath.self, self.indexPath)
     }
 }

@@ -46,9 +46,14 @@ class DetailInfoViewController: UIViewController {
         self.setupUI()
         self.tableViewInit()
         
-        self.setupData()
         
 //        loading(.start)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.setupData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

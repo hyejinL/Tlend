@@ -189,10 +189,8 @@ extension ChoiceFundingViewController: SendDataViewControllerDelegate {
         if let data = data as? Int {
             self.optionCount += data
             self.optionChoiceTableView.reloadSections(IndexSet(integer: Section.total.rawValue), with: .automatic)
-        } else if let data = data as? String {
-            if data == "remove" {
-                
-            }
+        } else if let data = data as? IndexPath {
+            
         }
     }
 }
@@ -284,6 +282,7 @@ extension ChoiceFundingViewController: UITableViewDataSource {
         case .choiceOption:
             let cell = tableView.dequeue(SelectedOptionTableViewCell.self, for: indexPath)
             cell.delegate = self
+            cell.indexPath = indexPath
             cell.optionLabel.text = self.choiceArray[indexPath.row]
             return cell
         case .total:
